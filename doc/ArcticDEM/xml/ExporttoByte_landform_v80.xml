@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='utf-8'?>
+<runprocess>	
+	<userproj userid = 'karttur' projectid = 'karttur-arcticdemext' tractid= 'karttur-arcticdemext' siteid = '*' plotid = '*' system = 'modis'></userproj>
+	<period timestep='static'></period>	
+	
+	<!-- exporttobyte landform -->
+	<processx processid = 'exporttobytemodisRegionToTiles' version = '1.3'>
+		<overwrite>True</overwrite>
+		<parameters palette= 'landform'></parameters>		
+		<srcpath volume = "karttur3tb" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+		<dstpath volume = "karttur3tb" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>    	
+		<srccomp>
+			<tpi500-1500 id = 'landform' source = "NGA-NSF" product = "landform" folder = "landform" band = "tpi500-1500" prefix = "tpi500-1500" suffix = "10cl-arcticdemv30">	
+			</tpi500-1500>
+		</srccomp>	
+	</processx>
+	
+	<!-- exporttobyte landform -->
+	<processx processid = 'exporttobytemodisRegionToTiles' version = '1.3'>
+		<overwrite>True</overwrite>
+		<parameters palette= 'landform'></parameters>		
+		<srcpath volume = "karttur3tb" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+		<dstpath volume = "karttur3tb" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>    	
+		<srccomp>
+			<tpi500-1500 id = 'landform' source = "NGA-NSF" product = "landform" folder = "landform" band = "tpi500-1500" prefix = "tpi500-1500" suffix = "stand-10cl-arcticdemv30">	
+			</tpi500-1500>
+		</srccomp>	
+	</processx>
+
+	<!-- exporttobyte landform -->
+	<processx processid = 'exporttobytemodisRegionToTiles' version = '1.3'>
+		<overwrite>True</overwrite>
+		<parameters palette= 'landform'></parameters>		
+		<srcpath volume = "karttur3tb" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+		<dstpath volume = "karttur3tb" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>    	
+		<srccomp>
+			<tpi500-1500 id = 'landform' source = "NGA-NSF" product = "landform" folder = "landform" band = "tpi500-1500" prefix = "tpi500-1500" suffix = "glob-10cl-arcticdemv30">	
+			</tpi500-1500>
+		</srccomp>	
+	</processx>
+	
+	<!-- exporttobyte landform -->
+	<process processid = 'exporttobytemodisRegionToTiles' version = '1.3'>
+		<overwrite>True</overwrite>
+		<parameters palette= 'landform'></parameters>		
+		<srcpath volume = "karttur3tb" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+		<dstpath volume = "karttur3tb" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>    	
+		<srccomp>
+			<tpi500-1500 id = 'landform' source = "NGA-NSF" product = "landform" folder = "landform" band = "tpi500-1500" prefix = "tpi500-1500" suffix = "rel-10cl-arcticdemv30">	
+			</tpi500-1500>
+		</srccomp>	
+	</process>
+
+
+</runprocess>
+

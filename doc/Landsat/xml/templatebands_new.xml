@@ -1,0 +1,197 @@
+<?xml version='1.0' encoding='utf-8'?>
+<landsattemplate>
+
+	<!-- landsatbandtemplate -->
+	<process processid ='landsatbandtemplate' version ='1.3'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<parameters source ='LT05' product = 'L1TP' subtype='T' collcat = 'T1' collnr='1'   
+			scalefac = '1' 
+			offsetadd='0'
+			band = 'bl'
+			prefix = 'bl-dn'
+			pattern = '_B1.TIF'
+			measure = 'I'
+			dataunit = 'dn'
+			celltype ='Byte'
+			folder = 'dnbands'
+			fileext = 'tif'
+			required = 'Y'
+		>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatbandtemplate' version ='1.3'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<parameters source ='LT05' product = 'L1TP' subtype='T' collcat = 'T1' collnr='1'   
+			scalefac = '1' 
+			offsetadd='0'
+			band = 'gl'
+			prefix = 'gl-dn'
+			pattern = '_B2.TIF'
+			measure = 'I'
+			dataunit = 'dn'
+			celltype ='Byte'
+			folder = 'dnbands'
+			fileext = 'tif'
+			required = 'Y'
+		>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatbandtemplate' version ='1.3'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<parameters source ='LT05' product = 'L1TP' subtype='T' collcat = 'T1' collnr='1'   
+			scalefac = '1' 
+			offsetadd='0'
+			band = 'rl'
+			prefix = 'rl-dn'
+			pattern = '_B3.TIF'
+			measure = 'I'
+			dataunit = 'dn'
+			celltype ='Byte'
+			folder = 'dnbands'
+			fileext = 'tif'
+			required = 'Y'
+		>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatbandtemplate' version ='1.3'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<parameters source ='LT05' product = 'L1TP' subtype='T' collcat = 'T1' collnr='1'   
+			scalefac = '1' 
+			offsetadd='0'
+			band = 'na'
+			prefix = 'na-dn'
+			pattern = '_B4.TIF'
+			measure = 'I'
+			dataunit = 'dn'
+			celltype ='Byte'
+			folder = 'dnbands'
+			fileext = 'tif'
+			required = 'Y'
+		>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatbandtemplate' version ='1.3'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<parameters source ='LT05' product = 'L1TP' subtype='T' collcat = 'T1' collnr='1'   
+			scalefac = '1' 
+			offsetadd='0'
+			band = 'mb'
+			prefix = 'mb-dn'
+			pattern = '_B5.TIF'
+			measure = 'I'
+			dataunit = 'dn'
+			celltype ='Byte'
+			folder = 'dnbands'
+			fileext = 'tif'
+			required = 'Y'
+		>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatbandtemplate' version ='1.3'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<parameters source ='LT05' product = 'L1TP' subtype='T' collcat = 'T1' collnr='1'   
+			scalefac = '1' 
+			offsetadd='0'
+			band = 'mc'
+			prefix = 'mc-dn'
+			pattern = '_B7.TIF'
+			measure = 'I'
+			dataunit = 'dn'
+			celltype ='Byte'
+			folder = 'dnbands'
+			fileext = 'tif'
+			required = 'Y'
+		>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatbandtemplate' version ='1.3'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<parameters source ='LT05' product = 'L1TP' subtype='T' collcat = 'T1' collnr='1'   
+			scalefac = '1' 
+			offsetadd='0'
+			band = 'ta'
+			prefix = 'ta-dn'
+			pattern = '_B6.TIF'
+			measure = 'I'
+			dataunit = 'dn'
+			celltype ='Byte'
+			folder = 'dnbands'
+			fileext = 'tif'
+			required = 'Y'
+		>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatsupporttemplate' version ='1.3'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<parameters source ='LT05' product = 'L1TP' subtype='T' collcat = 'T1' collnr='1'
+			scalefac = '1' 
+			offsetadd='0'
+			band = 'bqa'
+			prefix = 'bqa'
+			pattern = '_BQA.TIF'
+			measure = 'N'
+			dataunit = 'dn'
+			celltype ='Int16'
+			folder = 'dndqa'
+			fileext = 'tif'
+			required = 'Y'
+		>
+	</process>
+
+	<process processid ='landsatmetatemplate' version ='1.3'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<parameters source ='LT05' product = 'L1TP' subtype='T' collcat = 'T1' collnr='1'
+			band = 'ang'
+			prefix = 'ang'
+			pattern = 'ANG.txt'
+			measure = 'N'
+			folder = 'dnmeta'
+			fileext = 'txt'
+			required = 'Y'
+		>
+	</process>	
+	
+	<process processid ='landsatmetatemplate' version ='1.3'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<parameters source ='LT05' product = 'L1TP' subtype='T' collcat = 'T1' collnr='1'
+			band = 'gcp'
+			prefix = 'gcp'
+			pattern = 'GCP.txt'
+			measure = 'N'
+			folder = 'dnmeta'
+			fileext = 'txt'
+			required = 'Y'
+		>
+	</process>
+	
+	<process processid ='landsatmetatemplate' version ='1.3'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<parameters source ='LT05' product = 'L1TP' subtype='T' collcat = 'T1' collnr='1'
+			band = 'ver'
+			prefix = 'ver'
+			pattern = 'VER.txt'
+			measure = 'N'
+			folder = 'dnmeta'
+			fileext = 'txt'
+			required = 'Y'
+		>
+	</process>
+</landsattemplate>

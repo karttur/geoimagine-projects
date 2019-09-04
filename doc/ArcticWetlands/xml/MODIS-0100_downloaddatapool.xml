@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<downloadMODIS>	
+	<userproj userid = 'karttur' projectid = 'karttur-arcticdem' tractid= 'karttur-arcticdem' siteid = '*' plotid = '*' system = 'modis'></userproj>
+	<period startyear = "2013" endyear = "2018" timestep='16D'></period>
+			
+	<process processid ='downloadModisRegionTiles' version = '1.3'>
+		<parameters remoteuser= 'Gumbricht' product='MCD43A4' version='006' asscript='True'> </parameters>
+		<dstpath volume = "arctic"></dstpath>
+    </process>
+	
+</downloadMODIS>

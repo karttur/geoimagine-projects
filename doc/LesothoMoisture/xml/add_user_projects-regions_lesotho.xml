@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<manageprocess>	
+	<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'system'></userproj>
+
+	<!-- Manage user project -->
+	<process processid ='ManageDefRegProj'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<parameters defaultregion = 'ls' 
+		tractid = 'karttur-lesotho' 
+		tractname = 'karttur Lesotho' 
+		projid = 'karttur-lesotho' 
+		projname = 'karttur Lesotho'>
+		<tracttitle>Karttur Lesotho</tracttitle>
+		<tractlabel>Karttur Lesotho</tractlabel>
+		<projtitle>Karttur Lesotho</projtitle>
+		<projlabel>Karttur Lesotho</projlabel>
+		</parameters>
+	</process>
+	
+
+	
+</manageprocess>	
+

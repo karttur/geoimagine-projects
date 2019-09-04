@@ -1,0 +1,31 @@
+###################################
+###################################
+###           Layouts           ###
+###################################
+###################################
+
+## default palettes
+defaultpalettes_v80.xml
+
+## palette_mirrorlag12*2 ##
+#palette_mirrorlag12*2.xml
+
+## scaling_mirrorlag12*2 ##
+#scaling_mirrorlag12*2.xml
+
+## palette_mirrorlag6*2 (version2)
+#palette_mirrorlag6*2.xml
+
+## TRMM scaling
+#TRMM-0001_createscaling.xml
+
+## TRMM legends
+TRMM-0003_createlegend.xml
+
+## SMAP scaling
+## Lost in translation
+#createscaling_SMAP_v80.xml
+
+## GRACE legend ##
+#GRACE-0003_createlegends.xml
+

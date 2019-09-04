@@ -1,0 +1,53 @@
+##### TRMM TRANSFER #####
+
+### 0 Set layout ###
+
+# 0.0 Create scaling
+#TRMM000_createscaling_v80.xml
+
+# 0.0 Create palette
+#TRMM000_createpalettes_v80.xml
+
+# 0.0 Create movieclock
+#TRMM000_addmovieclock.xml
+
+### 1 Transfer composition ###
+
+# 1.3 Update db
+TRMM013_updatedb_v80.xml
+
+### 2 Resample to annual precipitation ###
+
+# 2.1 resample TRMM to annual
+#TRMM021_resample-2-annual_v80.xml
+
+### 3 Calculate annual trend and trend significance ###
+
+# 3.1 Annual trend TRMM
+#TRMM031_trend_A_v80.xml
+
+# 3.2 Regions with significant trends
+#TRMM032_significant_changes_v80.xml
+
+### 5 Export ###
+
+# 5.0 Export
+# Export monthly TRMM
+#TRMM050_ExporttoByte_M_v80.xml
+# Export statistical TRMM
+#TRRM050_ExporttoByte_timespanA_v80.xml
+
+# 5.5 Create movieframes
+# For fully automated processing you need to set parameter "asscript" to False
+#TRMM055_movieframes_M_v80.xml
+#If you set the parameter "asscript" to True (= default),
+#you have to execute the shell script file reported by the process
+#"volume"/movieclock/export/trmm/region/rainfall/trmm/movieframes/movieframes_trmm-3b43v7-precip.sh
+
+#Create movieclock
+# For fully automated processing you need to set parameter "asscript" to False
+#TRMM056_movieclock_M_v80.xml
+#If you set the parameter "asscript" to True (= default),
+#you have to execute the shell script file reported by the process
+#"volume"/movieclock/export/trmm/region/rainfall/trmm/frames/frame_trmm-3b43v7-precip.sh
+#"volume"/movieclock/export/trmm/region/rainfall/trmm/movie/movie_trmm-3b43v7-precip.sh

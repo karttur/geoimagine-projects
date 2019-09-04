@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<palette>
+    <userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'system'></userproj>
+    <process processid = 'addrasterpalette'>
+        <parameters palette = 'lag6mirror-v2' compid='test'>
+            <setcolor id = '1' red = '128' green ='0' blue='64' alpha ='0' label='NA' hint='' ></setcolor>
+            <setcolor id = '2' red = '191' green ='0' blue='32' alpha ='0' label='NA' hint='' ></setcolor>
+            <setcolor id = '3' red = '255' green ='0' blue='0' alpha ='0' label='NA' hint='' ></setcolor>
+            <setcolor id = '4' red = '255' green ='63' blue='0' alpha ='0' label='NA' hint='' ></setcolor>
+            <setcolor id = '5' red = '255' green ='127' blue='0' alpha ='0' label='NA' hint='' ></setcolor>
+            <setcolor id = '6' red = '255' green ='191' blue='0' alpha ='0' label='NA' hint='' ></setcolor>
+            <setcolor id = '7' red = '255' green ='255' blue='0' alpha ='0' label='NA' hint='' ></setcolor>
+            <setcolor id = '8' red = '191' green ='191' blue='63' alpha ='0' label='NA' hint='' ></setcolor>
+            <setcolor id = '9' red = '127' green ='127' blue='127' alpha ='0' label='NA' hint='' ></setcolor>
+            <setcolor id = '10' red = '63' green ='63' blue='191' alpha ='0' label='NA' hint='' ></setcolor>
+            <setcolor id = '11' red = '0' green ='0' blue='255' alpha ='0' label='NA' hint='' ></setcolor>
+            <setcolor id = '12' red = '32' green ='0' blue='191' alpha ='0' label='NA' hint='' ></setcolor>
+            <setcolor id = '13' red = '64' green ='0' blue='128' alpha ='0' label='NA' hint='' ></setcolor>
+            	
+            <setcolor id = '253' red = '245' green ='237' blue='182' alpha ='0' label='NA' hint='' ></setcolor>
+            <setcolor id = '254' red = '32' green ='32' blue='32' alpha ='0' label='NA' hint='' ></setcolor>
+            <setcolor id = '255' red = '0' green ='0' blue='0' alpha ='0' label='NA' hint='' ></setcolor>
+        </parameters>
+    </process>
+</palette>

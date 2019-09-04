@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LandsatProc>	
+	<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'landsat'></userproj>
+	<period startyear = "1992" endyear = "2019" timestep='allscenes'></period>
+
+	<process processid ='dbupdateLandsatSingleScene' dsversion = '1.3'>
+		<parameters wrspath='19' wrsrow='49' proccat='DN'
+		toasuffix ='eemeta'
+		reflsuffix='eemeta'
+		srfisuffix='eemeta'
+		emissuffix='eemeta'
+		decloudsuffix=''
+		tercorsuffix=''
+		>
+		</parameters>
+		<srcpath volume = "guatemala" hdrfiletype = 'gz' ></srcpath>	
+		<dstpath volume = "guatemala" hdrfiletype = 'tif' ></dstpath>	
+	</process>
+	
+	<process processid ='dbupdateLandsatSingleScene' dsversion = '1.3'>
+		<parameters wrspath='19' wrsrow='50' proccat='DN'
+		toasuffix ='eemeta'
+		reflsuffix='eemeta'
+		srfisuffix='eemeta'
+		emissuffix='eemeta'
+		decloudsuffix=''
+		tercorsuffix=''
+		>
+		</parameters>
+		<srcpath volume = "guatemala" hdrfiletype = 'gz' ></srcpath>	
+		<dstpath volume = "guatemala" hdrfiletype = 'tif' ></dstpath>	
+	</process>
+	
+	<process processid ='dbupdateLandsatSingleScene' dsversion = '1.3'>
+		<parameters wrspath='20' wrsrow='49' proccat='DN'
+		toasuffix ='eemeta'
+		reflsuffix='eemeta'
+		srfisuffix='eemeta'
+		emissuffix='eemeta'
+		decloudsuffix=''
+		tercorsuffix=''
+		>
+		</parameters>
+		<srcpath volume = "guatemala" hdrfiletype = 'gz' ></srcpath>	
+		<dstpath volume = "guatemala" hdrfiletype = 'tif' ></dstpath>	
+	</process>
+	
+	<process processid ='dbupdateLandsatSingleScene' dsversion = '1.3'>
+		<parameters wrspath='20' wrsrow='50' proccat='DN'
+		toasuffix ='eemeta'
+		reflsuffix='eemeta'
+		srfisuffix='eemeta'
+		emissuffix='eemeta'
+		decloudsuffix=''
+		tercorsuffix=''
+		>
+		</parameters>
+		<srcpath volume = "guatemala" hdrfiletype = 'gz' ></srcpath>	
+		<dstpath volume = "guatemala" hdrfiletype = 'tif' ></dstpath>	
+	</process>
+	
+</LandsatProc>
+

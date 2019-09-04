@@ -1,0 +1,1816 @@
+<?xml version='1.0' encoding='utf-8'?>
+<landsattemplate>
+	<userproject userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system='system'></userproject>
+	<path></path>
+	<!-- landsatscenetemplate  -->_cfmask.tif_cfmask.tif
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='*' typeid = 'LPGS' subtype='A' L1type = '*' collection = '*' tier='*'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<measure>I</measure>
+		<scenenameform>LXSS_LLLL_ppprrr_YYYYMMDD_yyyymmdd_CC_TX.tar.gz</scenenameform>
+		<basenameform>LXSS_LLLL_ppprrr_YYYYMMDD_yyyymmdd_CC_TX</basenameform>
+		<scenecompstr>L?0?_L1??_??????_????????_????????_??_T?.tar.gz</scenecompstr>
+		<basecompstr>L?0?_L1??_??????_????????_????????_??_T?</basecompstr>
+		<archive>USGScollL1v2016</archive>
+		</parameters>
+	</process>
+
+	<!-- landsatscenetemplate  -->
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LC8' typeid = 'LC8SR' subtype='A' L1type = 'L1T' collection = 'PC' tier='FF'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>reflectance</dataunit>
+		<measure>R</measure>
+		<scenenameform>LC8ppprrryyyydoy-SCproddatennnnnn.tar.gz</scenenameform>
+		<basenameform>LC8ppprrryyyydoy-SCproddatennnnnn</basenameform>
+		<scenecompstr>LC8?????????????-SC??????????????.tar.gz</scenecompstr>
+		<basecompstr>LC8?????????????-SC??????????????</basecompstr>
+		<archive>USGScollL1v2016</archive>
+		</parameters>
+	</process>
+	
+	<!-- landsatbandtemplate -->
+	<process processid ='landsatbandtemplate' version ='1.3'>
+		<parameters sensat ='LC8' typeid = 'LC8SR' subtype='A'  scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>CB</band>
+		<prefix>CB-SRFI</prefix>
+		<pattern>_sr_band1.tif</pattern>
+		<measure>R</measure>
+		<dataunit>reflectance</dataunit>
+		<celltype>Int16</celltype>
+		<folder>SRFI</folder>
+		<fileext>tif</fileext>
+		<required>Y</required>
+		</parameters>
+	</process>
+		
+	<!-- landsatbandtemplate -->
+	<process processid ='landsatbandtemplate' version ='1.3'>
+		<parameters sensat ='LC8' typeid = 'LC8SR' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>BL</band> 
+		<prefix>BL-SRFI</prefix>
+		<pattern>_sr_band2.tif</pattern>
+		<measure>R</measure>
+		<dataunit>reflectance</dataunit>
+		<celltype>Int16</celltype>
+		<folder>SRFI</folder>
+		<fileext>tif</fileext>
+		<required>Y</required>
+		</parameters>
+	</process>	
+	<!-- landsatbandtemplate -->
+	<process processid ='landsatbandtemplate' version ='1.3'>
+		<parameters sensat ='LC8' typeid = 'LC8SR' subtype='A'  scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>GL</band>
+		<prefix>GL-SRFI</prefix>
+		<pattern>_sr_band3.tif</pattern>
+		<measure>R</measure>
+		<dataunit>reflectance</dataunit>
+		<celltype>Int16</celltype>
+		<folder>SRFI</folder>
+		<fileext>tif</fileext>
+		<required>Y</required>
+		</parameters>
+	</process>	
+	<!-- landsatbandtemplate -->
+	<process processid ='landsatbandtemplate' version ='1.3'>
+		<parameters sensat ='LC8' typeid = 'LC8SR' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>RL</band> 
+		<prefix>RL-SRFI</prefix>
+		<pattern>_sr_band4.tif</pattern>
+		<measure>R</measure>
+		<dataunit>reflectance</dataunit>
+		<celltype>Int16</celltype>
+		<folder>SRFI</folder>
+		<fileext>tif</fileext>
+		<required>Y</required>
+		</parameters>
+	</process>	
+	<!-- landsatbandtemplate -->
+	<process processid ='landsatbandtemplate' version ='1.3'>
+		<parameters sensat ='LC8' typeid = 'LC8SR' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>NA</band> 
+		<prefix>NA-SRFI</prefix>
+		<pattern>_sr_band5.tif</pattern>
+		<measure>R</measure>
+		<dataunit>reflectance</dataunit>
+		<celltype>Int16</celltype>
+		<folder>SRFI</folder>
+		<fileext>tif</fileext>
+		<required>Y</required>
+		</parameters>
+	</process>	
+	<!-- landsatbandtemplate -->
+	<process processid ='landsatbandtemplate' version ='1.3'>
+		<parameters sensat ='LC8' typeid = 'LC8SR' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>MB</band> 
+		<prefix>MB-SRFI</prefix>
+		<pattern>_sr_band6.tif</pattern>
+		<measure>R</measure>
+		<dataunit>reflectance</dataunit>
+		<celltype>Int16</celltype>
+		<folder>SRFI</folder>
+		<fileext>tif</fileext>
+		<required>Y</required>
+		</parameters>
+	</process>
+	<!-- landsatbandtemplate -->
+	<process processid ='landsatbandtemplate' version ='1.3'>
+		<parameters sensat ='LC8' typeid = 'LC8SR' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>MC</band> 
+		<prefix>MC-SRFI</prefix>
+		<pattern>_sr_band7.tif</pattern>
+		<measure>R</measure>
+		<dataunit>reflectance</dataunit>
+		<celltype>Int16</celltype>
+		<folder>SRFI</folder>
+		<fileext>tif</fileext>
+		<required>Y</required>
+		</parameters>
+	</process>
+	
+	<!-- landsatsupporttemplate -->
+	<process processid ='landsatsupporttemplate' version ='1.3'>
+		<parameters sensat ='LC8' typeid = 'LC8SR' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>cfmask</band>
+		<prefix>cfmask</prefix>
+		<pattern>_cfmask.tif</pattern>
+		<measure>N</measure>
+		<dataunit>NA</dataunit>
+		<celltype>Byte</celltype>
+		<folder>mask</folder>
+		<fileext>tif</fileext>
+		<required>Y</required>
+		</parameters>
+	</process>
+	
+	<!-- landsatsupporttemplate -->
+	<process processid ='landsatsupporttemplate' version ='1.3' scalefac = '0.0001' offsetadd='0'>
+		<parameters sensat ='LC8' typeid = 'LC8SR' subtype='A'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>cfmaskconf</band> 
+		<prefix>cfmaskconf</prefix>
+		<pattern>_cfmask_conf.tif</pattern>
+		<measure>N</measure>
+		<dataunit>NA</dataunit>
+		<celltype>Byte</celltype>
+		<folder>no</folder>
+		<fileext>tif</fileext>
+		<required>N</required>
+		</parameters>
+	</process>
+	
+	<!-- landsatsupporttemplate -->
+	<process processid ='landsatsupporttemplate' version ='1.3'>
+		<parameters sensat ='LC8' typeid = 'LC8SR' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>cloud</band> 
+		<prefix>cloud</prefix>
+		<pattern>_sr_cloud.tif</pattern>
+		<measure>N</measure>
+		<dataunit>NA</dataunit>
+		<celltype>Byte</celltype>
+		<folder>no</folder>
+		<fileext>tif</fileext>
+		<required>N</required>
+		</parameters>
+	</process>
+	
+	<!-- landsatmetatemplate -->
+	<process processid ='landsatmetatemplate' version ='1.3'>
+		<parameters sensat ='LC8' typeid = 'LC8SR' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>xml</band>
+		<prefix>xml</prefix>
+		<pattern>.xml</pattern>
+		<measure>N</measure>
+		<dataunit>NA</dataunit>
+		<folder>meta</folder>
+		<fileext>xml</fileext>
+		<required>Y</required>
+		</parameters>
+	</process>
+	
+	
+	<!-- landsatscenetemplate  -->
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7SR' subtype='A' L1type = 'L1T' collection = 'PC' tier='FF'  scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>reflectance</dataunit>
+		<scenenameform>LE7ppprrryyyydoy-SC2proddatennnnnn.tar.gz</scenenameform>
+		<basenameform>LE7ppprrryyyydoySTN0x</basenameform>
+		<scenecompstr>LE7?????????????-SC2??????????????.tar.gz</scenecompstr>
+		<basecompstr>LE7????????????????0?</basecompstr>
+		<archive>USGScollL1v2016</archive>
+		</parameters>
+	</process>
+			
+	<!-- landsatbandtemplate -->
+	<process processid ='landsatbandtemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7SR' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>BL</band> 
+		<prefix>BL-SRFI</prefix>
+		<pattern>_sr_band1.tif</pattern>
+		<measure>R</measure>
+		<dataunit>reflectance</dataunit>
+		<celltype>Int16</celltype>
+		<folder>SRFI</folder>
+		<fileext>tif</fileext>
+		<required>Y</required>
+		</parameters>
+	</process>	
+	<!-- landsatbandtemplate -->
+	<process processid ='landsatbandtemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7SR' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>GL</band>
+		<prefix>GL-SRFI</prefix> 
+		<pattern>_sr_band2.tif</pattern>
+		<measure>R</measure>
+		<dataunit>reflectance</dataunit>
+		<celltype>Int16</celltype>
+		<folder>SRFI</folder>
+		<fileext>tif</fileext>
+		<required>Y</required>
+		</parameters>
+	</process>	
+	<!-- landsatbandtemplate -->
+	<process processid ='landsatbandtemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7SR' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>RL</band> 
+		<prefix>RL-SRFI</prefix>
+		<pattern>_sr_band3.tif</pattern>
+		<measure>R</measure>
+		<dataunit>reflectance</dataunit>
+		<celltype>Int16</celltype>
+		<folder>SRFI</folder>
+		<fileext>tif</fileext>
+		<required>Y</required>
+		</parameters>
+	</process>	
+	<!-- landsatbandtemplate -->
+	<process processid ='landsatbandtemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7SR' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>NA</band> 
+		<prefix>NA-SRFI</prefix>
+		<pattern>_sr_band4.tif</pattern>
+		<measure>R</measure>
+		<dataunit>reflectance</dataunit>
+		<celltype>Int16</celltype>
+		<folder>SRFI</folder>
+		<fileext>tif</fileext>
+		<required>Y</required>
+		</parameters>
+	</process>	
+	<!-- landsatbandtemplate -->
+	<process processid ='landsatbandtemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7SR' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>MB</band> 
+		<prefix>MB-SRFI</prefix>
+		<pattern>_sr_band5.tif</pattern>
+		<measure>R</measure>
+		<dataunit>reflectance</dataunit>
+		<celltype>Int16</celltype>
+		<folder>SRFI</folder>
+		<fileext>tif</fileext>
+		<required>Y</required>
+		</parameters>
+	</process>
+	<!-- landsatbandtemplate -->
+	<process processid ='landsatbandtemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7SR' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>MC</band> 
+		<prefix>MC-SRFI</prefix>
+		<pattern>_sr_band7.tif</pattern>
+		<measure>R</measure>
+		<dataunit>reflectance</dataunit>
+		<celltype>Int16</celltype>
+		<folder>SRFI</folder>
+		<fileext>tif</fileext>
+		<required>Y</required>
+		</parameters>
+	</process>
+	
+	<!-- landsatsupporttemplate -->
+	<process processid ='landsatsupporttemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7SR' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>cfmask</band>
+		<prefix>cfmask</prefix> 
+		<pattern>_cfmask.tif</pattern>
+		<measure>N</measure>
+		<dataunit>NA</dataunit>
+		<celltype>Byte</celltype>
+		<folder>mask</folder>
+		<fileext>tif</fileext>
+		<required>Y</required>
+		</parameters>
+	</process>
+	
+	<!-- landsatsupporttemplate -->
+	<process processid ='landsatsupporttemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7SR' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>cfmaskconf</band> 
+		<prefix>_cfmask_conf</prefix>
+		<pattern>_cfmask_conf.tif</pattern>
+		<measure>N</measure>
+		<dataunit>NA</dataunit>
+		<celltype>Byte</celltype>
+		<folder>no</folder>
+		<fileext>tif</fileext>
+		<required>N</required>
+		</parameters>
+	</process>
+
+	<!-- landsatsupporttemplate -->
+	<process processid ='landsatsupporttemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7SR' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>ddv-qa</band> 
+		<prefix>ddv-qa</prefix>
+		<pattern>_sr_ddv_qa.tif</pattern>
+		<measure>N</measure>
+		<dataunit>NA</dataunit>
+		<celltype>Byte</celltype>
+		<folder>no</folder>
+		<fileext>tif</fileext>
+		<required>N</required>
+		</parameters>
+	</process>
+
+	<!-- landsatsupporttemplate -->
+	<process processid ='landsatsupporttemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7SR' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>atmos-opacity</band> 
+		<prefix>atmos-opacity</prefix>
+		<pattern>_sr_atmos_opacity.tif</pattern>
+		<measure>N</measure>
+		<dataunit>NA</dataunit>
+		<celltype>Byte</celltype>
+		<folder>no</folder>
+		<fileext>tif</fileext>
+		<required>N</required>
+		</parameters>
+	</process>
+	
+	<!-- landsatsupporttemplate -->
+	<process processid ='landsatsupporttemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7SR' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>adj-cloud-qa</band> 
+		<prefix>adj-cloud-qa</prefix>
+		<pattern>_sr_adjacent_cloud_qa.tif</pattern>
+		<measure>N</measure>
+		<dataunit>NA</dataunit>
+		<celltype>Byte</celltype>
+		<folder>no</folder>
+		<fileext>tif</fileext>
+		<required>N</required>
+		</parameters>
+	</process>
+
+	<!-- landsatsupporttemplate -->
+	<process processid ='landsatsupporttemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7SR' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>fill-qa</band> 
+		<prefix>fill-qa</prefix>
+		<pattern>_sr_fill_qa.tif</pattern>
+		<measure>N</measure>
+		<dataunit>NA</dataunit>
+		<celltype>Byte</celltype>
+		<folder>no</folder>
+		<fileext>tif</fileext>
+		<required>N</required>
+		</parameters>
+	</process>
+	
+	<!-- landsatsupporttemplate -->
+	<process processid ='landsatsupporttemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7SR' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>land-water-qa</band> 
+		<prefix>land-water-qa</prefix>
+		<pattern>_sr_land_water_qa.tif</pattern>
+		<measure>N</measure>
+		<dataunit>NA</dataunit>
+		<celltype>Byte</celltype>
+		<folder>no</folder>
+		<fileext>tif</fileext>
+		<required>N</required>
+		</parameters>
+	</process>
+	
+	<!-- landsatsupporttemplate -->
+	<process processid ='landsatsupporttemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7SR' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>cloud-shadow-qa</band> 
+		<prefix>cloud-shadow-qa</prefix>
+		<pattern>_sr_cloud_shadow_qa.tif</pattern>
+		<measure>N</measure>
+		<dataunit>NA</dataunit>
+		<celltype>Byte</celltype>
+		<folder>no</folder>
+		<fileext>tif</fileext>
+		<required>N</required>
+		</parameters>
+	</process>
+	
+	<!-- landsatsupporttemplate -->
+	<process processid ='landsatsupporttemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7SR' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>snow-qa</band> 
+		<prefix>snow-qa</prefix>
+		<pattern>_sr_snow_qa.tif</pattern>
+		<measure>N</measure>
+		<dataunit>NA</dataunit>
+		<celltype>Byte</celltype>
+		<folder>no</folder>
+		<fileext>tif</fileext>
+		<required>N</required>
+		</parameters>
+	</process>
+	
+	<!-- landsatsupporttemplate -->
+	<process processid ='landsatsupporttemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7SR' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>cloud-qa</band> 
+		<prefix>cloud-qa</prefix>
+		<pattern>_sr_cloud_qa.tif</pattern>
+		<measure>N</measure>
+		<dataunit>NA</dataunit>
+		<celltype>Byte</celltype>
+		<folder>no</folder>
+		<fileext>tif</fileext>
+		<required>N</required>
+		</parameters>
+	</process>
+	
+	<!-- landsatmetatemplate -->
+	<process processid ='landsatmetatemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7SR' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>xml</band>
+		<prefix>xml</prefix> 
+		<pattern>.xml</pattern>
+		<dataunit>NA</dataunit>
+		<measure>N</measure>
+		<folder>meta</folder>
+		<fileext>xml</fileext>
+		<required>Y</required>
+		</parameters>
+	</process>
+	
+	<!-- landsatscenetemplate  -->
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7SR' subtype='B' L1type = 'L1T' collection = 'PC' tier='FF'  scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>reflectance</dataunit>
+		<scenenameform>LE7ppprrryyyydoy-SCproddatennnnnn.tar.gz</scenenameform>
+		<basenameform>LE7ppprrryyyydoySTN0x</basenameform>
+		<scenecompstr>LE7?????????????-SC??????????????.tar.gz</scenecompstr>
+		<basecompstr>LE7????????????????0?</basecompstr>
+		<archive>USGScollL1v2016</archive>
+		</parameters>
+	</process>
+		
+	<!-- landsatbandtemplate -->
+	<process processid ='landsatbandtemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7SR' subtype='B' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>BL</band> 
+		<prefix>BL-SRFI</prefix>
+		<pattern>_sr_band1.tif</pattern>
+		<measure>R</measure>
+		<dataunit>reflectance</dataunit>
+		<celltype>Int16</celltype>
+		<folder>SRFI</folder>
+		<fileext>tif</fileext>
+		<required>Y</required>
+		</parameters>
+	</process>	
+	<!-- landsatbandtemplate -->
+	<process processid ='landsatbandtemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7SR' subtype='B' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>GL</band>
+		<prefix>GL-SRFI</prefix> 
+		<pattern>_sr_band2.tif</pattern>
+		<measure>R</measure>
+		<dataunit>reflectance</dataunit>
+		<celltype>Int16</celltype>
+		<folder>SRFI</folder>
+		<fileext>tif</fileext>
+		<required>Y</required>
+		</parameters>
+	</process>	
+	<!-- landsatbandtemplate -->
+	<process processid ='landsatbandtemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7SR' subtype='B' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>RL</band> 
+		<prefix>RL-SRFI</prefix>
+		<pattern>_sr_band3.tif</pattern>
+		<measure>R</measure>
+		<dataunit>reflectance</dataunit>
+		<celltype>Int16</celltype>
+		<folder>SRFI</folder>
+		<fileext>tif</fileext>
+		<required>Y</required>
+		</parameters>
+	</process>	
+	<!-- landsatbandtemplate -->
+	<process processid ='landsatbandtemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7SR' subtype='B' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>NA</band> 
+		<prefix>NA-SRFI</prefix>
+		<pattern>_sr_band4.tif</pattern>
+		<measure>R</measure>
+		<dataunit>reflectance</dataunit>
+		<celltype>Int16</celltype>
+		<folder>SRFI</folder>
+		<fileext>tif</fileext>
+		<required>Y</required>
+		</parameters>
+	</process>	
+	<!-- landsatbandtemplate -->
+	<process processid ='landsatbandtemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7SR' subtype='B' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>MB</band> 
+		<prefix>MB-SRFI</prefix>
+		<pattern>_sr_band5.tif</pattern>
+		<measure>R</measure>
+		<dataunit>reflectance</dataunit>
+		<celltype>Int16</celltype>
+		<folder>SRFI</folder>
+		<fileext>tif</fileext>
+		<required>Y</required>
+		</parameters>
+	</process>
+	
+	<!-- landsatbandtemplate -->
+	<process processid ='landsatbandtemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7SR' subtype='B' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>MC</band> 
+		<prefix>MC-SRFI</prefix>
+		<pattern>_sr_band7.tif</pattern>
+		<measure>R</measure>
+		<dataunit>reflectance</dataunit>
+		<celltype>Int16</celltype>
+		<folder>SRFI</folder>
+		<fileext>tif</fileext>
+		<required>Y</required>
+		</parameters>
+	</process>
+	
+	<!-- landsatsupporttemplate -->
+	<process processid ='landsatsupporttemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7SR' subtype='B' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>cfmask</band>
+		<prefix>cfmask</prefix> 
+		<pattern>_cfmask.tif</pattern>
+		<measure>N</measure>
+		<dataunit>NA</dataunit>
+		<celltype>Byte</celltype>
+		<folder>mask</folder>
+		<fileext>tif</fileext>
+		<required>Y</required>
+		</parameters>
+	</process>
+	
+	<!-- landsatsupporttemplate -->
+	<process processid ='landsatsupporttemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7SR' subtype='B' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>cfmaskconf</band> 
+		<prefix>_cfmask_conf</prefix>
+		<pattern>_cfmask_conf.tif</pattern>
+		<measure>N</measure>
+		<dataunit>NA</dataunit>
+		<celltype>Byte</celltype>
+		<folder>no</folder>
+		<fileext>tif</fileext>
+		<required>N</required>
+		</parameters>
+	</process>
+
+	<!-- landsatsupporttemplate -->
+	<process processid ='landsatsupporttemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7SR' subtype='B' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>ddv-qa</band> 
+		<prefix>ddv-qa</prefix>
+		<pattern>_sr_ddv_qa.tif</pattern>
+		<measure>N</measure>
+		<dataunit>NA</dataunit>
+		<celltype>Byte</celltype>
+		<folder>no</folder>
+		<fileext>tif</fileext>
+		<required>N</required>
+		</parameters>
+	</process>
+
+	<!-- landsatsupporttemplate -->
+	<process processid ='landsatsupporttemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7SR' subtype='B' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>atmos-opacity</band> 
+		<prefix>atmos-opacity</prefix>
+		<pattern>_sr_atmos_opacity.tif</pattern>
+		<measure>N</measure>
+		<dataunit>NA</dataunit>
+		<celltype>Byte</celltype>
+		<folder>no</folder>
+		<fileext>tif</fileext>
+		<required>N</required>
+		</parameters>
+	</process>
+	
+	<!-- landsatsupporttemplate -->
+	<process processid ='landsatsupporttemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7SR' subtype='B' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>adj-cloud-qa</band> 
+		<prefix>adj-cloud-qa</prefix>
+		<pattern>_sr_adjacent_cloud_qa.tif</pattern>
+		<measure>N</measure>
+		<dataunit>NA</dataunit>
+		<celltype>Byte</celltype>
+		<folder>no</folder>
+		<fileext>tif</fileext>
+		<required>N</required>
+		</parameters>
+	</process>
+
+	<!-- landsatsupporttemplate -->
+	<process processid ='landsatsupporttemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7SR' subtype='B' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>fill-qa</band> 
+		<prefix>fill-qa</prefix>
+		<pattern>_sr_fill_qa.tif</pattern>
+		<measure>N</measure>
+		<dataunit>NA</dataunit>
+		<celltype>Byte</celltype>
+		<folder>no</folder>
+		<fileext>tif</fileext>
+		<required>N</required>
+		</parameters>
+	</process>
+	
+	<!-- landsatsupporttemplate -->
+	<process processid ='landsatsupporttemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7SR' subtype='B' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>land-water-qa</band> 
+		<prefix>land-water-qa</prefix>
+		<pattern>_sr_land_water_qa.tif</pattern>
+		<measure>N</measure>
+		<dataunit>NA</dataunit>
+		<celltype>Byte</celltype>
+		<folder>no</folder>
+		<fileext>tif</fileext>
+		<required>N</required>
+		</parameters>
+	</process>
+	
+	<!-- landsatsupporttemplate -->
+	<process processid ='landsatsupporttemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7SR' subtype='B' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>cloud-shadow-qa</band> 
+		<prefix>cloud-shadow-qa</prefix>
+		<pattern>_sr_cloud_shadow_qa.tif</pattern>
+		<measure>N</measure>
+		<dataunit>NA</dataunit>
+		<celltype>Byte</celltype>
+		<folder>no</folder>
+		<fileext>tif</fileext>
+		<required>N</required>
+		</parameters>
+	</process>
+	
+	<!-- landsatsupporttemplate -->
+	<process processid ='landsatsupporttemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7SR' subtype='B' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>snow-qa</band> 
+		<prefix>snow-qa</prefix>
+		<pattern>_sr_snow_qa.tif</pattern>
+		<measure>N</measure>
+		<dataunit>NA</dataunit>
+		<celltype>Byte</celltype>
+		<folder>no</folder>
+		<fileext>tif</fileext>
+		<required>N</required>
+		</parameters>
+	</process>
+	
+	<!-- landsatsupporttemplate -->
+	<process processid ='landsatsupporttemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7SR' subtype='B' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>cloud-qa</band> 
+		<prefix>cloud-qa</prefix>
+		<pattern>_sr_cloud_qa.tif</pattern>
+		<measure>N</measure>
+		<dataunit>NA</dataunit>
+		<celltype>Byte</celltype>
+		<folder>no</folder>
+		<fileext>tif</fileext>
+		<required>N</required>
+		</parameters>
+	</process>
+	
+	<!-- landsatmetatemplate -->
+	<process processid ='landsatmetatemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7SR' subtype='B' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>xml</band>
+		<prefix>xml</prefix> 
+		<pattern>.xml</pattern>
+		<measure>N</measure>
+		<dataunit>NA</dataunit>
+		<folder>meta</folder>
+		<fileext>xml</fileext>
+		<required>Y</required>
+		</parameters>
+	</process>
+	
+	<!-- landsatmetatemplate -->
+	<process processid ='landsatmetatemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7SR' subtype='B' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>mtl</band>
+		<prefix>mtl</prefix> 
+		<pattern>_MTL.txt</pattern>
+		<measure>N</measure>
+		<dataunit>NA</dataunit>
+		<folder>meta</folder>
+		<fileext>txt</fileext>
+		<required>N</required>
+		</parameters>
+	</process>
+	
+	<!-- landsatmetatemplate -->
+	<process processid ='landsatmetatemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7SR' subtype='B' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>gcp</band>
+		<prefix>gcp</prefix> 
+		<pattern>_GCP.txt</pattern>
+		<measure>N</measure>
+		<dataunit>NA</dataunit>
+		<folder>meta</folder>
+		<fileext>txt</fileext>
+		<required>N</required>
+		</parameters>
+	</process>
+	
+	
+	<!-- landsatscenetemplate  -->
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7HDF' subtype='A' L1type = 'L1T' collection = 'PC' tier='FF'  scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>reflectance</dataunit>
+		<scenenameform>LE7ppprrryyyydoySTN0x-sr.tar.gz</scenenameform>
+		<basenameform>LE7ppprrryyyydoySTN0x</basenameform>
+		<scenecompstr>LE7????????????????0?-sr.tar.gz</scenecompstr>
+		<basecompstr>LE7????????????????0?</basecompstr>
+		<archive>USGScollL1v2016</archive>
+		</parameters>
+	</process>
+	
+
+	<!-- landsatbandtemplate -->
+	<process processid ='landsatbandtemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7HDF' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>BL</band> 
+		<prefix>BL-SRFI</prefix>
+		<pattern>lndcal.LE7????????????????0?.hdf</pattern>
+		<measure>R</measure>
+		<dataunit>reflectance</dataunit>
+		<hdfgrid>:Grid:band1</hdfgrid>
+		<celltype>Int16</celltype>
+		<folder>SRFI</folder>
+		<fileext>tif</fileext>
+		<required>Y</required>
+		</parameters>
+	</process>	
+	<!-- landsatbandtemplate -->
+	<process processid ='landsatbandtemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7HDF' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>GL</band>
+		<prefix>GL-SRFI</prefix>
+		<pattern>lndcal.LE7????????????????0?.hdf</pattern>
+		<measure>R</measure>
+		<dataunit>reflectance</dataunit>
+		<hdfgrid>:Grid:band2</hdfgrid>
+		<celltype>Int16</celltype>
+		<folder>SRFI</folder>
+		<fileext>tif</fileext>
+		<required>Y</required>
+		</parameters>
+	</process>	
+	<!-- landsatbandtemplate -->
+	<process processid ='landsatbandtemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7HDF' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>RL</band> 
+		<prefix>RL-SRFI</prefix>
+		<pattern>lndcal.LE7????????????????0?.hdf</pattern>
+		<measure>R</measure>
+		<dataunit>reflectance</dataunit>
+		<hdfgrid>:Grid:band3</hdfgrid>
+		<celltype>Int16</celltype>
+		<folder>SRFI</folder>
+		<fileext>tif</fileext>
+		<required>Y</required>
+		</parameters>
+	</process>	
+	<!-- landsatbandtemplate -->
+	<process processid ='landsatbandtemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7HDF' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>NA</band> 
+		<prefix>NA-SRFI</prefix>
+		<pattern>lndcal.LE7????????????????0?.hdf</pattern>
+		<dataunit>reflectance</dataunit>
+		<measure>R</measure>
+		<hdfgrid>:Grid:band4</hdfgrid>
+		<celltype>Int16</celltype>
+		<folder>SRFI</folder>
+		<fileext>tif</fileext>
+		<required>Y</required>
+		</parameters>
+	</process>	
+	<!-- landsatbandtemplate -->
+	<process processid ='landsatbandtemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7HDF' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>MB</band> 
+		<prefix>MB-SRFI</prefix>
+		<pattern>lndcal.LE7????????????????0?.hdf</pattern>
+		<dataunit>reflectance</dataunit>
+		<measure>R</measure>
+		<hdfgrid>:Grid:band5</hdfgrid>
+		<celltype>Int16</celltype>
+		<folder>SRFI</folder>
+		<fileext>tif</fileext>
+		<required>Y</required>
+		</parameters>
+	</process>
+	<!-- landsatbandtemplate -->
+	<process processid ='landsatbandtemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7HDF' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>MC</band> 
+		<prefix>MC-SRFI</prefix>
+		<pattern>lndcal.LE7????????????????0?.hdf</pattern>
+		<dataunit>reflectance</dataunit>
+		<measure>R</measure>
+		<hdfgrid>:Grid:band7</hdfgrid>
+		<celltype>Int16</celltype>
+		<folder>SRFI</folder>
+		<fileext>tif</fileext>
+		<required>Y</required>
+		</parameters>
+	</process>
+	<!-- landsatsupporttemplate -->
+	<process processid ='landsatbandtemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7HDF' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>mask</band> 
+		<prefix>mask</prefix>
+		<pattern>lndcal.LE7????????????????0?.hdf</pattern>
+		<dataunit>NA</dataunit>
+		<measure>N</measure>
+		<hdfgrid>:Grid:lndcal_QA</hdfgrid>
+		<celltype>Int16</celltype>
+		<folder>mask</folder>
+		<fileext>tif</fileext>
+		<required>Y</required>
+		</parameters>
+	</process>
+	
+	
+
+	<!-- landsatsupporttemplate -->
+	<process processid ='landsatsupporttemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7HDF' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>ddv-qa</band> 
+		<prefix>ddv-qa</prefix>
+		<pattern>lndsr.LE7????????????????0?.hdf</pattern>
+		<dataunit>NA</dataunit>
+		<measure>N</measure>
+		<hdfgrid>:Grid:DDV_QA</hdfgrid>
+		<celltype>Byte</celltype>
+		<folder>no</folder>
+		<fileext>tif</fileext>
+		<required>N</required>
+		</parameters>
+	</process>
+
+	<!-- landsatsupporttemplate -->
+	<process processid ='landsatsupporttemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7HDF' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>atmos-opacity</band> 
+		<prefix>atmos-opacity</prefix>
+		<pattern>lndsr.LE7????????????????0?.hdf</pattern>
+		<dataunit>NA</dataunit>
+		<measure>N</measure>
+		<hdfgrid>:Grid:atmos_opacity</hdfgrid>
+		<celltype>Byte</celltype>
+		<folder>no</folder>
+		<fileext>tif</fileext>
+		<required>N</required>
+		</parameters>
+	</process>
+	
+	<!-- landsatsupporttemplate -->
+	<process processid ='landsatsupporttemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7HDF' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>adj-cloud-qa</band> 
+		<prefix>adj-cloud-qa</prefix>
+		<pattern>lndsr.LE7????????????????0?.hdf</pattern>
+		<dataunit>NA</dataunit>
+		<measure>N</measure>
+		<hdfgrid>:Grid:adjacent_cloud_QA</hdfgrid>
+		<celltype>Byte</celltype>
+		<folder>mask</folder>
+		<fileext>tif</fileext>
+		<required>Y</required>
+		</parameters>
+	</process>
+
+	<!-- landsatsupporttemplate -->
+	<process processid ='landsatsupporttemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7HDF' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>fill-qa</band> 
+		<prefix>fill-qa</prefix>
+		<pattern>lndsr.LE7????????????????0?.hdf</pattern>
+		<dataunit>NA</dataunit>
+		<measure>N</measure>
+		<hdfgrid>:Grid:fill_QA</hdfgrid>
+		<celltype>Byte</celltype>
+		<folder>mask</folder>
+		<fileext>tif</fileext>
+		<required>Y</required>
+		</parameters>
+	</process>
+	
+	<!-- landsatsupporttemplate -->
+	<process processid ='landsatsupporttemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7HDF' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>land-water-qa</band> 
+		<prefix>land-water-qa</prefix>
+		<pattern>lndsr.LE7????????????????0?.hdf</pattern>
+		<dataunit>NA</dataunit>
+		<measure>N</measure>
+		<hdfgrid>:Grid:land_water_QA</hdfgrid>
+		<celltype>Byte</celltype>
+		<folder>no</folder>
+		<fileext>tif</fileext>
+		<required>N</required>
+		</parameters>
+	</process>
+	
+	<!-- landsatsupporttemplate -->
+	<process processid ='landsatsupporttemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7HDF' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>cloud-shadow-qa</band> 
+		<prefix>cloud-shadow-qa</prefix>
+		<pattern>lndsr.LE7????????????????0?.hdf</pattern>
+		<dataunit>NA</dataunit>
+		<measure>N</measure>
+		<hdfgrid>:Grid:cloud_shadow_QA</hdfgrid>
+		<celltype>Byte</celltype>
+		<folder>mask</folder>
+		<fileext>tif</fileext>
+		<required>Y</required>
+		</parameters>
+	</process>
+	
+	<!-- landsatsupporttemplate -->
+	<process processid ='landsatsupporttemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7HDF' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>snow-qa</band> 
+		<prefix>snow-qa</prefix>
+		<pattern>lndsr.LE7????????????????0?.hdf</pattern>
+		<dataunit>NA</dataunit>
+		<measure>N</measure>
+		<hdfgrid>:Grid:snow_QA</hdfgrid>
+		<celltype>Byte</celltype>
+		<folder>mask</folder>
+		<fileext>tif</fileext>
+		<required>Y</required>
+		</parameters>
+	</process>
+	
+	<!-- landsatsupporttemplate -->
+	<process processid ='landsatsupporttemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7HDF' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>cloud-qa</band> 
+		<prefix>cloud-qa</prefix>
+		<pattern>lndsr.LE7????????????????0?.hdf</pattern>
+		<dataunit>NA</dataunit>
+		<measure>N</measure>
+		<hdfgrid>:Grid:cloud_QA</hdfgrid>
+		<celltype>Byte</celltype>
+		<folder>mask</folder>
+		<fileext>tif</fileext>
+		<required>Y</required>
+		</parameters>
+	</process>	
+	
+	<!-- landsatmetatemplate -->
+	<process processid ='landsatmetatemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7HDF' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>meta</band>
+		<prefix>meta</prefix>
+		<pattern>.metadata.txt</pattern>
+		<dataunit>NA</dataunit>
+		<measure>N</measure>
+		<folder>meta</folder>
+		<fileext>txt</fileext>
+		<required>Y</required>
+		</parameters>
+	</process>
+	
+	<!-- landsatmetatemplate -->
+	<process processid ='landsatmetatemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7HDF' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>mtlold</band>
+		<prefix>mtlold</prefix>
+		<pattern>_MTLold.txt</pattern>
+		<dataunit>NA</dataunit>
+		<measure>N</measure>
+		<folder>meta</folder>
+		<fileext>txt</fileext>
+		<required>N</required>
+		</parameters>
+	</process>
+	
+	<!-- landsatscenetemplate  -->
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LT5' typeid = 'LT5SR' subtype='A' L1type = 'L1T' collection = 'PC' tier='FF'  scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>reflectance</dataunit>
+		<scenenameform>LT5ppprrryyyydoy-SCproddatennnnnn.tar.gz</scenenameform>
+		<basenameform>LT5ppprrryyyydoySTN0x</basenameform>
+		<scenecompstr>LT5?????????????-SC??????????????.tar.gz</scenecompstr>
+		<basecompstr>LT5????????????????0?</basecompstr>
+		<archive>USGScollL1v2016</archive>
+		</parameters>
+	</process>
+			
+	<!-- landsatbandtemplate -->
+	<process processid ='landsatbandtemplate' version ='1.3'>
+		<parameters sensat ='LT5' typeid = 'LT5SR' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>BL</band> 
+		<prefix>BL-SRFI</prefix>
+		<pattern>_sr_band1.tif</pattern>
+		<measure>R</measure>
+		<dataunit>reflectance</dataunit>
+		<celltype>Int16</celltype>
+		<folder>SRFI</folder>
+		<fileext>tif</fileext>
+		<required>Y</required>
+		</parameters>
+	</process>	
+	<!-- landsatbandtemplate -->
+	<process processid ='landsatbandtemplate' version ='1.3'>
+		<parameters sensat ='LT5' typeid = 'LT5SR' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>GL</band>
+		<prefix>GL-SRFI</prefix>
+		<pattern>_sr_band2.tif</pattern>
+		<measure>R</measure>
+		<dataunit>reflectance</dataunit>
+		<celltype>Int16</celltype>
+		<folder>SRFI</folder>
+		<fileext>tif</fileext>
+		<required>Y</required>
+		</parameters>
+	</process>	
+	<!-- landsatbandtemplate -->
+	<process processid ='landsatbandtemplate' version ='1.3'>
+		<parameters sensat ='LT5' typeid = 'LT5SR' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>RL</band> 
+		<prefix>RL-SRFI</prefix>
+		<pattern>_sr_band3.tif</pattern>
+		<measure>R</measure>
+		<dataunit>reflectance</dataunit>
+		<celltype>Int16</celltype>
+		<folder>SRFI</folder>
+		<fileext>tif</fileext>
+		<required>Y</required>
+		</parameters>
+	</process>	
+	<!-- landsatbandtemplate -->
+	<process processid ='landsatbandtemplate' version ='1.3'>
+		<parameters sensat ='LT5' typeid = 'LT5SR' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>NA</band> 
+		<prefix>NA-SRFI</prefix>
+		<pattern>_sr_band4.tif</pattern>
+		<measure>R</measure>
+		<dataunit>reflectance</dataunit>
+		<celltype>Int16</celltype>
+		<folder>SRFI</folder>
+		<fileext>tif</fileext>
+		<required>Y</required>
+		</parameters>
+	</process>	
+	<!-- landsatbandtemplate -->
+	<process processid ='landsatbandtemplate' version ='1.3'>
+		<parameters sensat ='LT5' typeid = 'LT5SR' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>MB</band> 
+		<prefix>MB-SRFI</prefix>
+		<pattern>_sr_band5.tif</pattern>
+		<measure>R</measure>
+		<dataunit>reflectance</dataunit>
+		<celltype>Int16</celltype>
+		<folder>SRFI</folder>
+		<fileext>tif</fileext>
+		<required>Y</required>
+		</parameters>
+	</process>
+	<!-- landsatbandtemplate -->
+	<process processid ='landsatbandtemplate' version ='1.3'>
+		<parameters sensat ='LT5' typeid = 'LT5SR' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>MC</band> 
+		<prefix>MC-SRFI</prefix>
+		<pattern>_sr_band7.tif</pattern>
+		<measure>R</measure>
+		<dataunit>reflectance</dataunit>
+		<celltype>Int16</celltype>
+		<folder>SRFI</folder>
+		<fileext>tif</fileext>
+		<required>Y</required>
+		</parameters>
+	</process>
+	
+	<!-- landsatsupporttemplate -->
+	<process processid ='landsatsupporttemplate' version ='1.3'>
+		<parameters sensat ='LT5' typeid = 'LT5SR' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>cfmask</band>
+		<prefix>cfmask</prefix> 
+		<pattern>_cfmask.tif</pattern>
+		<measure>N</measure>
+		<dataunit>NA</dataunit>
+		<celltype>Byte</celltype>
+		<folder>mask</folder>
+		<fileext>tif</fileext>
+		<required>Y</required>
+		</parameters>
+	</process>
+	
+	<!-- landsatsupporttemplate -->
+	<process processid ='landsatsupporttemplate' version ='1.3'>
+		<parameters sensat ='LT5' typeid = 'LT5SR' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>cfmaskconf</band> 
+		<prefix>_cfmask_conf</prefix>
+		<pattern>_cfmask_conf.tif</pattern>
+		<measure>N</measure>
+		<dataunit>NA</dataunit>
+		<celltype>Byte</celltype>
+		<folder>no</folder>
+		<fileext>tif</fileext>
+		<required>N</required>
+		</parameters>
+	</process>
+
+	<!-- landsatsupporttemplate -->
+	<process processid ='landsatsupporttemplate' version ='1.3'>
+		<parameters sensat ='LT5' typeid = 'LT5SR' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>ddv-qa</band> 
+		<prefix>ddv-qa</prefix>
+		<pattern>_sr_ddv_qa.tif</pattern>
+		<measure>N</measure>
+		<dataunit>NA</dataunit>
+		<celltype>Byte</celltype>
+		<folder>no</folder>
+		<fileext>tif</fileext>
+		<required>N</required>
+		</parameters>
+	</process>
+
+	<!-- landsatsupporttemplate -->
+	<process processid ='landsatsupporttemplate' version ='1.3'>
+		<parameters sensat ='LT5' typeid = 'LT5SR' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>atmos-opacity</band> 
+		<prefix>atmos-opacity</prefix>
+		<measure>N</measure>
+		<dataunit>NA</dataunit>
+		<pattern>_sr_atmos_opacity.tif</pattern>
+		<celltype>Byte</celltype>
+		<folder>no</folder>
+		<fileext>tif</fileext>
+		<required>N</required>
+		</parameters>
+	</process>
+	
+	<!-- landsatsupporttemplate -->
+	<process processid ='landsatsupporttemplate' version ='1.3'>
+		<parameters sensat ='LT5' typeid = 'LT5SR' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>adj-cloud-qa</band> 
+		<prefix>adj-cloud-qa</prefix>
+		<pattern>_sr_adjacent_cloud_qa.tif</pattern>
+		<measure>N</measure>
+		<dataunit>NA</dataunit>
+		<celltype>Byte</celltype>
+		<folder>no</folder>
+		<fileext>tif</fileext>
+		<required>N</required>
+		</parameters>
+	</process>
+
+	<!-- landsatsupporttemplate -->
+	<process processid ='landsatsupporttemplate' version ='1.3'>
+		<parameters sensat ='LT5' typeid = 'LT5SR' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>fill-qa</band> 
+		<prefix>fill-qa</prefix>
+		<pattern>_sr_fill_qa.tif</pattern>
+		<measure>N</measure>
+		<dataunit>NA</dataunit>
+		<celltype>Byte</celltype>
+		<folder>no</folder>
+		<fileext>tif</fileext>
+		<required>N</required>
+		</parameters>
+	</process>
+	
+	<!-- landsatsupporttemplate -->
+	<process processid ='landsatsupporttemplate' version ='1.3'>
+		<parameters sensat ='LT5' typeid = 'LT5SR' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>land-water-qa</band> 
+		<prefix>land-water-qa</prefix>
+		<pattern>_sr_land_water_qa.tif</pattern>
+		<measure>N</measure>
+		<dataunit>NA</dataunit>
+		<celltype>Byte</celltype>
+		<folder>no</folder>
+		<fileext>tif</fileext>
+		<required>N</required>
+		</parameters>
+	</process>
+	
+	<!-- landsatsupporttemplate -->
+	<process processid ='landsatsupporttemplate' version ='1.3'>
+		<parameters sensat ='LT5' typeid = 'LT5SR' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>cloud-shadow-qa</band> 
+		<prefix>cloud-shadow-qa</prefix>
+		<pattern>_sr_cloud_shadow_qa.tif</pattern>
+		<measure>N</measure>
+		<dataunit>NA</dataunit>
+		<celltype>Byte</celltype>
+		<folder>no</folder>
+		<fileext>tif</fileext>
+		<required>N</required>
+		</parameters>
+	</process>
+	
+	<!-- landsatsupporttemplate -->
+	<process processid ='landsatsupporttemplate' version ='1.3'>
+		<parameters sensat ='LT5' typeid = 'LT5SR' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>snow-qa</band> 
+		<prefix>snow-qa</prefix>
+		<pattern>_sr_snow_qa.tif</pattern>
+		<measure>N</measure>
+		<dataunit>NA</dataunit>
+		<celltype>Byte</celltype>
+		<folder>no</folder>
+		<fileext>tif</fileext>
+		<required>N</required>
+		</parameters>
+	</process>
+	
+	<!-- landsatsupporttemplate -->
+	<process processid ='landsatsupporttemplate' version ='1.3'>
+		<parameters sensat ='LT5' typeid = 'LT5SR' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>cloud-qa</band> 
+		<prefix>cloud-qa</prefix>
+		<pattern>_sr_cloud_qa.tif</pattern>
+		<measure>N</measure>
+		<dataunit>NA</dataunit>
+		<celltype>Byte</celltype>
+		<folder>no</folder>
+		<fileext>tif</fileext>
+		<required>N</required>
+		</parameters>
+	</process>
+	
+	<!-- landsatmetatemplate -->
+	<process processid ='landsatmetatemplate' version ='1.3'>
+		<parameters sensat ='LT5' typeid = 'LT5SR' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>xml</band>
+		<prefix>xml</prefix>
+		<pattern>.xml</pattern>
+		<measure>N</measure>
+		<dataunit>NA</dataunit>
+		<folder>meta</folder>
+		<fileext>xml</fileext>
+		<required>Y</required>
+		</parameters>
+	</process>	
+	
+		<!-- landsatmetatemplate -->
+	<process processid ='landsatmetatemplate' version ='1.3'>
+		<parameters sensat ='LT5' typeid = 'LT5SR' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>mtl</band>
+		<prefix>mtl</prefix>
+		<pattern>_MTL.txt</pattern>
+		<measure>N</measure>
+		<dataunit>NA</dataunit>
+		<folder>meta</folder>
+		<fileext>txt</fileext>
+		<required>N</required>
+		</parameters>
+	</process>
+	
+	<!-- landsatmetatemplate -->
+	<process processid ='landsatmetatemplate' version ='1.3'>
+		<parameters sensat ='LT5' typeid = 'LT5SR' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>gcp</band>
+		<prefix>gcp</prefix> 
+		<pattern>_GCP.txt</pattern>
+		<measure>N</measure>
+		<dataunit>NA</dataunit>
+		<folder>meta</folder>
+		<fileext>txt</fileext>
+		<required>N</required>
+		</parameters>
+	</process>	
+	
+	<!-- landsatscenetemplate  -->
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LT4' typeid = 'LT4SR' subtype='A' L1type = 'L1T' collection = 'PC' tier='FF'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>reflectance</dataunit>
+		<scenenameform>LT4ppprrryyyydoy-SCproddatennnnnn.tar.gz</scenenameform>
+		<basenameform>LT4ppprrryyyydoySTN0x</basenameform>
+		<scenecompstr>LT4?????????????-SC??????????????.tar.gz</scenecompstr>
+		<basecompstr>LT4????????????????0?</basecompstr>
+		<archive>USGScollL1v2016</archive>
+		
+		</parameters>
+	</process>
+			
+	<!-- landsatbandtemplate -->
+	<process processid ='landsatbandtemplate' version ='1.3'>
+		<parameters sensat ='LT4' typeid = 'LT4SR' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>BL</band> 
+		<prefix>BL-SRFI</prefix>
+		<pattern>_sr_band1.tif</pattern>
+		<measure>R</measure>
+		<dataunit>reflectance</dataunit>
+		<celltype>Int16</celltype>
+		<folder>SRFI</folder>
+		<fileext>tif</fileext>
+		<required>Y</required>
+		</parameters>
+	</process>	
+	<!-- landsatbandtemplate -->
+	<process processid ='landsatbandtemplate' version ='1.3'>
+		<parameters sensat ='LT4' typeid = 'LT4SR' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>GL</band>
+		<prefix>GL-SRFI</prefix>
+		<pattern>_sr_band2.tif</pattern>
+		<measure>R</measure>
+		<dataunit>reflectance</dataunit>
+		<celltype>Int16</celltype>
+		<folder>SRFI</folder>
+		<fileext>tif</fileext>
+		<required>Y</required>
+		</parameters>
+	</process>	
+	<!-- landsatbandtemplate -->
+	<process processid ='landsatbandtemplate' version ='1.3'>
+		<parameters sensat ='LT4' typeid = 'LT4SR' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>RL</band> 
+		<prefix>RL-SRFI</prefix>
+		<pattern>_sr_band3.tif</pattern>
+		<measure>R</measure>
+		<dataunit>reflectance</dataunit>
+		<celltype>Int16</celltype>
+		<folder>SRFI</folder>
+		<fileext>tif</fileext>
+		<required>Y</required>
+		</parameters>
+	</process>	
+	<!-- landsatbandtemplate -->
+	<process processid ='landsatbandtemplate' version ='1.3'>
+		<parameters sensat ='LT4' typeid = 'LT4SR' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>NA</band> 
+		<prefix>NA-SRFI</prefix>
+		<pattern>_sr_band4.tif</pattern>
+		<measure>R</measure>
+		<dataunit>reflectance</dataunit>
+		<celltype>Int16</celltype>
+		<folder>SRFI</folder>
+		<fileext>tif</fileext>
+		<required>Y</required>
+		</parameters>
+	</process>	
+	<!-- landsatbandtemplate -->
+	<process processid ='landsatbandtemplate' version ='1.3'>
+		<parameters sensat ='LT4' typeid = 'LT4SR' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>MB</band> 
+		<prefix>MB-SRFI</prefix>
+		<pattern>_sr_band5.tif</pattern>
+		<measure>R</measure>
+		<dataunit>reflectance</dataunit>
+		<celltype>Int16</celltype>
+		<folder>SRFI</folder>
+		<fileext>tif</fileext>
+		<required>Y</required>
+		</parameters>
+	</process>
+	<!-- landsatbandtemplate -->
+	<process processid ='landsatbandtemplate' version ='1.3'>
+		<parameters sensat ='LT4' typeid = 'LT4SR' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>MC</band> 
+		<prefix>MC-SRFI</prefix>
+		<pattern>_sr_band7.tif</pattern>
+		<measure>R</measure>
+		<dataunit>reflectance</dataunit>
+		<celltype>Int16</celltype>
+		<folder>SRFI</folder>
+		<fileext>tif</fileext>
+		<required>Y</required>
+		</parameters>
+	</process>
+	
+	<!-- landsatsupporttemplate -->
+	<process processid ='landsatsupporttemplate' version ='1.3'>
+		<parameters sensat ='LT4' typeid = 'LT4SR' subtype='A' scalefac = '1' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>cfmask</band>
+		<prefix>cfmask</prefix> 
+		<pattern>_cfmask.tif</pattern>
+		<measure>N</measure>
+		<dataunit>NA</dataunit>
+		<celltype>Byte</celltype>
+		<folder>mask</folder>
+		<fileext>tif</fileext>
+		<required>Y</required>
+		</parameters>
+	</process>
+	
+	<!-- landsatsupporttemplate -->
+	<process processid ='landsatsupporttemplate' version ='1.3'>
+		<parameters sensat ='LT4' typeid = 'LT4SR' subtype='A' scalefac = '1' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>cfmaskconf</band> 
+		<prefix>_cfmask_conf</prefix>
+		<pattern>_cfmask_conf.tif</pattern>
+		<measure>N</measure>
+		<dataunit>NA</dataunit>
+		<celltype>Byte</celltype>
+		<folder>no</folder>
+		<fileext>tif</fileext>
+		<required>N</required>
+		</parameters>
+	</process>
+
+	<!-- landsatsupporttemplate -->
+	<process processid ='landsatsupporttemplate' version ='1.3'>
+		<parameters sensat ='LT4' typeid = 'LT4SR' subtype='A' scalefac = '1' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>ddv-qa</band> 
+		<prefix>ddv-qa</prefix>
+		<pattern>_sr_ddv_qa.tif</pattern>
+		<measure>N</measure>
+		<dataunit>NA</dataunit>
+		<celltype>Byte</celltype>
+		<folder>no</folder>
+		<fileext>tif</fileext>
+		<required>N</required>
+		</parameters>
+	</process>
+
+	<!-- landsatsupporttemplate -->
+	<process processid ='landsatsupporttemplate' version ='1.3'>
+		<parameters sensat ='LT4' typeid = 'LT4SR' subtype='A' scalefac = '1' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>atmos-opacity</band> 
+		<prefix>atmos-opacity</prefix>
+		<pattern>_sr_atmos_opacity.tif</pattern>
+		<measure>N</measure>
+		<dataunit>NA</dataunit>
+		<celltype>Byte</celltype>
+		<folder>no</folder>
+		<fileext>tif</fileext>
+		<required>N</required>
+		</parameters>
+	</process>
+	
+	<!-- landsatsupporttemplate -->
+	<process processid ='landsatsupporttemplate' version ='1.3'>
+		<parameters sensat ='LT4' typeid = 'LT4SR' subtype='A' scalefac = '1' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>adj-cloud-qa</band> 
+		<prefix>adj-cloud-qa</prefix>
+		<pattern>_sr_adjacent_cloud_qa.tif</pattern>
+		<measure>N</measure>
+		<dataunit>NA</dataunit>
+		<celltype>Byte</celltype>
+		<folder>no</folder>
+		<fileext>tif</fileext>
+		<required>N</required>
+		</parameters>
+	</process>
+
+	<!-- landsatsupporttemplate -->
+	<process processid ='landsatsupporttemplate' version ='1.3'>
+		<parameters sensat ='LT4' typeid = 'LT4SR' subtype='A' scalefac = '1' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>fill-qa</band> 
+		<prefix>fill-qa</prefix>
+		<pattern>_sr_fill_qa.tif</pattern>
+		<measure>N</measure>
+		<dataunit>NA</dataunit>
+		<celltype>Byte</celltype>
+		<folder>no</folder>
+		<fileext>tif</fileext>
+		<required>N</required>
+		</parameters>
+	</process>
+	
+	<!-- landsatsupporttemplate -->
+	<process processid ='landsatsupporttemplate' version ='1.3'>
+		<parameters sensat ='LT4' typeid = 'LT4SR' subtype='A' scalefac = '1' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>land-water-qa</band> 
+		<prefix>land-water-qa</prefix>
+		<pattern>_sr_land_water_qa.tif</pattern>
+		<measure>N</measure>
+		<dataunit>NA</dataunit>
+		<celltype>Byte</celltype>
+		<folder>no</folder>
+		<fileext>tif</fileext>
+		<required>N</required>
+		</parameters>
+	</process>
+	
+	<!-- landsatsupporttemplate -->
+	<process processid ='landsatsupporttemplate' version ='1.3'>
+		<parameters sensat ='LT4' typeid = 'LT4SR' subtype='A' scalefac = '1' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>cloud-shadow-qa</band> 
+		<prefix>cloud-shadow-qa</prefix>
+		<pattern>_sr_cloud_shadow_qa.tif</pattern>
+		<measure>N</measure>
+		<dataunit>NA</dataunit>
+		<celltype>Byte</celltype>
+		<folder>no</folder>
+		<fileext>tif</fileext>
+		<required>N</required>
+		</parameters>
+	</process>
+	
+	<!-- landsatsupporttemplate -->
+	<process processid ='landsatsupporttemplate' version ='1.3'>
+		<parameters sensat ='LT4' typeid = 'LT4SR' subtype='A' scalefac = '1' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>snow-qa</band> 
+		<prefix>snow-qa</prefix>
+		<pattern>_sr_snow_qa.tif</pattern>
+		<measure>N</measure>
+		<dataunit>NA</dataunit>
+		<celltype>Byte</celltype>
+		<folder>no</folder>
+		<fileext>tif</fileext>
+		<required>N</required>
+		</parameters>
+	</process>
+	
+	<!-- landsatsupporttemplate -->
+	<process processid ='landsatsupporttemplate' version ='1.3'>
+		<parameters sensat ='LT4' typeid = 'LT4SR' subtype='A' scalefac = '1' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>cloud-qa</band> 
+		<prefix>cloud-qa</prefix>
+		<pattern>_sr_cloud_qa.tif</pattern>
+		<measure>N</measure>
+		<dataunit>NA</dataunit>
+		<celltype>Byte</celltype>
+		<folder>no</folder>
+		<fileext>tif</fileext>
+		<required>N</required>
+		</parameters>
+	</process>
+	
+	<!-- landsatmetatemplate -->
+	<process processid ='landsatmetatemplate' version ='1.3'>
+		<parameters sensat ='LT4' typeid = 'LT4SR' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>xml</band>
+		<prefix>xml</prefix>
+		<pattern>.xml</pattern>
+		<measure>N</measure>
+		<dataunit>NA</dataunit>
+		<folder>meta</folder>
+		<fileext>xml</fileext>
+		<required>Y</required>
+		</parameters>
+	</process>	
+	
+		<!-- landsatmetatemplate -->
+	<process processid ='landsatmetatemplate' version ='1.3'>
+		<parameters sensat ='LT4' typeid = 'LT4SR' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>mtl</band>
+		<prefix>mtl</prefix>
+		<pattern>_MTL.txt</pattern>
+		<measure>N</measure>
+		<dataunit>NA</dataunit>
+		<folder>meta</folder>
+		<fileext>txt</fileext>
+		<required>N</required>
+		</parameters>
+	</process>
+	
+	<!-- landsatmetatemplate -->
+	<process processid ='landsatmetatemplate' version ='1.3'>
+		<parameters sensat ='LT4' typeid = 'LT4SR' subtype='A' scalefac = '0.0001' offsetadd='0'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<band>gcp</band>
+		<prefix>gcp</prefix> 
+		<pattern>_GCP.txt</pattern>
+		<measure>N</measure>
+		<dataunit>NA</dataunit>
+		<folder>meta</folder>
+		<fileext>txt</fileext>
+		<required>N</required>
+		</parameters>
+	</process>	
+</landsattemplate>

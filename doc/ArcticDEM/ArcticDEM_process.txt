@@ -1,0 +1,48 @@
+#Create ArcticDEM region
+#MUST BE DONE FROM SETUP_PROCESSES
+
+#Create user projects and tracts for the arctic regions
+#add_user_projects-regions_arctic.xml
+
+# Import Arctic DEM as ancillary layer (requires that the user tracts for the arctic are created)
+#ancillary-import-arcticDEM.xml
+
+#Link Arctic regions to MODIS tiles
+#regions-modtiles_v80.xml
+
+#Tile the ArcticDEM to MODIS
+#tile_ArcticDEM2modis.xml
+
+#calculate hill shade
+#ArcticDEM_HillShade.xml
+
+#calculate slope
+#ArcticDEM_Slope.xml
+
+#calculate aspect
+#ArcticDEM_Aspect.xml
+
+#calculate TPI
+#ArcticDEM_TPI.xml
+
+#calculate TRI
+#ArcticDEM_TRI.xml
+
+#calculate roughness
+#ArcticDEM_roughness.xml
+
+#Calculate landform
+#ArcticDEM_landformTPI.xml
+
+#Create palette for landform
+#landformpalettes_v80.xml
+
+#Create scaling for the landform layers
+createscaling_Landform_v80.xml
+
+#Export raster
+ExporttoByte_landform_v80.xml
+
+mkdir pub-images;
+for i in *.png; do convert -quality 80 "$i" "pub-images/${i%.*}.jpg"; done
+

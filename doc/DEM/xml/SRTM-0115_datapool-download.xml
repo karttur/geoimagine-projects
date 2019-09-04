@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='utf-8'?>
+<searchdatapool>
+	<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'ancillary'></userproj>
+
+	<processx processid ='downloadSRTMSingleTile' dsversion = '1.3'>
+		<parameters 
+			product="SRTMGL1_NC" 
+			version="003" 
+			lltile='N15W091'
+			regionid = 'global' 
+			remoteuser='Gumbricht' 
+			asscript='False'>
+		</parameters>
+		<srcpath volume = "guatemala" ></srcpath>
+		<dstpath volume = "guatemala" ></dstpath>
+		
+		<srcraw id="dem-srtmgl1"
+			datadir ='DataPoolSRTM/SRTMGL1_NC.003'
+			datafile ='N15W091.SRTMGL1_NC'
+			datalayer ='N15W091'
+			dsversion = '003'
+			product = 'SRTM'
+			theme = "hydrology"
+			subtheme = "gravitywater"
+			dataurl = 'x'
+			metaurl = 'x'
+			metapath = 'x'
+			title = "GRACE global data"
+			label = "GRACE (Gravity Recovery and Climate Experiment) global data"
+		></srcraw>
+		<dstcomp>
+			<dem-srtmgl1 source = "usgs" product = "srtmgl1" folder = "dem" band = "dem-srtmgl1" prefix = "dem" suffix = "003" scalefac = "1" offsetadd = "0" dataunit = "masl" celltype = 'Int16' cellnull = '-32767' measure ='R' masked='Y'>	
+			</dem-srtmgl1>
+		</dstcomp>
+		
+	</processx>
+	
+	<processx processid ='downloadSRTMSingleTile' dsversion = '1.3'>
+		<parameters 
+			product="SRTMGL1_NC" 
+			version="003" 
+			lltile='N15W090'
+			regionid = 'global' 
+			remoteuser='Gumbricht' 
+			asscript='False'>
+		</parameters>
+		<srcpath volume = "guatemala" ></srcpath>
+		<dstpath volume = "guatemala" ></dstpath>
+		
+		<srcraw id="dem-srtmgl1"
+			datadir ='DataPoolSRTM/SRTMGL1_NC.003'
+			datafile ='N15W090.SRTMGL1_NC'
+			datalayer ='N15W090'
+			dsversion = '003'
+			product = 'SRTM'
+			theme = "hydrology"
+			subtheme = "gravitywater"
+			dataurl = 'x'
+			metaurl = 'x'
+			metapath = 'x'
+			title = "GRACE global data"
+			label = "GRACE (Gravity Recovery and Climate Experiment) global data"
+		></srcraw>
+		<dstcomp>
+			<dem-srtmgl1 source = "usgs" product = "srtmgl1" folder = "dem" band = "dem-srtmgl1" prefix = "dem" suffix = "003" scalefac = "1" offsetadd = "0" dataunit = "masl" celltype = 'Int16' cellnull = '-32767' measure ='R' masked='Y'>	
+			</dem-srtmgl1>
+		</dstcomp>
+		
+	</processx>
+	
+	<processx processid ='downloadSRTMSingleTile' dsversion = '1.3'>
+		<parameters 
+			product="SRTMGL1_NC" 
+			version="003" 
+			lltile='N16W090'
+			regionid = 'global' 
+			remoteuser='Gumbricht' 
+			asscript='False'>
+		</parameters>
+		<srcpath volume = "guatemala" ></srcpath>
+		<dstpath volume = "guatemala" ></dstpath>
+		
+		<srcraw id="dem-srtmgl1"
+			datadir ='DataPoolSRTM/SRTMGL1_NC.003'
+			datafile ='N16W090.SRTMGL1_NC'
+			datalayer ='N16W090'
+			dsversion = '003'
+			product = 'SRTM'
+			theme = "hydrology"
+			subtheme = "gravitywater"
+			dataurl = 'x'
+			metaurl = 'x'
+			metapath = 'x'
+			title = "GRACE global data"
+			label = "GRACE (Gravity Recovery and Climate Experiment) global data"
+		></srcraw>
+		<dstcomp>
+			<dem-srtmgl1 source = "usgs" product = "srtmgl1" folder = "dem" band = "dem-srtmgl1" prefix = "dem" suffix = "003" scalefac = "1" offsetadd = "0" dataunit = "masl" celltype = 'Int16' cellnull = '-32767' measure ='R' masked='Y'>	
+			</dem-srtmgl1>
+		</dstcomp>
+		
+	</processx>
+	
+	<process processid ='downloadSRTMRegion' dsversion = '1.3'>
+		<parameters 
+			product="SRTMGL1_NC" 
+			version="003" 
+			regionid = 'global' 
+			remoteuser='Gumbricht' 
+			asscript='False'>
+		</parameters>
+		<srcpath volume = "guatemala" ></srcpath>
+		<dstpath volume = "guatemala" ></dstpath>
+		
+		<srcraw id="dem-srtmgl1"
+			datadir ='DataPoolSRTM/SRTMGL1_NC.003'
+			datafile ='N16W090.SRTMGL1_NC'
+			datalayer ='N16W090'
+			dsversion = '003'
+			product = 'SRTM'
+			theme = "hydrology"
+			subtheme = "gravitywater"
+			dataurl = 'x'
+			metaurl = 'x'
+			metapath = 'x'
+			title = "GRACE global data"
+			label = "GRACE (Gravity Recovery and Climate Experiment) global data"
+		></srcraw>
+		<dstcomp>
+			<dem-srtmgl1 source = "usgs" product = "srtmgl1" folder = "dem" band = "dem-srtmgl1" prefix = "dem" suffix = "003" scalefac = "1" offsetadd = "0" dataunit = "masl" celltype = 'Int16' cellnull = '-32767' measure ='R' masked='Y'>	
+			</dem-srtmgl1>
+		</dstcomp>
+		
+	</process>
+		
+</searchdatapool>

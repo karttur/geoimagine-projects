@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+<downloadSentinel>
+	<userproj userid = 'karttur' projectid = 'karttur-lesotho' tractid= 'karttur-lesotho' siteid = '*' plotid = '*' system = 'sentinel'></userproj>
+	<period startyear = '2016' endyear = '2018' timestep='allscenes'></period>
+
+	<process processid ='downloadSentinelDataRegion' dsversion = '3.0'>
+		<parameters tiles = 'True'
+			orbitdirection = 'B' 
+			platformname = 'Sentinel-2' 
+			prodtype  = 'S2MSI1C' 
+			cloudmax = "30"
+		> </parameters>
+		<srcpath volume = "karttur" hdrfiletype = "shp"></srcpath>
+		<dstpath volume = "karttur" hdrfiletype = "zip" datfiletype = "zip"></dstpath>
+	</process>
+	
+	<processx processid ='downloadSentinelDataRegion' dsversion = '3.0'>
+		<parameters tiles = 'False'
+			orbitdirection = 'B' 
+			platformname = 'Sentinel-2' 
+			prodtype  = 'S2MSI1C' 
+			cloudmax = "30"
+
+		> </parameters>
+		<srcpath volume = "karttur" hdrfiletype = "shp"></srcpath>
+		<dstpath volume = "karttur" hdrfiletype = "zip" datfiletype = "zip"></dstpath>
+	</processx>
+	
+	
+	<processx processid ='downloadSentinelDataRegion' dsversion = '3.0'>
+		<parameters  tiles = 'False'
+			orbitdirection = 'B' 
+			platformname = 'Sentinel-1' 
+			prodtype  = 'GRD' 
+			cloudmax = "100"
+
+		> </parameters>
+		<srcpath volume = "karttur" hdrfiletype = "shp"></srcpath>
+		<dstpath volume = "karttur" hdrfiletype = "zip" datfiletype = "zip"></dstpath>
+	</processx>
+</downloadSentinel>

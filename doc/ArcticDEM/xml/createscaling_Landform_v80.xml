@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<scaling>	
+	<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'system'></userproj>
+
+	
+	<!-- Create scaling -->
+	
+	<!-- NOTE THE ID IS OLNLY USED IN THE SCRIPTING SO IT CAN HAVE (UNIQUE) DUMMY VALUES HERE -->
+	<!-- GRACE monthly cmwater-->
+	<process processid = 'createscaling' version = '1.3'>
+		<overwrite>True</overwrite>
+		<parameters></parameters>			
+    	<comp id = '1' source = "NGA-NSF" product = "landform" folder = "landform" band = "tpi500-1500" prefix = "tpi500-1500" suffix = "10cl-arcticdemv30"></comp>    	
+		<comp id = '2' source = "NGA-NSF" product = "landform" folder = "landform" band = "tpi500-1500" prefix = "tpi500-1500" suffix = "stand-10cl-arcticdemv30"></comp> 
+		<comp id = '3' source = "NGA-NSF" product = "landform" folder = "landform" band = "tpi500-1500" prefix = "tpi500-1500" suffix = "glob-10cl-arcticdemv30"></comp> 
+		<comp id = '4' source = "NGA-NSF" product = "landform" folder = "landform" band = "tpi500-1500" prefix = "tpi500-1500" suffix = "rel-10cl-arcticdemv30"></comp> 
+
+		<comp id = '5' source = "NGA-NSF" product = "landform" folder = "landform" band = "tpi500-1500" prefix = "tpi500-1500" suffix = "12cl-arcticdemv30"></comp>    	
+		<comp id = '6' source = "NGA-NSF" product = "landform" folder = "landform" band = "tpi500-1500" prefix = "tpi500-1500" suffix = "stand-12cl-arcticdemv30"></comp> 
+		<comp id = '7' source = "NGA-NSF" product = "landform" folder = "landform" band = "tpi500-1500" prefix = "tpi500-1500" suffix = "glob-12cl-arcticdemv30"></comp>   	
+		<comp id = '8' source = "NGA-NSF" product = "landform" folder = "landform" band = "tpi500-1500" prefix = "tpi500-1500" suffix = "rel-12cl-arcticdemv30"></comp>   	
+
+	</process>
+
+
+</scaling>
+
+

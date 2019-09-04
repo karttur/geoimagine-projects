@@ -1,0 +1,40 @@
+##### GRACE #####
+
+#Search JPL for GRACE products
+#Done by manual download of entire folder
+
+#Create the grace specific palettes
+#GRACE000_createpalettes_v80.xml
+
+#Create the grace specific legend
+#GRACE000_createlegends_v80.xml
+
+#Create the grace specific scalings
+#GRACE000_createscaling_v80.xml
+
+#Organize pre-downloaded GRACE data
+#GRACE010_organize_v80.xml
+
+#Mend grace by interpolating missing dates
+#GRACE011_mend_v80.xml
+
+#Average the three GRACE solutions
+#GRACE012_average_v80.xml
+
+#Extract Grace seasonal signal
+#GRACE013_extractseason_v80.xml
+
+#Resample Grace to Annual
+#GRACE014_resample-A_v80.xml
+
+#Annual trend
+#GRACE015_trend-A_v80.xml
+
+#Siginificant changes
+#GRACE016_significant-changes_v80.xml
+
+#Export the legends
+#exportlegend_GRACE_v80.xml
+
+#Export to byte
+#GRACE050_ExporttoByte_v80.xml

@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Landsatprocess>	
+	<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'landsat'></userproj>
+
+	<!-- All sensors common metadafile columns -->
+	<process processid = 'landsatmetadb' version ='1.3'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<parameters sensor = 'all' filetype='csv'></parameters>
+		<column csv = 'acquisitionDate' table = 'main' column = 'acqdate' type = 'date' length = '0'  default = '' required = 'Y'></column>
+		<column csv = 'dateUpdated' table = 'main' column = 'update' type = 'date' length = '0'  default = '1010-10-10' required = 'N'></column>
+		<column csv = 'browseAvailable' table = 'url' column = 'browse' type = 'char' length = '1'  default = 'N' required = 'N'></column>
+		<column csv = 'browseURL' table = 'url' column = 'browseurl' type = 'varchar' length = '255'  default = 'False' required = 'N'></column>
+		<column csv = 'path' table = 'main' column = 'path' type = 'smallint' length = '0'  default = '-99' required = 'Y'></column>
+		<column csv = 'row' table = 'main' column = 'row' type = 'smallint' length = '0'  default = '-99' required = 'Y'></column>
+		<column csv = 'upperLeftCornerLatitude' table = 'geo' column = 'ulclat' type = 'double precision' length = '0'  default = '-99' required = 'N'></column>
+		<column csv = 'upperLeftCornerLongitude' table = 'geo' column = 'ulclon' type = 'double precision' length = '0'  default = '-99' required = 'N'></column>
+		<column csv = 'upperRightCornerLatitude' table = 'geo' column = 'urclat' type = 'double precision' length = '0'  default = '-99' required = 'N'></column>
+		<column csv = 'upperRightCornerLongitude' table = 'geo' column = 'urclon' type = 'double precision' length = '0'  default = '-99' required = 'N'></column>
+		<column csv = 'lowerLeftCornerLatitude' table = 'geo' column = 'llclat' type = 'double precision' length = '0'  default = '-99' required = 'N'></column>
+		<column csv = 'lowerLeftCornerLongitude' table = 'geo' column = 'llclon' type = 'double precision' length = '0'  default = '-99' required = 'N'></column>
+		<column csv = 'lowerRightCornerLatitude' table = 'geo' column = 'lrclat' type = 'double precision' length = '0'  default = '-99' required = 'N'></column>
+		<column csv = 'lowerRightCornerLongitude' table = 'geo' column = 'lrclon' type = 'double precision' length = '0'  default = '-99' required = 'N'></column>
+		<column csv = 'sceneCenterLatitude' table = 'geo' column = 'sclat' type = 'double precision' length = '0'  default = '-99' required = 'N'></column>
+		<column csv = 'sceneCenterLongitude' table = 'geo' column = 'sclon' type = 'double precision' length = '0'  default = '-99' required = 'N'></column>
+		<column csv = 'cloudCover' table = 'sub' column = 'cloudcov' type = 'real' length = '0'  default = '-99' required = 'N'></column>
+		<column csv = 'dayOrNight' table = 'sub' column = 'dayornight' type = 'varchar' length = '8'  default = 'DAY' required = 'Y'></column>
+		<column csv = 'sunElevation' table = 'geo' column = 'sunelev' type = 'real' length = '0'  default = '-99' required = 'N'></column>
+		<column csv = 'sunAzimuth' table = 'geo' column = 'sunazim' type = 'real' length = '0'  default = '-99' required = 'N'></column>
+		<column csv = 'DATA_TYPE_L1' table = 'main' column = 'datatypel1' type = 'varchar' length = '16'  default = '' required = 'Y'></column>
+		<column csv = 'cartURL' table = 'url' column = 'carturl' type = 'varchar' length = '255'  default = 'False' required = 'N'></column>
+		<column csv = 'DATUM' table = 'geo' column = 'datum' type = 'varchar' length = '32'  default = 'False' required = 'N'></column>
+		<column csv = 'ELLIPSOID' table = 'geo' column = 'ellipsoid' type = 'varchar' length = '32'  default = 'False' required = 'N'></column>
+		<column csv = 'GEOMETRIC_RMSE_MODEL' table = 'geo' column = 'geormse' type = 'real' length = '0'  default = '-99' required = 'N'></column>
+		<column csv = 'GEOMETRIC_RMSE_MODEL_X' table = 'geo' column = 'geormsex' type = 'real' length = '0'  default = '-99' required = 'N'></column>
+		<column csv = 'GEOMETRIC_RMSE_MODEL_Y' table = 'geo' column = 'geormsey' type = 'real' length = '0'  default = '-99' required = 'N'></column>
+
+		<column csv = 'MAP_PROJECTION_L1' table = 'geo' column = 'projection' type = 'varchar' length = '32'  default = 'False' required = 'N'></column>
+		<column csv = 'UTM_ZONE' table = 'geo' column = 'utm_zone' type = 'smallint' length = '0'  default = '-99' required = 'N'></column>
+		<column csv = 'imageQuality1' table = 'sub' column = 'imgqual1' type = 'smallint' length = '0'  default = '-99' required = 'N'></column>
+		<column csv = 'receivingStation' table = 'sub' column = 'recstn' type = 'varchar' length = '64'  default = 'False' required = 'N'></column>		
+	</process>
+	
+	<!-- metadafile derived columns -->
+	<process processid = 'landsatmetadb' version ='1.3'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<parameters sensor = 'collections' filetype='csv'></parameters>
+		<column csv = 'sensor' table = 'coll' column = 'sensor' type = 'varchar' length = '16'  default = 'False' required = 'Y'></column>		
+
+		<column csv = 'LANDSAT_PRODUCT_ID' table = 'coll' column = 'lsatprodid' type = 'varchar' length = '64'  default = 'False' required = 'Y'></column>		
+
+
+		<column csv = 'REFLECTIVE_SAMPLES' table = 'coll' column = 'refcols' type = 'integer' length = '0'  default = '0' required = 'Y'></column>		
+		<column csv = 'REFLECTIVE_LINES' table = 'coll' column = 'reflins' type = 'integer' length = '0'  default = '0' required = 'Y'></column>		
+
+		<column csv = 'GRID_CELL_SIZE_REFLECTIVE' table = 'coll' column = 'refgridsize' type = 'real' length = '0'  default = '0' required = 'Y'></column>		
+		<column csv = 'GRID_CELL_SIZE_PANCHROMATIC' table = 'coll' column = 'pangridsize' type = 'real' length = '0'  default = '-99' required = 'N'></column>		
+		<column csv = 'GRID_CELL_SIZE_THERMAL' table = 'coll' column = 'thermgridsize' type = 'real' length = '0'  default = '-99' required = 'N'></column>		
+
+		<column csv = 'COLLECTION_CATEGORY' table = 'coll' column = 'collcat' type = 'varchar' length = '32'  default = 'False' required = 'Y'></column>		
+		<column csv = 'PANCHROMATIC_LINES' table = 'coll' column = 'panlins' type = 'integer' length = '0'  default = '-99' required = 'N'></column>		
+		<column csv = 'PANCHROMATIC_SAMPLES' table = 'coll' column = 'pancols' type = 'integer' length = '0'  default = '-99' required = 'N'></column>		
+
+		<column csv = 'THERMAL_SAMPLES' table = 'coll' column = 'thermcols' type = 'integer' length = '0'  default = '-99' required = 'N'></column>		
+		<column csv = 'THERMAL_LINES' table = 'coll' column = 'thermlins' type = 'integer' length = '0'  default = '-99' required = 'N'></column>		
+		
+		<column csv = 'PANCHROMATIC_SAMPLES' table = 'coll' column = 'pancols' type = 'integer' length = '0'  default = '-99' required = 'N'></column>		
+		<column csv = 'PANCHROMATIC_LINES' table = 'coll' column = 'panlins' type = 'integer' length = '0'  default = '-99' required = 'N'></column>		
+
+		<column csv = 'GROUND_CONTROL_POINTS_MODEL' table = 'coll' column = 'gcpmodel' type = 'varchar' length = '32'  default = 'False' required = 'N'></column>		
+		<column csv = 'GROUND_CONTROL_POINTS_VERSION' table = 'coll' column = 'gcpversion' type = 'varchar' length = '32'  default = 'False' required = 'N'></column>		
+
+		<column csv = 'PROCESSING_SOFTWARE_VERSION' table = 'coll' column = 'appversion' type = 'varchar' length = '32'  default = 'False' required = 'N'></column>		
+
+		<column csv = 'CLOUD_COVER_LAND' table = 'sub' column = 'cloudcovland' type = 'real' length = '0'  default = '-99' required = 'N'></column>		
+
+		<column csv = 'COLLECTION_NUMBER' table = 'coll' column = 'collnr' type = 'integer' length = '0'  default = '-99' required = 'Y'></column>		
+		<column csv = 'CPF_NAME' table = 'coll' column = 'cpfname' type = 'varchar' length = '64'  default = 'False' required = 'Y'></column>		
+
+		<column csv = 'DATE_L1_GENERATED' table = 'coll' column = 'gendate' type = 'date' length = '0'  default = 'False' required = 'Y'></column>		
+
+	</process>
+	
+	<!--
+	ALTER TABLE landsat.meta_sub ALTER COLUMN recstn TYPE varchar(64);	-->
+	
+	<!--
+	headerL [ 'NADIR_OFFNADIR', 'BPF_NAME_TIRS',  'sceneStartTime',  'BPF_NAME_OLI', 'sceneStopTime',   'RLUT_FILE_NAME', 'TIRS_SSM_MODEL', 'ROLL_ANGLE']
+	-->
+	
+	<!-- metadafile derived columns -->
+	<process processid = 'landsatmetadb' version ='1.3'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<parameters sensor = 'None' filetype='csv'></parameters>
+		<column csv = 'False' table = 'main' column = 'satelnr' type = 'integer' length = '0'  default = '0' required = 'Y'></column>
+		<column csv = 'False' table = 'main' column = 'sensorid' type = 'char' length = '1'  default = 'F' required = 'Y'></column>
+		<column csv = 'False' table = 'main' column = 'regdate' type = 'date' length = '0'  default = '' required = 'Y'></column>
+		<column csv = 'False' table = 'main' column = 'acqdoy' type = 'smallint' length = '0'  default = '0' required = 'Y'></column>
+	</process>
+				
+	<!-- MSS CSV metadafile columns -->
+	<process processid = 'landsatmetadb' version ='1.3'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<parameters sensor = 'MSS' filetype='csv'></parameters>		
+		<column csv = 'IMAGE_QUALITY' table = 'sub' column = 'imgqual1' type = 'char' length = '21'  default = '' required = 'Y'></column>
+		<column csv = 'IMAGE_QUALITY' table = 'sub' column = 'imgqual2' type = 'char' length = '21'  default = '' required = 'Y'></column>
+	</process>
+	
+</Landsatprocess>

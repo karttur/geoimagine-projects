@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='utf-8'?>
+<manageprocess>	
+	<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'system'></userproj>
+
+	<!-- Manage user project -->
+	<process processid ='ManageDefRegProj'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<parameters defaultregion = 'arcticland' 
+		tractid = 'karttur-arcticland' 
+		tractname = 'karttur arcticland' 
+		projid = 'karttur-arcticland' 
+		projname = 'karttur arcticland'>
+		<tracttitle>Karttur arcticland</tracttitle>
+		<tractlabel>Karttur arcticland</tractlabel>
+		<projtitle>Karttur arcticland</projtitle>
+		<projlabel>Karttur arcticland</projlabel>
+		</parameters>
+	</process>
+	
+	<!-- Manage user project -->
+	<process processid ='ManageDefRegProj'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<parameters defaultregion = 'arcticdem' 
+		tractid = 'karttur-arcticdem' 
+		tractname = 'karttur arcticdem' 
+		projid = 'karttur-arcticdem' 
+		projname = 'karttur arcticdem'>
+		<tracttitle>Karttur arcticdem</tracttitle>
+		<tractlabel>Karttur arcticdem</tractlabel>
+		<projtitle>Karttur arcticdem</projtitle>
+		<projlabel>Karttur arcticdem</projlabel>
+		</parameters>
+	</process>
+	
+	<!-- Manage user project -->
+	<process processid ='ManageDefRegProj'>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<parameters defaultregion = 'arcticdemext' 
+		tractid = 'karttur-arcticdemext' 
+		tractname = 'karttur arcticdemext' 
+		projid = 'karttur-arcticdemext' 
+		projname = 'karttur arcticdemext'>
+		<tracttitle>Karttur arcticdemext</tracttitle>
+		<tractlabel>Karttur arcticdemext</tractlabel>
+		<projtitle>Karttur arcticdemext</projtitle>
+		<projlabel>Karttur arcticdemext</projlabel>
+		</parameters>
+	</process>
+	
+</manageprocess>	
+

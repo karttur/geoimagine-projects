@@ -1,0 +1,450 @@
+#Create Africa Sub-Saharan default region
+#NOTE THIS MUST BE DONE FROM THE PACKAGE SETUP_PROCESSES
+#add_Africa-Sub_Sahara_default-region_v80.xml
+
+#Link all default regions to the MODIS tiles
+#regions-modtiles_v80.xml
+
+#Create user projects and tracts for the arctic
+#This must be done with all the following processes closed (commented with #)
+#add_user_projects-regions_arctic.xml
+
+## Create scaling for miscellaneous layers ##
+#ArcticWetlands_0001_createscaling.xml
+#ArcticWetlands_0001_createscaling.xml
+
+###################################
+###################################
+###    	       SMAP             ###
+###################################
+###################################
+
+## Tile SMAP to MODIS ##
+#ArcticWetlands_SMAP-0162_tile_16D.xml
+
+###################################
+###################################
+###    MODIS processing     ###
+###################################
+###################################
+
+#Search the online MODIS data holdings for tiles (always done as global search)
+#modis-search_data-pool.xml
+
+#Load any modis found in the previous step to the local postgres database
+#modis-search_todb.xml
+
+#Download modis tiles for Sub Saharan Africa
+#MODIS-0100_downloaddatapool.xml
+
+#Either rerun the script "MODIS-0100_downloaddatapool.xml" (fast), or run "modis_checktiles_downloaded_v80.xml" (slow)
+#modis_checktiles_downloaded_v80.xml
+
+## Explode all un-exploded tiles for Sub Saharan Africa ##
+##MODIS-0130_explodetiles.xml
+#MODIS-0130_explodetiles_h18v02.xml
+
+#If you exploded using script:
+#Either rerun the script "modis_explodetiles_v80.xml" (fast), or run "modis_checktiles_exploded_v80.xml" (slow)
+#modis_checktiles_exploded_v80.xml
+
+## TASSELED CAP ##
+#ArcticWetlands_MODIS-0461_orthotrans.xml
+
+# TWI
+#ArcticWetlands_MODIS-0471_fgbg-TWI.xml
+
+# TWI percent
+#ArcticWetlands_MODIS-0472_TWI-percent.xml
+
+## Extract season
+ArcticWetlands_MODIS-0320_TWI-extract-season_16D.xml
+
+## Interpolation Force fill with season
+#ArcticWetlands_MODIS-0330_interpolseasn-fill-16D_2001-2017.xml
+
+## Resample MODIS 16D to monthly
+#ArcticWetlands_MODIS-0290_resample-2-M.xml
+
+## Resample MODIS 16D to annual
+#ArcticWetlands_MODIS-0290_resample-2-A.xml
+
+## Annual stats ##
+#ArcticWetlands_MODIS-0310_trend_A_2001-2017.xml
+
+###################################
+###  MODIS + SMAP downscaling    ###
+###################################
+
+## TENTATIVE ##
+## Resample SMAP to MODIS ##
+#ArcticWetlands_SMAP-0160_resample-2-MODIS_16D.xml
+
+## Cross correlate SMAP and TWI (both filled)
+## use the resampled SMAP and the original TWI
+#ArcticWetlands-SMAP-MODIS_crosscorr_16D
+
+## Resample MODIS to fit the SMAP 9 km spatial resolution (overlapping dates) ##
+## Set resample to average, mask out the cells that have negative crosscorr???
+#ArcticWetlands_MODIS-0170_resample-2-SMAP_16D.xml
+
+## Use the 
+## Extract season from both MODIS and SMAP for overlapping period
+#ArcticWetlands_MODIS-0320_TWI-fill-extract-season_16D_2015-2019.xml
+#ArcticWetlands_SMAP-0320_TWI-fill-extract-season_16D_2015-2019.xml
+
+## Get the per cell assimilation numbers for adjusting MODIS to have the same mean and sd as SMAP
+#ArcticWetlands.....
+
+## Resample the mean and std assimilation factors to the original MODIS cell size
+#ArcticWetlands_MODIS-0170_TWI-assim-resample-2-MODIS_16D.xml
+
+## Adjust the MODIS fill-TWI using the SMAP mean and std assimilation factors
+# ArcticWetlands...
+
+###################################
+###################################
+###    TRMM data processing     ###
+###################################
+###################################
+
+## The TRMM processing requires that the Tropical Rainfall Measurement Mission (TRMM) data are already processed and available ##
+
+###################################
+###       Tile to region        ###
+###################################
+
+## Tile monthly TRMM to region ##
+#ArcticWetlands_TRMM-0160_tile_M.xml
+
+## Tile annual TRMM to region ##
+#ArcticWetlands_TRMM-0161_tile_A.xml
+
+#or resample to annual per tile
+#ArcticWetlands021_tileTRMM-resample-2-annual.xml
+#new number 0290
+
+###################################
+###   Time Series Processing    ###
+###################################
+
+## TRMM annual trends (1998-2017 is for the complete timeseries, 2003-2016 for overlap with GRACE 
+## should be done at tile level! Not by tiling original data. ##
+#ArcticWetlands_TRMM-0310_trend_A_1998-2017.xml
+#ArcticWetlands_TRMM-0310_trend_A_2003-2016.xml
+
+## Changes and significant trends (1998-2017 is for the complete timeseries, 2003-2016 for overlap with GRACE ## 
+#ArcticWetlands_TRMM-0320_changes_A_1998-2017.xml
+#ArcticWetlands_TRMM-0320_changes_A_2003-2016.xml
+
+## Cross correlation climate indexes and TRMM ##
+#ArcticWetlands_TRMM-0380_index-x-corr_M.xml
+
+###################################
+###   	       Mosaic           ###
+###################################
+
+## Mosaic monthly TRMM ##
+#ArcticWetlands_TRMM-0610_mosaic_M.xml
+
+## Mosaic climate Index vs TRMM cross correlation ##
+#ArcticWetlands_TRMM-0620_mosaic_index-x-corr_M.xml
+
+## Mosaic TRMM trends ##
+#ArcticWetlands_TRMM-0630_mosaic_timespanA_1998-2017.xml
+#ArcticWetlands_TRMM-0630_mosaic_timespanA_2003-2016.xml
+
+###################################
+###        Export media         ###
+###################################
+
+## Export monthly TRMM mosaics ##
+#ArcticWetlands_TRMM-0900_ExporttoByte_M.xml
+
+## Export TRMM annual trends ##
+#ArcticWetlands_TRMM-0910_ExporttoByte_timespanA_1998-2017.xml
+#ArcticWetlands_TRMM-0910_ExporttoByte_timespanA_2003-2016.xml
+
+## Export Climate Index vs TRMM Cross correlation ##
+#ArcticWetlands_TRMM-0920_ExporttoByte_crosscorr_2003-2016.xml
+
+## Create TRMM movieframes ##
+#ArcticWetlands_TRMM-0950_movieframes_M.xml
+
+## Create TRMM Movieclock and movie scripts ##
+#ArcticWetlands_TRMM-0960_movieclock_M.xml
+
+###################################
+###################################
+###     VWB data processing     ###
+###################################
+###################################
+
+## The processing requires that the Vertical Water Balance (VWB) data are already processed and available ##
+
+#VWB000_createscaling_v80.xml
+#VWB_scaling_auto+cross-corr.xml
+
+###################################
+###       Tile to region        ###
+###################################
+
+## Tile monthly VWB to region ##
+#ArcticWetlands_VWB-0160_tile_M.xml
+
+## Tile annual VWB to region ##
+#ArcticWetlands_VWB-0161_tile_A.xml
+
+## or resample to annual per tile
+
+#ArcticWetlands021_tileVWB-resample-2-annual.xml
+#new number 0290
+
+###################################
+###   Time Series Processing    ###
+###################################
+
+## VWB annual trends (1998-2017 is for the complete timeseries, 2003-2016 for overlap with GRACE 
+## should be done at tile level! Not by tiling original data. ##
+#ArcticWetlands_VWB-0310_trend_A_1998-2017.xml
+#ArcticWetlands_VWB-0310_trend_A_2003-2016.xml
+
+## Changes and significant trends (1998-2017 is for the complete timeseries, 2003-2016 for overlap with GRACE ## 
+#ArcticWetlands_VWB-0320_changes_A_1998-2017.xml
+#ArcticWetlands_VWB-0320_changes_A_2003-2016.xml
+
+###################################
+###   	       Mosaic           ###
+###################################
+
+## Mosaic monthly VWB ##
+#ArcticWetlands_VWB-0610_mosaic_M.xml
+
+## Mosaic VWB trends ##
+#ArcticWetlands_VWB-0630_mosaic_timespanA_1998-2017.xml
+#ArcticWetlands_VWB-0630_mosaic_timespanA_2003-2016.xml
+
+###################################
+###        Export media         ###
+###################################
+
+## Export monthly VWB mosaics ##
+#ArcticWetlands_VWB-0900_ExporttoByte_M.xml
+
+## Export VWB annual trends ##
+#ArcticWetlands_VWB-0910_ExporttoByte_timespanA_1998-2017.xml
+#ArcticWetlands_VWB-0910_ExporttoByte_timespanA_2003-2016.xml
+
+## Create monthly VWB movieframes for Sub Saharan Africa ##
+## To create individual movies for VWB-total, VWB-surplus and VWB-deficit
+## Run this and the next script three times while only keeping one process each time 
+## and also deleting intermediate files in between each run and renaming the final movie
+## There are alternatives, including running all scripts and change the the script files or the frame folders/frame names
+#ArcticWetlands_VWB-0950_movieframes_M.xml
+
+## Create Movieclock and scripts for VWB movie with movieclock overlay 
+#ArcticWetlands_VWB-0960_movieclock_M.xml
+
+###################################
+###################################
+###    GRACE data processing    ###
+###################################
+###################################
+
+## The processing requires that the GRACE data are already processed and available ##
+
+###################################
+###       Tile to region        ###
+###################################
+
+## Tile monthly GRACE to region ##
+#ArcticWetlands_GRACE-0160_tile_M.xml
+
+## Tile annual GRACE to region ##
+#ArcticWetlands_GRACE-0161_tile_A.xml
+
+## or resample to annual per tile
+
+#ArcticWetlands021_tileGRACE-resample-2-annual.xml
+#new number 0290
+
+###################################
+###   Time Series Processing    ###
+###################################
+
+## GRACE annual trends  
+#ArcticWetlands_GRACE-0310_trend_A_2003-2016.xml
+
+## Changes and significant trends  ##
+#ArcticWetlands_GRACE-0320_changes_A_2003-2016.xml
+
+###################################
+###   	       Mosaic           ###
+###################################
+
+## Mosaic monthly GRACE ##
+#ArcticWetlands_GRACE-0610_mosaic_M.xml
+
+## Mosaic VWB trends ##
+#ArcticWetlands_GRACE-0630_mosaic_timespanA_2003-2016.xml
+
+###################################
+###        Export media         ###
+###################################
+
+## Export monthly GRACE ##
+#ArcticWetlands_GRACE-0900_ExporttoByte_M.xml
+
+## Export GRACE annual trends ##
+#ArcticWetlands_GRACE-0910_ExporttoByte_timespanA_2003-2016.xml
+
+## Create GRACE movieframes ##
+#ArcticWetlands_GRACE-0950_movieframes_M.xml
+
+## Create GRACE Movieclock and movie script ##
+#ArcticWetlands_GRACE-0960_movieclock_M.xml
+
+###################################
+###################################
+###   TRMM vs GRACE analysis   ###
+###################################
+###################################
+
+## The processing requires that the TRMM and GRACE processing above are completed ##
+
+## trendcomp_createpalettes.xm
+
+###################################
+###     Overlay comparison      ###
+###################################
+
+## Compare trends from GRACE and TRMM  ##
+#ArcticWetlands_TRMM-GRACE-0370_dualtrendcomp_2003-2016.xml
+
+###################################
+###   Time Series Processing    ###
+###################################
+
+## Cross correlation between TRMM (master) and GRACE (slave) ##
+#ArcticWetlands_TRMM-GRACE-0385_layer-x-corr_2003-2016.xml
+
+###################################
+###   	       Mosaic           ###
+###################################
+
+## Mosaic the TRMM-GRACE (Master-Slave) cross correlation results for Sub Saharan Africa ##
+#ArcticWetlands_TRMM-GRACE-0625_mosaic_layer-x-corr_2003-2016.xml
+
+## Mosaic the trend comparison TRMM-GRACE for Sub Saharan Africa ##
+#ArcticWetlands_TRMM-GRACE-0630_mosaic_trendcomp_2003-2016.xml
+
+###################################
+###        Export media         ###
+###################################
+
+## Export TRMM-GRACE (Master-Slave) cross correlation ##
+#ArcticWetlands_TRMM-GRACE-0925-ExporttoByte_layer-x-corr_2003-2016.xml
+
+## Export trend comparison TRMM-GRACE results ##
+#ArcticWetlands_TRMM-GRACE-0930-ExporttoByte_trendcomp.xml
+
+## Create TRMM-GRACE overlay movieframes ##
+#ArcticWetlands_TRMM-GRACE-0951_overlay-movieframes_M.xml
+
+## Create Movieclock and scripts for TRMM + GRACE overlay movie with movieclock overlay
+#ArcticWetlands_TRMM-GRACE-0960_movieclock_M.xml
+
+###################################
+###################################
+###   VWB vs GRACE analysis   ###
+###################################
+###################################
+
+## The processing requires that the VWB and GRACE processing above are completed ##
+
+###################################
+###     Overlay comparison      ###
+###################################
+
+## Compare trends from GRACE and VWB  ##
+#ArcticWetlands_VWB-GRACE-0370_dualtrendcomp_2003-2016.xml
+
+###################################
+###   Time Series Processing    ###
+###################################
+
+## Cross correlation between TRMM (master) and GRACE (slave) ##
+#ArcticWetlands_VWB-GRACE-0385_layer-x-corr_2003-2016.xml
+
+###################################
+###   	       Mosaic           ###
+###################################
+
+## Mosaic the VWB-GRACE (Master-Slave) cross correlation results for Sub Saharan Africa ##
+#ArcticWetlands_VWB-GRACE-0625_mosaic_layer-x-corr_2003-2016.xml
+
+## Mosaic the trend comparison VWB-GRACE for Sub Saharan Africa ##
+#ArcticWetlands_VWB-GRACE-0630_mosaic_trendcomp_2003-2016.xml
+
+###################################
+###        Export media         ###
+###################################
+
+## Export VWB-GRACE (Master-Slave) cross correlation ##
+#ArcticWetlands_VWB-GRACE-0925-ExporttoByte_layer-x-corr_2003-2016.xml
+
+## Export trend comparison VWB-GRACE results ##
+#ArcticWetlands_VWB-GRACE-0930-ExporttoByte_trendcomp.xml
+
+## Create VWB-GRACE overlay movieframes ##
+#ArcticWetlands_VWB-GRACE-0951_overlay-movieframes_M.xml
+
+## Create Movieclock and scripts for TRMM + GRACE overlay movie with movieclock overlay
+#ArcticWetlands_VWB-GRACE-0960_movieclock_M.xml
+
+###################################
+###################################
+###    VWB vs GRACE analysis    ###
+###################################
+###################################
+## The processing requires that the VWB and GRACE processing above are completed ##
+
+## Create monthly VWB + GRACE overlay movieframes for Sub Saharan Africa 
+## If you want to create more than one movie you have to run the process sequential.
+## The destination folder can only contain the frames for a single movie
+#ArcticWetlands055_GRACE+VWB-overlaymovieframes_M.xml
+
+## Create Movieclock and scripts for VWB + GRACE overlay movie with movieclock overlay
+## To create individual movies for VWB-total and VWB-surplus
+## Run the script twice while only keeping one process each time 
+## Or just bulk rename the movieclock images to correspond to the layer movieframes##
+#ArcticWetlands056_GRACE+TRMM-movieclock_M.xml
+
+## Cross correlation between VWB (master) and GRACE (slave) ##
+#ArcticWetlands042_VWB-GRACE-imagecrosscorrelate.xml
+
+## Mosaic the VWB-GRACE (Master-Slave) cross correlation results for Sub Saharan Africa ##
+#ArcticWetlands0230_mosaic_vwb-grace_crosscorr.xml
+
+## Export the mosaicked VWB-GRACE (Master-Slave) cross correlation results for Sub Saharan Africa ##
+#ArcticWetlands050_VWB-GRACE-ExporttoByte_crosscorr.xml
+
+###################################
+###################################
+###    SMAP data processing    ###
+###################################
+###################################
+
+## The processing requires that the SMAP data are already processed and available ##
+
+#createscaling_SMAP_v80.xml
+
+###################################
+###       Tile to region        ###
+###################################
+
+## Tile monthly SMAP to region MODIS system ##
+#ArcticWetlands_SMAP-0160_tile_M.xml
+
+## Tile !16D SMAP to region MODIS system ##
+#ArcticWetlands_SMAP-0162_tile_16D.xml

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<movieclock>
+	<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'system'></userproj>
+	<path></path>
+
+	<!--  Add movieclock -->
+	<process processid = 'addmovieclock'>
+		<overwrite>Y</overwrite>
+		<delete>N</delete>
+		<parameters name = 'vwb'>
+		</parameters>
+	</process>
+</movieclock>

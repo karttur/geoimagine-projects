@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='utf-8'?>
+<okadeltaproject>
+	<userproj userid = 'karttur' projectid = 'karttur-africasubsahara' tractid= 'karttur-africasubsahara' siteid = '*' plotid = '*' system = 'modis'></userproj>
+	<period startyear = "2015" startmonth='04' startday='23' endyear = "2018" timestep='timespan-16D'></period>
+		
+	<!-- Mosaic crosscorr -->
+	<process processid = 'MosaicModis' version = '1.3'>
+		<overwrite>False</overwrite>
+		<parameters t_epsg ='4326' xres='0.08333' yres='0.08333'></parameters>
+		<srcpath volume = "africa"></srcpath>
+		<dstpath volume = "africa"></dstpath>
+		<srccomp>
+			<obs-lag id = 'obs-lag' source = "smapmodtwi"  product = "smap-xc-modtwi" folder = "xcorr" band = "obs-lag" prefix = "obs-lag" suffix = "f-002-tg01-9km-nadd-a1"></obs-lag>
+			<season-lag id = 'season-lag' source = "smapmodtwi"  product = "smap-xc-modtwi" folder = "xcorr" band = "season-lag" prefix = "season-lag" suffix = "f-002-tg01-9km-nadd-a1"></season-lag>
+			<tendency-lag id = 'tendency-lag' source = "smapmodtwi"  product = "smap-xc-modtwi" folder = "xcorr" band = "tendency-lag" prefix = "tendency-lag" suffix = "f-002-tg01-9km-nadd-a1"></tendency-lag>
+			<residual-lag id = 'residual-lag' source = "smapmodtwi"  product = "smap-xc-modtwi" folder = "xcorr" band = "residual-lag" prefix = "residual-lag" suffix = "f-002-tg01-9km-nadd-a1"></residual-lag>
+			
+			<obs-pearson id = 'obs-pearson' source = "smapmodtwi"  product = "smap-xc-modtwi" folder = "xcorr" band = "obs-pearson" prefix = "obs-pearson" suffix = "f-002-tg01-9km-nadd-a1"></obs-pearson>
+			<season-pearson id = 'season-pearson' source = "smapmodtwi"  product = "smap-xc-modtwi" folder = "xcorr" band = "season-pearson" prefix = "season-pearson" suffix = "f-002-tg01-9km-nadd-a1"></season-pearson>
+			<tendency-pearson id = 'tendency-pearson' source = "smapmodtwi"  product = "smap-xc-modtwi" folder = "xcorr" band = "tendency-pearson" prefix = "tendency-pearson" suffix = "f-002-tg01-9km-nadd-a1"></tendency-pearson>
+			<residual-pearson id = 'residual-pearson' source = "smapmodtwi"  product = "smap-xc-modtwi" folder = "xcorr" band = "residual-pearson" prefix = "residual-pearson" suffix = "f-002-tg01-9km-nadd-a1"></residual-pearson>
+			
+			<obs-pearson-lag-12 id = '-1l' source = "smapmodtwi"  product = "smap-xc-modtwi" folder = "xcorr" band = "obs-pearson-lag-12" prefix = "obs-pearson" suffix = "f-002-tg01-9km-nadd-a1"></obs-pearson-lag-12>
+			<obs-pearson-lag-11 id = '-1k' source = "smapmodtwi"  product = "smap-xc-modtwi" folder = "xcorr" band = "obs-pearson-lag-11" prefix = "obs-pearson" suffix = "f-002-tg01-9km-nadd-a1"></obs-pearson-lag-11>
+			<obs-pearson-lag-10 id = '-1j' source = "smapmodtwi"  product = "smap-xc-modtwi" folder = "xcorr" band = "obs-pearson-lag-10" prefix = "obs-pearson" suffix = "f-002-tg01-9km-nadd-a1"></obs-pearson-lag-10>
+			<obs-pearson-lag-9 id = '-1i' source = "smapmodtwi"  product = "smap-xc-modtwi" folder = "xcorr" band = "obs-pearson-lag-9" prefix = "obs-pearson" suffix = "f-002-tg01-9km-nadd-a1"></obs-pearson-lag-9>
+			<obs-pearson-lag-8 id = '-1h' source = "smapmodtwi"  product = "smap-xc-modtwi" folder = "xcorr" band = "obs-pearson-lag-8" prefix = "obs-pearson" suffix = "f-002-tg01-9km-nadd-a1"></obs-pearson-lag-8>
+			<obs-pearson-lag-7 id = '-1g' source = "smapmodtwi"  product = "smap-xc-modtwi" folder = "xcorr" band = "obs-pearson-lag-7" prefix = "obs-pearson" suffix = "f-002-tg01-9km-nadd-a1"></obs-pearson-lag-7>
+			<obs-pearson-lag-6 id = '-1f' source = "smapmodtwi"  product = "smap-xc-modtwi" folder = "xcorr" band = "obs-pearson-lag-6" prefix = "obs-pearson" suffix = "f-002-tg01-9km-nadd-a1"></obs-pearson-lag-6>
+			<obs-pearson-lag-5 id = '-1e' source = "smapmodtwi"  product = "smap-xc-modtwi" folder = "xcorr" band = "obs-pearson-lag-5" prefix = "obs-pearson" suffix = "f-002-tg01-9km-nadd-a1"></obs-pearson-lag-5>
+			<obs-pearson-lag-4 id = '-1d' source = "smapmodtwi"  product = "smap-xc-modtwi" folder = "xcorr" band = "obs-pearson-lag-4" prefix = "obs-pearson" suffix = "f-002-tg01-9km-nadd-a1"></obs-pearson-lag-4>
+			<obs-pearson-lag-3 id = '-1c' source = "smapmodtwi"  product = "smap-xc-modtwi" folder = "xcorr" band = "obs-pearson-lag-3" prefix = "obs-pearson" suffix = "f-002-tg01-9km-nadd-a1"></obs-pearson-lag-3>
+			<obs-pearson-lag-2 id = '-1b' source = "smapmodtwi"  product = "smap-xc-modtwi" folder = "xcorr" band = "obs-pearson-lag-2" prefix = "obs-pearson" suffix = "f-002-tg01-9km-nadd-a1"></obs-pearson-lag-2>
+			<obs-pearson-lag-1 id = '-1a' source = "smapmodtwi"  product = "smap-xc-modtwi" folder = "xcorr" band = "obs-pearson-lag-1" prefix = "obs-pearson" suffix = "f-002-tg01-9km-nadd-a1"></obs-pearson-lag-1>
+			<obs-pearson-lag0 id = '1' source = "smapmodtwi"  product = "smap-xc-modtwi" folder = "xcorr" band = "obs-pearson-lag0" prefix = "obs-pearson" suffix = "f-002-tg01-9km-nadd-a1"></obs-pearson-lag0>
+			<obs-pearson-lag1 id = '1a' source = "smapmodtwi"  product = "smap-xc-modtwi" folder = "xcorr" band = "obs-pearson-lag1" prefix = "obs-pearson" suffix = "f-002-tg01-9km-nadd-a1"></obs-pearson-lag1>
+			<obs-pearson-lag2 id = '1b' source = "smapmodtwi"  product = "smap-xc-modtwi" folder = "xcorr" band = "obs-pearson-lag2" prefix = "obs-pearson" suffix = "f-002-tg01-9km-nadd-a1"></obs-pearson-lag2>
+			<obs-pearson-lag3 id = '1c' source = "smapmodtwi"  product = "smap-xc-modtwi" folder = "xcorr" band = "obs-pearson-lag3" prefix = "obs-pearson" suffix = "f-002-tg01-9km-nadd-a1"></obs-pearson-lag3>
+			<obs-pearson-lag4 id = '1d' source = "smapmodtwi"  product = "smap-xc-modtwi" folder = "xcorr" band = "obs-pearson-lag4" prefix = "obs-pearson" suffix = "f-002-tg01-9km-nadd-a1"></obs-pearson-lag4>
+			<obs-pearson-lag5 id = '1e' source = "smapmodtwi"  product = "smap-xc-modtwi" folder = "xcorr" band = "obs-pearson-lag5" prefix = "obs-pearson" suffix = "f-002-tg01-9km-nadd-a1"></obs-pearson-lag5>
+			<obs-pearson-lag6 id = '1f' source = "smapmodtwi"  product = "smap-xc-modtwi" folder = "xcorr" band = "obs-pearson-lag6" prefix = "obs-pearson" suffix = "f-002-tg01-9km-nadd-a1"></obs-pearson-lag6>
+			<obs-pearson-lag7 id = '1g' source = "smapmodtwi"  product = "smap-xc-modtwi" folder = "xcorr" band = "obs-pearson-lag7" prefix = "obs-pearson" suffix = "f-002-tg01-9km-nadd-a1"></obs-pearson-lag7>
+			<obs-pearson-lag8 id = '1h' source = "smapmodtwi"  product = "smap-xc-modtwi" folder = "xcorr" band = "obs-pearson-lag8" prefix = "obs-pearson" suffix = "f-002-tg01-9km-nadd-a1"></obs-pearson-lag8>
+			<obs-pearson-lag9 id = '1i' source = "smapmodtwi"  product = "smap-xc-modtwi" folder = "xcorr" band = "obs-pearson-lag9" prefix = "obs-pearson" suffix = "f-002-tg01-9km-nadd-a1"></obs-pearson-lag9>
+			<obs-pearson-lag10 id = '1j' source = "smapmodtwi"  product = "smap-xc-modtwi" folder = "xcorr" band = "obs-pearson-lag10" prefix = "obs-pearson" suffix = "f-002-tg01-9km-nadd-a1"></obs-pearson-lag10>
+			<obs-pearson-lag11 id = '1k' source = "smapmodtwi"  product = "smap-xc-modtwi" folder = "xcorr" band = "obs-pearson-lag11" prefix = "obs-pearson" suffix = "f-002-tg01-9km-nadd-a1"></obs-pearson-lag11>
+			<obs-pearson-lag12 id = '1l' source = "smapmodtwi"  product = "smap-xc-modtwi" folder = "xcorr" band = "obs-pearson-lag12" prefix = "obs-pearson" suffix = "f-002-tg01-9km-nadd-a1"></obs-pearson-lag12>
+
+			<season-pearson-lag-12 id = '-2l' source = "smapmodtwi"  product = "smap-xc-modtwi" folder = "xcorr" band = "season-pearson-lag-12" prefix = "season-pearson" suffix = "f-002-tg01-9km-nadd-a1"></season-pearson-lag-12>
+			<season-pearson-lag-11 id = '-2k' source = "smapmodtwi"  product = "smap-xc-modtwi" folder = "xcorr" band = "season-pearson-lag-11" prefix = "season-pearson" suffix = "f-002-tg01-9km-nadd-a1"></season-pearson-lag-11>
+			<season-pearson-lag-10 id = '-2j' source = "smapmodtwi"  product = "smap-xc-modtwi" folder = "xcorr" band = "season-pearson-lag-10" prefix = "season-pearson" suffix = "f-002-tg01-9km-nadd-a1"></season-pearson-lag-10>
+			<season-pearson-lag-9 id = '-2i' source = "smapmodtwi"  product = "smap-xc-modtwi" folder = "xcorr" band = "season-pearson-lag-9" prefix = "season-pearson" suffix = "f-002-tg01-9km-nadd-a1"></season-pearson-lag-9>
+			<season-pearson-lag-8 id = '-2h' source = "smapmodtwi"  product = "smap-xc-modtwi" folder = "xcorr" band = "season-pearson-lag-8" prefix = "season-pearson" suffix = "f-002-tg01-9km-nadd-a1"></season-pearson-lag-8>
+			<season-pearson-lag-7 id = '-2g' source = "smapmodtwi"  product = "smap-xc-modtwi" folder = "xcorr" band = "season-pearson-lag-7" prefix = "season-pearson" suffix = "f-002-tg01-9km-nadd-a1"></season-pearson-lag-7>
+			<season-pearson-lag-6 id = '-2f' source = "smapmodtwi"  product = "smap-xc-modtwi" folder = "xcorr" band = "season-pearson-lag-6" prefix = "season-pearson" suffix = "f-002-tg01-9km-nadd-a1"></season-pearson-lag-6>
+			<season-pearson-lag-5 id = '-2e' source = "smapmodtwi"  product = "smap-xc-modtwi" folder = "xcorr" band = "season-pearson-lag-5" prefix = "season-pearson" suffix = "f-002-tg01-9km-nadd-a1"></season-pearson-lag-5>
+			<season-pearson-lag-4 id = '-2d' source = "smapmodtwi"  product = "smap-xc-modtwi" folder = "xcorr" band = "season-pearson-lag-4" prefix = "season-pearson" suffix = "f-002-tg01-9km-nadd-a1"></season-pearson-lag-4>
+			<season-pearson-lag-3 id = '-2c' source = "smapmodtwi"  product = "smap-xc-modtwi" folder = "xcorr" band = "season-pearson-lag-3" prefix = "season-pearson" suffix = "f-002-tg01-9km-nadd-a1"></season-pearson-lag-3>
+			<season-pearson-lag-2 id = '-2b' source = "smapmodtwi"  product = "smap-xc-modtwi" folder = "xcorr" band = "season-pearson-lag-2" prefix = "season-pearson" suffix = "f-002-tg01-9km-nadd-a1"></season-pearson-lag-2>
+			<season-pearson-lag-1 id = '-2sb' source = "smapmodtwi"  product = "smap-xc-modtwi" folder = "xcorr" band = "season-pearson-lag-1" prefix = "season-pearson" suffix = "f-002-tg01-9km-nadd-a1"></season-pearson-lag-1>
+			<season-pearson-lag0 id = '2' source = "smapmodtwi"  product = "smap-xc-modtwi" folder = "xcorr" band = "season-pearson-lag0" prefix = "season-pearson" suffix = "f-002-tg01-9km-nadd-a1"></season-pearson-lag0>
+			<season-pearson-lag1 id = '2sb' source = "smapmodtwi"  product = "smap-xc-modtwi" folder = "xcorr" band = "season-pearson-lag1" prefix = "season-pearson" suffix = "f-002-tg01-9km-nadd-a1"></season-pearson-lag1>
+			<season-pearson-lag2 id = '2b' source = "smapmodtwi"  product = "smap-xc-modtwi" folder = "xcorr" band = "season-pearson-lag2" prefix = "season-pearson" suffix = "f-002-tg01-9km-nadd-a1"></season-pearson-lag2>
+			<season-pearson-lag3 id = '2c' source = "smapmodtwi"  product = "smap-xc-modtwi" folder = "xcorr" band = "season-pearson-lag3" prefix = "season-pearson-lag3" suffix = "f-002-tg01-9km-nadd-a1"></season-pearson-lag3>
+			<season-pearson-lag4 id = '2d' source = "smapmodtwi"  product = "smap-xc-modtwi" folder = "xcorr" band = "season-pearson-lag4" prefix = "season-pearson-lag4" suffix = "f-002-tg01-9km-nadd-a1"></season-pearson-lag4>
+			<season-pearson-lag5 id = '2e' source = "smapmodtwi"  product = "smap-xc-modtwi" folder = "xcorr" band = "season-pearson-lag5" prefix = "season-pearson-lag5" suffix = "f-002-tg01-9km-nadd-a1"></season-pearson-lag5>
+			<season-pearson-lag6 id = '2f' source = "smapmodtwi"  product = "smap-xc-modtwi" folder = "xcorr" band = "season-pearson-lag6" prefix = "season-pearson-lag6" suffix = "f-002-tg01-9km-nadd-a1"></season-pearson-lag6>
+			<season-pearson-lag7 id = '2g' source = "smapmodtwi"  product = "smap-xc-modtwi" folder = "xcorr" band = "season-pearson-lag7" prefix = "season-pearson-lag7" suffix = "f-002-tg01-9km-nadd-a1"></season-pearson-lag7>
+			<season-pearson-lag8 id = '2h' source = "smapmodtwi"  product = "smap-xc-modtwi" folder = "xcorr" band = "season-pearson-lag8" prefix = "season-pearson-lag8" suffix = "f-002-tg01-9km-nadd-a1"></season-pearson-lag8>
+			<season-pearson-lag9 id = '2i' source = "smapmodtwi"  product = "smap-xc-modtwi" folder = "xcorr" band = "season-pearson-lag9" prefix = "season-pearson-lag9" suffix = "f-002-tg01-9km-nadd-a1"></season-pearson-lag9>
+			<season-pearson-lag10 id = '2j' source = "smapmodtwi"  product = "smap-xc-modtwi" folder = "xcorr" band = "season-pearson-lag10" prefix = "season-pearson-lag10" suffix = "f-002-tg01-9km-nadd-a1"></season-pearson-lag10>
+			<season-pearson-lag11 id = '2k' source = "smapmodtwi"  product = "smap-xc-modtwi" folder = "xcorr" band = "season-pearson-lag11" prefix = "season-pearson-lag11" suffix = "f-002-tg01-9km-nadd-a1"></season-pearson-lag11>
+			<season-pearson-lag12 id = '2l' source = "smapmodtwi"  product = "smap-xc-modtwi" folder = "xcorr" band = "season-pearson-lag12" prefix = "season-pearson-lag12" suffix = "f-002-tg01-9km-nadd-a1"></season-pearson-lag12>
+
+		</srccomp>
+	</process>
+	
+	<!-- Mosaic crosscorr -->
+	<process processid = 'MosaicModis' version = '1.3'>
+		<overwrite>False</overwrite>
+		<parameters t_epsg ='4326' xres='0.08333' yres='0.08333'></parameters>
+		<srcpath volume = "africa"></srcpath>
+		<dstpath volume = "africa"></dstpath>
+		<srccomp>
+			<obs-lag id = 'obs-lag' source = "smapmodtwi"  product = "smapveg-xc-modtwi" folder = "xcorr" band = "obs-lag" prefix = "obs-lag" suffix = "f-002-tg01-9km-nadd-a1"></obs-lag>
+			<season-lag id = 'season-lag' source = "smapmodtwi"  product = "smapveg-xc-modtwi" folder = "xcorr" band = "season-lag" prefix = "season-lag" suffix = "f-002-tg01-9km-nadd-a1"></season-lag>
+			<tendency-lag id = 'tendency-lag' source = "smapmodtwi"  product = "smapveg-xc-modtwi" folder = "xcorr" band = "tendency-lag" prefix = "tendency-lag" suffix = "f-002-tg01-9km-nadd-a1"></tendency-lag>
+			<residual-lag id = 'residual-lag' source = "smapmodtwi"  product = "smapveg-xc-modtwi" folder = "xcorr" band = "residual-lag" prefix = "residual-lag" suffix = "f-002-tg01-9km-nadd-a1"></residual-lag>
+			
+			<obs-pearson id = 'obs-pearson' source = "smapmodtwi"  product = "smapveg-xc-modtwi" folder = "xcorr" band = "obs-pearson" prefix = "obs-pearson" suffix = "f-002-tg01-9km-nadd-a1"></obs-pearson>
+			<season-pearson id = 'season-pearson' source = "smapmodtwi"  product = "smapveg-xc-modtwi" folder = "xcorr" band = "season-pearson" prefix = "season-pearson" suffix = "f-002-tg01-9km-nadd-a1"></season-pearson>
+			<tendency-pearson id = 'tendency-pearson' source = "smapmodtwi"  product = "smapveg-xc-modtwi" folder = "xcorr" band = "tendency-pearson" prefix = "tendency-pearson" suffix = "f-002-tg01-9km-nadd-a1"></tendency-pearson>
+			<residual-pearson id = 'residual-pearson' source = "smapmodtwi"  product = "smapveg-xc-modtwi" folder = "xcorr" band = "residual-pearson" prefix = "residual-pearson" suffix = "f-002-tg01-9km-nadd-a1"></residual-pearson>
+			
+			<obs-pearson-lag-12 id = '-1l' source = "smapmodtwi"  product = "smapveg-xc-modtwi" folder = "xcorr" band = "obs-pearson-lag-12" prefix = "obs-pearson" suffix = "f-002-tg01-9km-nadd-a1"></obs-pearson-lag-12>
+			<obs-pearson-lag-11 id = '-1k' source = "smapmodtwi"  product = "smapveg-xc-modtwi" folder = "xcorr" band = "obs-pearson-lag-11" prefix = "obs-pearson" suffix = "f-002-tg01-9km-nadd-a1"></obs-pearson-lag-11>
+			<obs-pearson-lag-10 id = '-1j' source = "smapmodtwi"  product = "smapveg-xc-modtwi" folder = "xcorr" band = "obs-pearson-lag-10" prefix = "obs-pearson" suffix = "f-002-tg01-9km-nadd-a1"></obs-pearson-lag-10>
+			<obs-pearson-lag-9 id = '-1i' source = "smapmodtwi"  product = "smapveg-xc-modtwi" folder = "xcorr" band = "obs-pearson-lag-9" prefix = "obs-pearson" suffix = "f-002-tg01-9km-nadd-a1"></obs-pearson-lag-9>
+			<obs-pearson-lag-8 id = '-1h' source = "smapmodtwi"  product = "smapveg-xc-modtwi" folder = "xcorr" band = "obs-pearson-lag-8" prefix = "obs-pearson" suffix = "f-002-tg01-9km-nadd-a1"></obs-pearson-lag-8>
+			<obs-pearson-lag-7 id = '-1g' source = "smapmodtwi"  product = "smapveg-xc-modtwi" folder = "xcorr" band = "obs-pearson-lag-7" prefix = "obs-pearson" suffix = "f-002-tg01-9km-nadd-a1"></obs-pearson-lag-7>
+			<obs-pearson-lag-6 id = '-1f' source = "smapmodtwi"  product = "smapveg-xc-modtwi" folder = "xcorr" band = "obs-pearson-lag-6" prefix = "obs-pearson" suffix = "f-002-tg01-9km-nadd-a1"></obs-pearson-lag-6>
+			<obs-pearson-lag-5 id = '-1e' source = "smapmodtwi"  product = "smapveg-xc-modtwi" folder = "xcorr" band = "obs-pearson-lag-5" prefix = "obs-pearson" suffix = "f-002-tg01-9km-nadd-a1"></obs-pearson-lag-5>
+			<obs-pearson-lag-4 id = '-1d' source = "smapmodtwi"  product = "smapveg-xc-modtwi" folder = "xcorr" band = "obs-pearson-lag-4" prefix = "obs-pearson" suffix = "f-002-tg01-9km-nadd-a1"></obs-pearson-lag-4>
+			<obs-pearson-lag-3 id = '-1c' source = "smapmodtwi"  product = "smapveg-xc-modtwi" folder = "xcorr" band = "obs-pearson-lag-3" prefix = "obs-pearson" suffix = "f-002-tg01-9km-nadd-a1"></obs-pearson-lag-3>
+			<obs-pearson-lag-2 id = '-1b' source = "smapmodtwi"  product = "smapveg-xc-modtwi" folder = "xcorr" band = "obs-pearson-lag-2" prefix = "obs-pearson" suffix = "f-002-tg01-9km-nadd-a1"></obs-pearson-lag-2>
+			<obs-pearson-lag-1 id = '-1a' source = "smapmodtwi"  product = "smapveg-xc-modtwi" folder = "xcorr" band = "obs-pearson-lag-1" prefix = "obs-pearson" suffix = "f-002-tg01-9km-nadd-a1"></obs-pearson-lag-1>
+			<obs-pearson-lag0 id = '1' source = "smapmodtwi"  product = "smapveg-xc-modtwi" folder = "xcorr" band = "obs-pearson-lag0" prefix = "obs-pearson" suffix = "f-002-tg01-9km-nadd-a1"></obs-pearson-lag0>
+			<obs-pearson-lag1 id = '1a' source = "smapmodtwi"  product = "smapveg-xc-modtwi" folder = "xcorr" band = "obs-pearson-lag1" prefix = "obs-pearson" suffix = "f-002-tg01-9km-nadd-a1"></obs-pearson-lag1>
+			<obs-pearson-lag2 id = '1b' source = "smapmodtwi"  product = "smapveg-xc-modtwi" folder = "xcorr" band = "obs-pearson-lag2" prefix = "obs-pearson" suffix = "f-002-tg01-9km-nadd-a1"></obs-pearson-lag2>
+			<obs-pearson-lag3 id = '1c' source = "smapmodtwi"  product = "smapveg-xc-modtwi" folder = "xcorr" band = "obs-pearson-lag3" prefix = "obs-pearson" suffix = "f-002-tg01-9km-nadd-a1"></obs-pearson-lag3>
+			<obs-pearson-lag4 id = '1d' source = "smapmodtwi"  product = "smapveg-xc-modtwi" folder = "xcorr" band = "obs-pearson-lag4" prefix = "obs-pearson" suffix = "f-002-tg01-9km-nadd-a1"></obs-pearson-lag4>
+			<obs-pearson-lag5 id = '1e' source = "smapmodtwi"  product = "smapveg-xc-modtwi" folder = "xcorr" band = "obs-pearson-lag5" prefix = "obs-pearson" suffix = "f-002-tg01-9km-nadd-a1"></obs-pearson-lag5>
+			<obs-pearson-lag6 id = '1f' source = "smapmodtwi"  product = "smapveg-xc-modtwi" folder = "xcorr" band = "obs-pearson-lag6" prefix = "obs-pearson" suffix = "f-002-tg01-9km-nadd-a1"></obs-pearson-lag6>
+			<obs-pearson-lag7 id = '1g' source = "smapmodtwi"  product = "smapveg-xc-modtwi" folder = "xcorr" band = "obs-pearson-lag7" prefix = "obs-pearson" suffix = "f-002-tg01-9km-nadd-a1"></obs-pearson-lag7>
+			<obs-pearson-lag8 id = '1h' source = "smapmodtwi"  product = "smapveg-xc-modtwi" folder = "xcorr" band = "obs-pearson-lag8" prefix = "obs-pearson" suffix = "f-002-tg01-9km-nadd-a1"></obs-pearson-lag8>
+			<obs-pearson-lag9 id = '1i' source = "smapmodtwi"  product = "smapveg-xc-modtwi" folder = "xcorr" band = "obs-pearson-lag9" prefix = "obs-pearson" suffix = "f-002-tg01-9km-nadd-a1"></obs-pearson-lag9>
+			<obs-pearson-lag10 id = '1j' source = "smapmodtwi"  product = "smapveg-xc-modtwi" folder = "xcorr" band = "obs-pearson-lag10" prefix = "obs-pearson" suffix = "f-002-tg01-9km-nadd-a1"></obs-pearson-lag10>
+			<obs-pearson-lag11 id = '1k' source = "smapmodtwi"  product = "smapveg-xc-modtwi" folder = "xcorr" band = "obs-pearson-lag11" prefix = "obs-pearson" suffix = "f-002-tg01-9km-nadd-a1"></obs-pearson-lag11>
+			<obs-pearson-lag12 id = '1l' source = "smapmodtwi"  product = "smapveg-xc-modtwi" folder = "xcorr" band = "obs-pearson-lag12" prefix = "obs-pearson" suffix = "f-002-tg01-9km-nadd-a1"></obs-pearson-lag12>
+
+			<season-pearson-lag-12 id = '-2l' source = "smapmodtwi"  product = "smapveg-xc-modtwi" folder = "xcorr" band = "season-pearson-lag-12" prefix = "season-pearson" suffix = "f-002-tg01-9km-nadd-a1"></season-pearson-lag-12>
+			<season-pearson-lag-11 id = '-2k' source = "smapmodtwi"  product = "smapveg-xc-modtwi" folder = "xcorr" band = "season-pearson-lag-11" prefix = "season-pearson" suffix = "f-002-tg01-9km-nadd-a1"></season-pearson-lag-11>
+			<season-pearson-lag-10 id = '-2j' source = "smapmodtwi"  product = "smapveg-xc-modtwi" folder = "xcorr" band = "season-pearson-lag-10" prefix = "season-pearson" suffix = "f-002-tg01-9km-nadd-a1"></season-pearson-lag-10>
+			<season-pearson-lag-9 id = '-2i' source = "smapmodtwi"  product = "smapveg-xc-modtwi" folder = "xcorr" band = "season-pearson-lag-9" prefix = "season-pearson" suffix = "f-002-tg01-9km-nadd-a1"></season-pearson-lag-9>
+			<season-pearson-lag-8 id = '-2h' source = "smapmodtwi"  product = "smapveg-xc-modtwi" folder = "xcorr" band = "season-pearson-lag-8" prefix = "season-pearson" suffix = "f-002-tg01-9km-nadd-a1"></season-pearson-lag-8>
+			<season-pearson-lag-7 id = '-2g' source = "smapmodtwi"  product = "smapveg-xc-modtwi" folder = "xcorr" band = "season-pearson-lag-7" prefix = "season-pearson" suffix = "f-002-tg01-9km-nadd-a1"></season-pearson-lag-7>
+			<season-pearson-lag-6 id = '-2f' source = "smapmodtwi"  product = "smapveg-xc-modtwi" folder = "xcorr" band = "season-pearson-lag-6" prefix = "season-pearson" suffix = "f-002-tg01-9km-nadd-a1"></season-pearson-lag-6>
+			<season-pearson-lag-5 id = '-2e' source = "smapmodtwi"  product = "smapveg-xc-modtwi" folder = "xcorr" band = "season-pearson-lag-5" prefix = "season-pearson" suffix = "f-002-tg01-9km-nadd-a1"></season-pearson-lag-5>
+			<season-pearson-lag-4 id = '-2d' source = "smapmodtwi"  product = "smapveg-xc-modtwi" folder = "xcorr" band = "season-pearson-lag-4" prefix = "season-pearson" suffix = "f-002-tg01-9km-nadd-a1"></season-pearson-lag-4>
+			<season-pearson-lag-3 id = '-2c' source = "smapmodtwi"  product = "smapveg-xc-modtwi" folder = "xcorr" band = "season-pearson-lag-3" prefix = "season-pearson" suffix = "f-002-tg01-9km-nadd-a1"></season-pearson-lag-3>
+			<season-pearson-lag-2 id = '-2b' source = "smapmodtwi"  product = "smapveg-xc-modtwi" folder = "xcorr" band = "season-pearson-lag-2" prefix = "season-pearson" suffix = "f-002-tg01-9km-nadd-a1"></season-pearson-lag-2>
+			<season-pearson-lag-1 id = '-2sb' source = "smapmodtwi"  product = "smapveg-xc-modtwi" folder = "xcorr" band = "season-pearson-lag-1" prefix = "season-pearson" suffix = "f-002-tg01-9km-nadd-a1"></season-pearson-lag-1>
+			<season-pearson-lag0 id = '2' source = "smapmodtwi"  product = "smapveg-xc-modtwi" folder = "xcorr" band = "season-pearson-lag0" prefix = "season-pearson" suffix = "f-002-tg01-9km-nadd-a1"></season-pearson-lag0>
+			<season-pearson-lag1 id = '2sb' source = "smapmodtwi"  product = "smapveg-xc-modtwi" folder = "xcorr" band = "season-pearson-lag1" prefix = "season-pearson" suffix = "f-002-tg01-9km-nadd-a1"></season-pearson-lag1>
+			<season-pearson-lag2 id = '2b' source = "smapmodtwi"  product = "smapveg-xc-modtwi" folder = "xcorr" band = "season-pearson-lag2" prefix = "season-pearson" suffix = "f-002-tg01-9km-nadd-a1"></season-pearson-lag2>
+			<season-pearson-lag3 id = '2c' source = "smapmodtwi"  product = "smapveg-xc-modtwi" folder = "xcorr" band = "season-pearson-lag3" prefix = "season-pearson-lag3" suffix = "f-002-tg01-9km-nadd-a1"></season-pearson-lag3>
+			<season-pearson-lag4 id = '2d' source = "smapmodtwi"  product = "smapveg-xc-modtwi" folder = "xcorr" band = "season-pearson-lag4" prefix = "season-pearson-lag4" suffix = "f-002-tg01-9km-nadd-a1"></season-pearson-lag4>
+			<season-pearson-lag5 id = '2e' source = "smapmodtwi"  product = "smapveg-xc-modtwi" folder = "xcorr" band = "season-pearson-lag5" prefix = "season-pearson-lag5" suffix = "f-002-tg01-9km-nadd-a1"></season-pearson-lag5>
+			<season-pearson-lag6 id = '2f' source = "smapmodtwi"  product = "smapveg-xc-modtwi" folder = "xcorr" band = "season-pearson-lag6" prefix = "season-pearson-lag6" suffix = "f-002-tg01-9km-nadd-a1"></season-pearson-lag6>
+			<season-pearson-lag7 id = '2g' source = "smapmodtwi"  product = "smapveg-xc-modtwi" folder = "xcorr" band = "season-pearson-lag7" prefix = "season-pearson-lag7" suffix = "f-002-tg01-9km-nadd-a1"></season-pearson-lag7>
+			<season-pearson-lag8 id = '2h' source = "smapmodtwi"  product = "smapveg-xc-modtwi" folder = "xcorr" band = "season-pearson-lag8" prefix = "season-pearson-lag8" suffix = "f-002-tg01-9km-nadd-a1"></season-pearson-lag8>
+			<season-pearson-lag9 id = '2i' source = "smapmodtwi"  product = "smapveg-xc-modtwi" folder = "xcorr" band = "season-pearson-lag9" prefix = "season-pearson-lag9" suffix = "f-002-tg01-9km-nadd-a1"></season-pearson-lag9>
+			<season-pearson-lag10 id = '2j' source = "smapmodtwi"  product = "smapveg-xc-modtwi" folder = "xcorr" band = "season-pearson-lag10" prefix = "season-pearson-lag10" suffix = "f-002-tg01-9km-nadd-a1"></season-pearson-lag10>
+			<season-pearson-lag11 id = '2k' source = "smapmodtwi"  product = "smapveg-xc-modtwi" folder = "xcorr" band = "season-pearson-lag11" prefix = "season-pearson-lag11" suffix = "f-002-tg01-9km-nadd-a1"></season-pearson-lag11>
+			<season-pearson-lag12 id = '2l' source = "smapmodtwi"  product = "smapveg-xc-modtwi" folder = "xcorr" band = "season-pearson-lag12" prefix = "season-pearson-lag12" suffix = "f-002-tg01-9km-nadd-a1"></season-pearson-lag12>
+
+		</srccomp>
+	</process>
+</okadeltaproject>
+

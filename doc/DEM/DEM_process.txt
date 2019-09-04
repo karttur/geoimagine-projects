@@ -1,0 +1,11 @@
+
+
+# SEARCH LP DAAC datapool for SRTM data
+#SRTM-0100_search-datapool.xml
+
+#Transfer to db
+#SRTM-0110_datapoolsearh-todb.xml
+
+#Download tiles
+SRTM-0115_datapool-download.xml
+

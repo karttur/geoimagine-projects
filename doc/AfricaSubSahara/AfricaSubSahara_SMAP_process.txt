@@ -1,0 +1,37 @@
+###################################
+###################################
+###    SMAP data processing    ###
+###################################
+###################################
+
+## The processing requires that the SMAP data are already processed and available ##
+
+###################################
+###          Update db          ###
+###################################
+
+## If you have access to SMAP data created by karttur's Geoimagine Framework ##
+## you can access the data from your Framework installation by updating the db ##
+## You can also use updatedb to clean your database and/or delete files from your Framework organized storage ##
+
+###################################
+###       Tile to region        ###
+###################################
+
+## Tile monthly SMAP to region ##
+## monthly NOT DONE, only 16 D ##
+#AfricaSubSahara_SMAP-0160_tile_M.xml
+
+## Tile 16D SMAP to region ##
+AfricaSubSahara_SMAP-0162_tile_16D.xml
+
+#AfricaSubSahara_SMAP-0980_archive-zip_16D.xml
+
+#AfricaSubSahara_MODIS-SMAP-0980_zip-archive-seasons_16D_2015-2018.xml
+
+###################################
+###          Archive           ###
+###################################
+
+# Archive monthly
+#AfricaSubSahara_SMAP-0980_archive-zip_M.xml

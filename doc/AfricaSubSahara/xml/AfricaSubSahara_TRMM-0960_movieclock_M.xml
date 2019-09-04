@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<africasubsaharaproject>
+	<userproj userid = 'karttur' projectid = 'karttur-africasubsahara' tractid= 'karttur-africasubsahara' siteid = '*' plotid = '*' system = 'modis'></userproj>
+	<period startyear = "1998" endyear = "2018" endmonth ='7' endday = '31' timestep='M'></period>
+
+	<!-- Create movie clock combine clock and image to movie frames and create movie -->
+	<process processid = 'movieclockModisRegionToRegion' version = '1.3'>
+		<overwrite>False</overwrite>
+		<parameters name = 'default' width = '800' asscript='True'></parameters>
+		<dstpath volume = "africa/movieclock" hdrfiletype = 'png' datfiletype = 'png'></dstpath>
+		<dstcomp>
+			<trmm-3b43v7-precip id ='trmm' source = "trmm" product = "3b43" folder = "rainfall" band = "trmm-3b43v7-precip" prefix = "rainfall" suffix = "v7-f-m-30km">
+			</trmm-3b43v7-precip>
+		</dstcomp>
+	</process>
+</africasubsaharaproject>
+

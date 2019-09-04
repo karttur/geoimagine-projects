@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Landsatprocess>	
+	<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'landsat'></userproj>
+	
+	<!-- Insert bulk meta-->
+	<process processid = 'insertbulkmeta' version ='1.3'>
+		<overwrite>Y</overwrite>
+		<delete>N</delete>
+		<parameters collection='Landsat1' level='1' sensor='MSS'></parameters>
+		<srcpath volume='africa' hdrfiletype='csv'></srcpath>
+	</process>
+	
+</Landsatprocess>

@@ -1,0 +1,67 @@
+###################################
+###################################
+###   VWB vs GRACE analysis   ###
+###################################
+###################################
+
+## The processing requires that the project VWB and GRACE processing are completed ##
+
+###################################
+###          Update db          ###
+###################################
+
+## If you have access to preprocessed data created by karttur's Geoimagine Framework ##
+## you can access the data from your Framework installation by updating the db ##
+## You can also use updatedb to clean your database and/or delete files from your Framework organized storage ##
+
+###################################
+###     Overlay comparison      ###
+###################################
+
+## Compare trends from VWB and GRACE ##
+#AfricaSubSahara_VWB-GRACE-0370_dualtrendcomp_2003-2016.xml
+
+###################################
+###   Time Series Processing    ###
+###################################
+
+## Cross correlation between VWB (master) and GRACE (slave) ##
+#AfricaSubSahara_VWB-GRACE-0385_layer-x-corr_2003-2016.xml
+
+###################################
+###   	       Mosaic           ###
+###################################
+
+## Mosaic cross correlation VWB-GRACE (Master-Slave) results for Sub Saharan Africa ##
+#AfricaSubSahara_VWB-GRACE-0625_mosaic_layer-x-corr_2003-2016.xml
+
+## Mosaic change comparison VWB-GRACE for Sub Saharan Africa ##
+#AfricaSubSahara_VWB-GRACE-0630_mosaic_trendcomp_2003-2016.xml
+
+###################################
+###        Export media         ###
+###################################
+
+## Export cross correlation VWB-GRACE (Master-Slave)  ##
+#AfricaSubSahara_VWB-GRACE-0925-ExporttoByte_layer-x-corr_2003-2016.xml
+
+## Export change comparison VWB-GRACE results ##
+#AfricaSubSahara_VWB-GRACE-0930-ExporttoByte_trendcomp.xml
+
+###   	       Movie            ###
+
+## Create overlay image frames VWB-GRACE ##
+#AfricaSubSahara_VWB-GRACE-0951_overlay-movieframes_M.xml
+
+## Create clock frames and movie for VWB + GRACE overlay movie with movieclock overlay ##
+#AfricaSubSahara_VWB-GRACE-0960_movieclock_M.xml
+
+###################################
+###          Archive            ###
+###################################
+
+## Archive cross correlation ##
+#AfricaSubSahara_VWB-GRACE-0980_archive-zip_layer-x-corr_2003-2016.xml
+
+## Archive change comparison VWB-GRACE for Sub Saharan Africa ##
+AfricaSubSahara_VWB-GRACE-0980-archive-zip_trendcomp.xml

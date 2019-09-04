@@ -1,0 +1,977 @@
+<?xml version='1.0' encoding='utf-8'?>
+<landsattemplate>
+
+	<path></path>
+	<!-- landsatscenetemplate  older files-->
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LC8' typeid = 'LC8DN' subtype='A' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>LC8ppprrryyyydoySTNnn_Bb.TIF.zip</scenenameform>
+		<basenameform>LC8ppprrryyyydoySTNnn</basenameform>
+		<scenecompstr>LC8??????????????????_B?.TIF.zip</scenecompstr>
+		<basecompstr>LC8??????????????????</basecompstr>
+		<archive>USGScollL1v2016</archive>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LC8' typeid = 'LC8DN' subtype='B' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>LC8ppprrryyyydoySTNnn_Bbb.TIF.zip</scenenameform>
+		<basenameform>LC8ppprrryyyydoySTNnn</basenameform>
+		<scenecompstr>LC8??????????????????_B??.TIF.zip</scenecompstr>
+		<basecompstr>LC8??????????????????</basecompstr>
+		<archive>USGScollL1v2016</archive>
+		</parameters>
+	</process>
+
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7DN' subtype='U' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>pppprrrr_7cyyyymmdd_zum_nnbb.tif.zip</scenenameform>
+		<basenameform>pppprrrr_7cyyyymmdd</basenameform>
+		<scenecompstr>p???r???_7?????????_z??_nn??.tif.zip</scenecompstr>
+		<basecompstr>p???r???_7?????????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7DN' subtype='S' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>pppprrrr_7xyyyymmdd_zum_bb.tif.zip</scenenameform>
+		<basenameform>pppprrrr_7xyyyymmdd</basenameform>
+		<scenecompstr>p???r???_7x????????_z??_??.tif.zip</scenecompstr>
+		<basecompstr>p???r???_7x????????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7DN' subtype='T' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>pppprrrr_7dcyyyymmdd_zum_bb.tif.zip</scenenameform>
+		<basenameform>pppprrrr_7dcyyyymmdd</basenameform>
+		<scenecompstr>p???r???_7d?????????_z??_??.tif.zip</scenecompstr>
+		<basecompstr>p???r???_7d?????????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LT5' typeid = 'LT5DN' subtype='S' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>pppprrrr_5xyyyymmdd_zum_bb.tif.zip</scenenameform>
+		<basenameform>pppprrrr_5xyyyymmdd</basenameform>
+		<scenecompstr>p???r???_5x????????_z??_??.tif.zip</scenecompstr>
+		<basecompstr>p???r???_5x????????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>
+
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LT5' typeid = 'LT5DN' subtype='T' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>pppprrrr_5dcyyyymmdd_zum_bb.tif.zip</scenenameform>
+		<basenameform>pppprrrr_5dcyyyymmdd</basenameform>
+		<scenecompstr>p???r???_5d?????????_z??_??.tif.zip</scenecompstr>
+		<basecompstr>p???r???_5d?????????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>
+
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LT5' typeid = 'LT5DN' subtype='V' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>L7cppprrr_pppyyyymmdd_Bbb.TIF.zip</scenenameform>
+		<basenameform>L7cppprrr_rrryyyymmdd</basenameform>
+		<scenecompstr>L7???????_???????????_B??.TIF.zip</scenecompstr>
+		<basecompstr>L7???????_???????????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LE7' typeid = 'LE7DN' subtype='L' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>L7cppprrr_rrryyyymmdd_Bbb.L1G.zip</scenenameform>
+		<basenameform>L7cppprrr_rrryyyymmdd</basenameform>
+		<scenecompstr>L7???????_???????????_B??.L1G.zip</scenecompstr>
+		<basecompstr>L7???????_???????????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LT5' typeid = 'LT5DN' subtype='U' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>L5ppprrr_rrryyyymmdd_Bbb.TIF.zip</scenenameform>
+		<basenameform>L5ppprrr_rrryyyymmdd</basenameform>
+		<scenecompstr>L5??????_???????????_Bbb.TIF.zip</scenecompstr>
+		<basecompstr>L5??????_???????????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LT5' typeid = 'LT5DN' subtype='U' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>L5ppprrr_rrryyyymmdd_Bbb.TIF.zip</scenenameform>
+		<basenameform>L5ppprrr_rrryyyymmdd</basenameform>
+		<scenecompstr>L5??????_???????????_Bbb.TIF.zip</scenecompstr>
+		<basecompstr>L5??????_???????????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LT5' typeid = 'LT5DN' subtype='V' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>L5ppprrr_rrryyyymmdd_Bbb.TIF.zip</scenenameform>
+		<basenameform>L5ppprrr_rrryyyymmdd</basenameform>
+		<scenecompstr>L5??????_???????????_B??.TIF.zip</scenecompstr>
+		<basecompstr>L5??????_???????????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process> 
+
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LXX' typeid = 'LXXDN' subtype='X' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>ppprrrmmddyy.bn.zip</scenenameform>
+		<basenameform>ppprrrmmddyy</basenameform>
+		<scenecompstr>????????????.b?.zip</scenecompstr>
+		<basecompstr>????????????</basecompstr>
+		<archive>unknown</archive>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LXX' typeid = 'LXXDN' subtype='Y' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>ppprrrmmddyy_bn.zip</scenenameform>
+		<basenameform>ppprrrmmddyy</basenameform>
+		<scenecompstr>????????????_b?.zip</scenecompstr>
+		<basecompstr>????????????</basecompstr>
+		<archive>unknown</archive>
+		</parameters>
+	</process>
+
+
+5T
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LT5' typeid = 'LT5DN' subtype='M' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PpppRrrr_5cyymmdd_nnx.tif.zip</scenenameform>
+		<basenameform>PpppRrrr_5cyymmdd</basenameform>
+		<scenecompstr>p???r???_5???????_nn?.tif.zip</scenecompstr>
+		<basecompstr>p???r???_5???????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>	
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LT5' typeid = 'LT5DN' subtype='N' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PpppRrr_5cyymmdd_nnx.tif.zip</scenenameform>
+		<basenameform>PpppRrr_5cyymmdd</basenameform>
+		<scenecompstr>p???r??_5???????_nn?.tif.zip</scenecompstr>
+		<basecompstr>p???r??_5???????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LT5' typeid = 'LT5DN' subtype='O' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PpppRr_5cyymmdd_nnx.tif.zip</scenenameform>
+		<basenameform>PpppRr_5cyymmdd</basenameform>
+		<scenecompstr>p???r?_5???????_nn?.tif.zip</scenecompstr>
+		<basecompstr>p???r?_5???????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LT5' typeid = 'LT5DN' subtype='P' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PppRr_5cyymmdd_nnx.tif.zip</scenenameform>
+		<basenameform>PppRr_5cyymmdd</basenameform>
+		<scenecompstr>p??r?_5???????_nn?.tif.zip</scenecompstr>
+		<basecompstr>p??r?_5??????????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LT5' typeid = 'LT5DN' subtype='Q' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PpRr_5cyymmdd_nnx.tif.zip</scenenameform>
+		<basenameform>PpRr_5cyymmdd</basenameform>
+		<scenecompstr>p?r?_5???????_nn?.tif.zip</scenecompstr>
+		<basecompstr>p?r?_5???????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LT5' typeid = 'LT5DN' subtype='R' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PppRrr_5cyymmdd_nnx.tif.zip</scenenameform>
+		<basenameform>PppRrr_5cyymmdd</basenameform>
+		<scenecompstr>p??r??_5???????_nn?.tif.zip</scenecompstr>
+		<basecompstr>p??r??_5???????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LT5' typeid = 'LT5DN' subtype='S' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PpRrrr_5cyymmdd_nnx.tif.zip</scenenameform>
+		<basenameform>PpRrrr_5cyymmdd</basenameform>
+		<scenecompstr>p?r???_5???????_nn?.tif.zip</scenecompstr>
+		<basecompstr>p?r???_5???????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LT4' typeid = 'LT4DN' subtype='A' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PpppRrrr_4cyymmdd_Bb.tif.zip</scenenameform>
+		<basenameform>PpppRrrr_4cyymmdd</basenameform>
+		<scenecompstr>p???r???_4?????????_B?.tif.zip</scenecompstr>
+		<basecompstr>p???r???_4?????????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LT4' typeid = 'LT4DN' subtype='B' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PpppRrrr_4cyymmdd.Bb.tif.zip</scenenameform>
+		<basenameform>PpppRrrr_4cyymmdd</basenameform>
+		<scenecompstr>p???r???_4?????????.B?.tif.zip</scenecompstr>
+		<basecompstr>p???r???_4?????????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>	
+		
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LT5' typeid = 'LT5DN' subtype='C' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PpppRrrr_5cyyyymmdd_nnx.tif.zip</scenenameform>
+		<basenameform>PpppRrrr_5cyyyymmdd</basenameform>
+		<scenecompstr>p???r???_5?????????_nn?.tif.zip</scenecompstr>
+		<basecompstr>p???r???_5?????????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>	
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LT5' typeid = 'LT5DN' subtype='D' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PpppRrr_5cyyyymmdd_nnx.tif.zip</scenenameform>
+		<basenameform>PpppRrr_5cyyyymmdd</basenameform>
+		<scenecompstr>p???r??_5?????????_nn?.tif.zip</scenecompstr>
+		<basecompstr>p???r??_5?????????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LT5' typeid = 'LT5DN' subtype='E' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PpppRr_5cyyyymmdd_nnx.tif.zip</scenenameform>
+		<basenameform>PpppRr_5cyyyymmdd</basenameform>
+		<scenecompstr>p???r?_5?????????_nn?.tif.zip</scenecompstr>
+		<basecompstr>p???r?_5?????????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LT5' typeid = 'LT5DN' subtype='F' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PppRr_5cyyyymmdd_nnx.tif.zip</scenenameform>
+		<basenameform>PppRr_5cyyyymmdd</basenameform>
+		<scenecompstr>p??r?_5?????????_nn?.tif.zip</scenecompstr>
+		<basecompstr>p??r?_5????????????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LT5' typeid = 'LT5DN' subtype='G' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PpRr_5cyyyymmdd_nnx.tif.zip</scenenameform>
+		<basenameform>PpRr_5cyyyymmdd</basenameform>
+		<scenecompstr>p?r?_5?????????_nn?.tif.zip</scenecompstr>
+		<basecompstr>p?r?_5?????????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LT5' typeid = 'LT5DN' subtype='H' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PppRrr_5cyyyymmdd_nnx.tif.zip</scenenameform>
+		<basenameform>PppRrr_5cyyyymmdd</basenameform>
+		<scenecompstr>p??r??_5?????????_nn?.tif.zip</scenecompstr>
+		<basecompstr>p??r??_5?????????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LT5' typeid = 'LT5DN' subtype='I' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PpRrrr_5cyyyymmdd_nnx.tif.zip</scenenameform>
+		<basenameform>PpRrrr_5cyyyymmdd</basenameform>
+		<scenecompstr>p?r???_5?????????_nn?.tif.zip</scenecompstr>
+		<basecompstr>p?r???_5?????????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LT4' typeid = 'LT4DN' subtype='A' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PpppRrrr_4cyyyymmdd_Bb.tif.zip</scenenameform>
+		<basenameform>PpppRrrr_4cyyyymmdd</basenameform>
+		<scenecompstr>p???r???_4?????????_B?.tif.zip</scenecompstr>
+		<basecompstr>p???r???_4?????????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LT4' typeid = 'LT4DN' subtype='B' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PpppRrrr_4cyyyymmdd.Bb.tif.zip</scenenameform>
+		<basenameform>PpppRrrr_4cyyyymmdd</basenameform>
+		<scenecompstr>p???r???_4?????????.B?.tif.zip</scenecompstr>
+		<basecompstr>p???r???_4?????????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>
+	
+There
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LT4' typeid = 'LT4DN' subtype='M' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PpppRrrr_4cyymmdd_nnx.tif.zip</scenenameform>
+		<basenameform>PpppRrrr_4cyymmdd</basenameform>
+		<scenecompstr>p???r???_4???????_nn?.tif.zip</scenecompstr>
+		<basecompstr>p???r???_4???????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>	
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LT4' typeid = 'LT4DN' subtype='N' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PpppRrr_4cyymmdd_nnx.tif.zip</scenenameform>
+		<basenameform>PpppRrr_4cyymmdd</basenameform>
+		<scenecompstr>p???r??_4???????_nn?.tif.zip</scenecompstr>
+		<basecompstr>p???r??_4???????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LT4' typeid = 'LT4DN' subtype='O' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PpppRr_4cyymmdd_nnx.tif.zip</scenenameform>
+		<basenameform>PpppRr_4cyymmdd</basenameform>
+		<scenecompstr>p???r?_4???????_nn?.tif.zip</scenecompstr>
+		<basecompstr>p???r?_4???????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LT4' typeid = 'LT4DN' subtype='P' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PppRr_4cyymmdd_nnx.tif.zip</scenenameform>
+		<basenameform>PppRr_4cyymmdd_</basenameform>
+		<scenecompstr>p??r?_4???????_nn?.tif.zip</scenecompstr>
+		<basecompstr>p??r?_4????????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LT4' typeid = 'LT4DN' subtype='Q' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PpRr_4cyymmdd_nnx.tif.zip</scenenameform>
+		<basenameform>PpRr_4cyymmdd</basenameform>
+		<scenecompstr>p?r?_4???????_nn?.tif.zip</scenecompstr>
+		<basecompstr>p?r?_4???????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LT4' typeid = 'LT4DN' subtype='R' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PppRrr_4cyymmdd_nnx.tif.zip</scenenameform>
+		<basenameform>PppRrr_4cyymmdd</basenameform>
+		<scenecompstr>p??r??_4???????_nn?.tif.zip</scenecompstr>
+		<basecompstr>p??r??_4???????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LT4' typeid = 'LT4DN' subtype='S' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PpRrrr_4cyymmdd_nnx.tif.zip</scenenameform>
+		<basenameform>PpRrrr_4cyymmdd</basenameform>
+		<scenecompstr>p?r???_4???????_nn?.tif.zip</scenecompstr>
+		<basecompstr>p?r???_4???????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>	
+HERE
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LM1' typeid = 'LM1DN' subtype='M' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PpppRrrr_1myyyymmdd_nnx.tif.zip</scenenameform>
+		<basenameform>PpppRrrr_1myyyymmdd</basenameform>
+		<scenecompstr>p???r???_1m????????_nn?.tif.zip</scenecompstr>
+		<basecompstr>p???r???_1m????????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>	
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LM1' typeid = 'LM1DN' subtype='N' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PpppRrr_1myyyymmdd_nnx.tif.zip</scenenameform>
+		<basenameform>PpppRrr_1myyyymmdd</basenameform>
+		<scenecompstr>p???r??_1m????????_nn?.tif.zip</scenecompstr>
+		<basecompstr>p???r??_1m????????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LM1' typeid = 'LM1DN' subtype='O' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PpppRr_1myyyymmdd_bb.tif.zip</scenenameform>
+		<basenameform>PpppRr_1myyyymmdd</basenameform>
+		<scenecompstr>p???r?_1m????????_??.tif.zip</scenecompstr>
+		<basecompstr>p???r?_1m????????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LM1' typeid = 'LM1DN' subtype='P' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PppRr_1myyyymmdd_bb.tif.zip</scenenameform>
+		<basenameform>PppRr_1myyyyymmdd</basenameform>
+		<scenecompstr>p??r?_1m????????_??.tif.zip</scenecompstr>
+		<basecompstr>p??r?_51m?????????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LM1' typeid = 'LM1DN' subtype='Q' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PpRr_1myyyymmdd_bb.tif.zip</scenenameform>
+		<basenameform>PpRr_1myyyymmdd</basenameform>
+		<scenecompstr>p?r?_1m????????_??.tif.zip</scenecompstr>
+		<basecompstr>p?r?_1m????????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LM1' typeid = 'LM1DN' subtype='R' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PppRrr_1myyyymmdd_bb.tif.zip</scenenameform>
+		<basenameform>PppRrr_1myyyymmdd</basenameform>
+		<scenecompstr>p??r??_1m????????_??.tif.zip</scenecompstr>
+		<basecompstr>p??r??_1m????????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LM1' typeid = 'LM1DN' subtype='S' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PpRrrr_1myyyymmdd_bb.tif.zip</scenenameform>
+		<basenameform>PpRrrr_1myyyymmdd</basenameform>
+		<scenecompstr>p?r???_1m????????_??.tif.zip</scenecompstr>
+		<basecompstr>p?r???_1m????????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>	
+	
+HERE
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LM2' typeid = 'LM2DN' subtype='M' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PpppRrrr_2myyyymmdd_nnx.tif.zip</scenenameform>
+		<basenameform>PpppRrrr_2myyyymmdd</basenameform>
+		<scenecompstr>p???r???_2m????????_nn?.tif.zip</scenecompstr>
+		<basecompstr>p???r???_2m????????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>	
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LM2' typeid = 'LM2DN' subtype='N' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PpppRrr_2myyyymmdd_nnx.tif.zip</scenenameform>
+		<basenameform>PpppRrr_2myyyymmdd</basenameform>
+		<scenecompstr>p???r??_2m????????_nn?.tif.zip</scenecompstr>
+		<basecompstr>p???r??_2m????????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LM2' typeid = 'LM2DN' subtype='O' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PpppRr_2myyyymmdd_bb.tif.zip</scenenameform>
+		<basenameform>PpppRr_2myyyymmdd</basenameform>
+		<scenecompstr>p???r?_2m????????_??.tif.zip</scenecompstr>
+		<basecompstr>p???r?_2m????????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LM2' typeid = 'LM2DN' subtype='P' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PppRr_2myyyymmdd_bb.tif.zip</scenenameform>
+		<basenameform>PppRr_2myyyyymmdd</basenameform>
+		<scenecompstr>p??r?_2m????????_??.tif.zip</scenecompstr>
+		<basecompstr>p??r?_52m?????????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LM2' typeid = 'LM2DN' subtype='Q' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PpRr_2myyyymmdd_bb.tif.zip</scenenameform>
+		<basenameform>PpRr_2myyyymmdd</basenameform>
+		<scenecompstr>p?r?_2m????????_??.tif.zip</scenecompstr>
+		<basecompstr>p?r?_2m????????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LM2' typeid = 'LM2DN' subtype='R' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PppRrr_2myyyymmdd_bb.tif.zip</scenenameform>
+		<basenameform>PppRrr_2myyyymmdd</basenameform>
+		<scenecompstr>p??r??_2m????????_??.tif.zip</scenecompstr>
+		<basecompstr>p??r??_2m????????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LM2' typeid = 'LM2DN' subtype='S' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PpRrrr_2myyyymmdd_bb.tif.zip</scenenameform>
+		<basenameform>PpRrrr_2myyyymmdd</basenameform>
+		<scenecompstr>p?r???_2m????????_??.tif.zip</scenecompstr>
+		<basecompstr>p?r???_2m????????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>	
+	
+HERE
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LM3' typeid = 'LM3DN' subtype='M' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PpppRrrr_3myyyymmdd_nnx.tif.zip</scenenameform>
+		<basenameform>PpppRrrr_3myyyymmdd</basenameform>
+		<scenecompstr>p???r???_3m????????_nn?.tif.zip</scenecompstr>
+		<basecompstr>p???r???_3m????????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>	
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LM3' typeid = 'LM3DN' subtype='N' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PpppRrr_3myyyymmdd_nnx.tif.zip</scenenameform>
+		<basenameform>PpppRrr_3myyyymmdd</basenameform>
+		<scenecompstr>p???r??_3m????????_nn?.tif.zip</scenecompstr>
+		<basecompstr>p???r??_3m????????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LM3' typeid = 'LM3DN' subtype='O' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PpppRr_3myyyymmdd_bb.tif.zip</scenenameform>
+		<basenameform>PpppRr_3myyyymmdd</basenameform>
+		<scenecompstr>p???r?_3m????????_??.tif.zip</scenecompstr>
+		<basecompstr>p???r?_3m????????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LM3' typeid = 'LM3DN' subtype='P' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PppRr_3myyyymmdd_bb.tif.zip</scenenameform>
+		<basenameform>PppRr_3myyyyymmdd</basenameform>
+		<scenecompstr>p??r?_3m????????_??.tif.zip</scenecompstr>
+		<basecompstr>p??r?_53m?????????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LM3' typeid = 'LM3DN' subtype='Q' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PpRr_3myyyymmdd_bb.tif.zip</scenenameform>
+		<basenameform>PpRr_3myyyymmdd</basenameform>
+		<scenecompstr>p?r?_3m????????_??.tif.zip</scenecompstr>
+		<basecompstr>p?r?_3m????????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LM3' typeid = 'LM3DN' subtype='R' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PppRrr_3myyyymmdd_bb.tif.zip</scenenameform>
+		<basenameform>PppRrr_3myyyymmdd</basenameform>
+		<scenecompstr>p??r??_3m????????_??.tif.zip</scenecompstr>
+		<basecompstr>p??r??_3m????????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LM3' typeid = 'LM3DN' subtype='S' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PpRrrr_3myyyymmdd_bb.tif.zip</scenenameform>
+		<basenameform>PpRrrr_3myyyymmdd</basenameform>
+		<scenecompstr>p?r???_3m????????_??.tif.zip</scenecompstr>
+		<basecompstr>p?r???_3m????????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>	
+	
+	HERE
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LM4' typeid = 'LM4DN' subtype='M' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PpppRrrr_4myyyymmdd_nnx.tif.zip</scenenameform>
+		<basenameform>PpppRrrr_4myyyymmdd</basenameform>
+		<scenecompstr>p???r???_4m????????_nn?.tif.zip</scenecompstr>
+		<basecompstr>p???r???_4m????????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>	
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LM4' typeid = 'LM4DN' subtype='N' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PpppRrr_4myyyymmdd_nnx.tif.zip</scenenameform>
+		<basenameform>PpppRrr_4myyyymmdd</basenameform>
+		<scenecompstr>p???r??_4m????????_nn?.tif.zip</scenecompstr>
+		<basecompstr>p???r??_4m????????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LM4' typeid = 'LM4DN' subtype='O' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PpppRr_4myyyymmdd_bb.tif.zip</scenenameform>
+		<basenameform>PpppRr_4myyyymmdd</basenameform>
+		<scenecompstr>p???r?_4m????????_??.tif.zip</scenecompstr>
+		<basecompstr>p???r?_4m????????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LM4' typeid = 'LM4DN' subtype='P' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PppRr_4myyyymmdd_bb.tif.zip</scenenameform>
+		<basenameform>PppRr_4myyyyymmdd</basenameform>
+		<scenecompstr>p??r?_4m????????_??.tif.zip</scenecompstr>
+		<basecompstr>p??r?_54m?????????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LM4' typeid = 'LM4DN' subtype='Q' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PpRr_4myyyymmdd_bb.tif.zip</scenenameform>
+		<basenameform>PpRr_4myyyymmdd</basenameform>
+		<scenecompstr>p?r?_4m????????_??.tif.zip</scenecompstr>
+		<basecompstr>p?r?_4m????????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LM4' typeid = 'LM4DN' subtype='R' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PppRrr_4myyyymmdd_bb.tif.zip</scenenameform>
+		<basenameform>PppRrr_4myyyymmdd</basenameform>
+		<scenecompstr>p??r??_4m????????_??.tif.zip</scenecompstr>
+		<basecompstr>p??r??_4m????????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LM4' typeid = 'LM4DN' subtype='S' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PpRrrr_4myyyymmdd_bb.tif.zip</scenenameform>
+		<basenameform>PpRrrr_4myyyymmdd</basenameform>
+		<scenecompstr>p?r???_4m????????_??.tif.zip</scenecompstr>
+		<basecompstr>p?r???_4m????????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>	
+	
+		HERE
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LM5' typeid = 'LM5DN' subtype='M' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PpppRrrr_5myyyymmdd_nnx.tif.zip</scenenameform>
+		<basenameform>PpppRrrr_5myyyymmdd</basenameform>
+		<scenecompstr>p???r???_5m????????_nn?.tif.zip</scenecompstr>
+		<basecompstr>p???r???_5m????????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>	
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LM5' typeid = 'LM5DN' subtype='N' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PpppRrr_5myyyymmdd_nnx.tif.zip</scenenameform>
+		<basenameform>PpppRrr_5myyyymmdd</basenameform>
+		<scenecompstr>p???r??_5m????????_nn?.tif.zip</scenecompstr>
+		<basecompstr>p???r??_5m????????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LM5' typeid = 'LM5DN' subtype='O' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PpppRr_5myyyymmdd_bb.tif.zip</scenenameform>
+		<basenameform>PpppRr_5myyyymmdd</basenameform>
+		<scenecompstr>p???r?_5m????????_??.tif.zip</scenecompstr>
+		<basecompstr>p???r?_5m????????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LM5' typeid = 'LM5DN' subtype='P' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PppRr_5myyyymmdd_bb.tif.zip</scenenameform>
+		<basenameform>PppRr_5myyyyymmdd</basenameform>
+		<scenecompstr>p??r?_5m????????_??.tif.zip</scenecompstr>
+		<basecompstr>p??r?_55m?????????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LM5' typeid = 'LM5DN' subtype='Q' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PpRr_5myyyymmdd_bb.tif.zip</scenenameform>
+		<basenameform>PpRr_5myyyymmdd</basenameform>
+		<scenecompstr>p?r?_5m????????_??.tif.zip</scenecompstr>
+		<basecompstr>p?r?_5m????????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LM5' typeid = 'LM5DN' subtype='R' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PppRrr_5myyyymmdd_bb.tif.zip</scenenameform>
+		<basenameform>PppRrr_5myyyymmdd</basenameform>
+		<scenecompstr>p??r??_5m????????_??.tif.zip</scenecompstr>
+		<basecompstr>p??r??_5m????????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>
+	
+	<process processid ='landsatscenetemplate' version ='1.3'>
+		<parameters sensat ='LM5' typeid = 'LM5DN' subtype='S' L1type = 'FF' collection = 'FF' tier='FF' >
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<dataunit>DN</dataunit>
+		<scenenameform>PpRrrr_5myyyymmdd_bb.tif.zip</scenenameform>
+		<basenameform>PpRrrr_5myyyymmdd</basenameform>
+		<scenecompstr>p?r???_5m????????_??.tif.zip</scenecompstr>
+		<basecompstr>p?r???_5m????????</basecompstr>
+		<archive>UMIACSold</archive>
+		</parameters>
+	</process>	
+
+</landsattemplate>

@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<palette>
+	<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'system'></userproj>
+	<path></path>
+
+	<!-- Add movieclock -->
+	<process processid = 'addmovieclock'>
+		<parameters name = 'trmm'>
+		</parameters>
+	</process>
+</palette>

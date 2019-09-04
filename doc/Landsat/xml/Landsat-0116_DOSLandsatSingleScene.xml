@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LandsatProc>	
+	<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'landsat'></userproj>
+	<period startyear = "1992" endyear = "2019" timestep='allscenes'></period>
+
+	<process processid ='LandsatTMDosSingleScene' dsversion = '1.3'>
+		<overwrite>TRUE</overwrite>
+		<parameters wrspath='20' wrsrow='49' lsatprodid='LE07_L1TP_020049_20030421_20170125_01_T1' 
+		bl='67' gl='44' rl='33' na='30' mb='26' mc='13'>
+		</parameters>
+		<srcpath volume = "guatemala" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+	
+	</process>
+		
+</LandsatProc>
+

@@ -1,0 +1,76 @@
+###################################
+###################################
+###    GRACE data processing    ###
+###################################
+###################################
+
+## The processing requires that the global GRACE data are already captured, processed and available ##
+
+###################################
+###          Update db          ###
+###################################
+
+## If you have access to GRACE data created by karttur's Geoimagine Framework ##
+## you can access the data from your Framework installation by updating the db ##
+## You can also use updatedb to clean your database and/or delete files from your Framework organized storage ##
+
+###################################
+###       Tile to region        ###
+###################################
+
+## Tile monthly GRACE ##
+#AfricaSubSahara_GRACE-0160_tile_M.xml
+
+## Tile annual GRACE ##
+#AfricaSubSahara_GRACE-0160_tile_A.xml
+
+###################################
+###   Time Series Processing    ###
+###################################
+
+## Annual statistics and trends  
+#AfricaSubSahara_GRACE-0310_trend_A_2003-2016.xml
+
+## Annual changes and significant trends
+#AfricaSubSahara_GRACE-0320_changes_A_2003-2016.xml
+
+###################################
+###   	       Mosaic           ###
+###################################
+
+## Mosaic monthly GRACE ##
+#AfricaSubSahara_GRACE-0610_mosaic_M.xml
+
+## Mosaic stats, trends and changes ##
+#AfricaSubSahara_GRACE-0630_mosaic_timespanA_2003-2016.xml
+
+###################################
+###        Export media         ###
+###################################
+
+## Export monthly ##
+#AfricaSubSahara_GRACE-0900_ExporttoByte_M.xml
+
+## Export annual stats, trends and changes ##
+#AfricaSubSahara_GRACE-0910_ExporttoByte_timespanA_2003-2016.xml
+
+###            Movie            ###
+
+## Create image frames ##
+#AfricaSubSahara_GRACE-0950_movieframes_M.xml
+
+## Create clock frames and movie ##
+#AfricaSubSahara_GRACE-0960_movieclock_M.xml
+
+###################################
+###           Archive           ###
+###################################
+
+## Archive monthly ##
+#AfricaSubSahara_GRACE-0980_arcihive-zip_M.xml
+
+## Archive annual ##
+#AfricaSubSahara_GRACE-0980_arcihive-zip_A.xml
+
+## Archive annual stats, trends and changes ##
+#AfricaSubSahara_GRACE-0980_arcihive-zip_A-stats.xml

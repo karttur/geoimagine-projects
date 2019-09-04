@@ -1,0 +1,85 @@
+##### Vertical Water Balance using TRMM and FAO ref evap ######
+
+#Uncomment the processes you want to run by removing the "#"
+
+###################################
+###  Scaling, palette & legend  ###
+###################################
+
+## Create scaling for VWB data ##
+#VWB-0001_createscaling.xml
+
+## Create the VWB palettes ##
+#VWB-0002_createpalettes.xml
+
+# Create legends for VWB ##
+#VWB-0003_createlegends.xml
+
+## Create TRMM movieclock ##
+#VWB-0004_addmovieclock.xml
+
+###################################
+###           Import            ###
+###################################
+
+### NOTE: if you have access to VWB data processed from the Framework you can import it here
+### Otherwise you need to follow the steps under # prepare data #. ###
+
+## Update db with monthly VWB from existing Framework
+#VWB-0190_udatedb.xml
+
+###################################
+###        Prepare data         ###
+###################################
+
+### NOTE: If you have imported VWB in the above # Import # step you can skip this (# Prepare data #) section. ###
+
+## Convert FAO refet to mm/month
+#VWB-0130_FAOrefet_convert_daytomonth.xml
+
+## Translate FAO refet to spatial extent of TRMM ##
+#VWB-0140_FAOrefet_translate_2_TRMM.xml
+
+## create mask from FAO refet (land) that fits the TRMM data
+#VWB-0160_FAOrefet_createmask.xml
+
+## mask out land from TRMM (using the FAO refet mask)
+#VWB-0170_TRMM-applymask.xml
+
+###################################
+###   Time Series Processing    ###
+###################################
+
+## Monthly vertical water balance ##
+#VWB-0241_subtract_seasonal_trmm-refet.xml
+
+## Resample VWB to annual ##
+#VWB-0290_resample-2-annual.xml
+
+###################################
+###     Time Series Analysis    ###
+###################################
+
+## Estimate VWB annual trends (1998-2017 is for the complete timeseries, 2003-2016 for overlap with GRACE ##
+#VWB-0310_trend_A_1998-2017.xml
+#VWB-0310_trend_A_2003-2016.xml
+
+## Identify regions with significant trends (1998-2017 is for the complete timeseries, 2003-2016 for overlap with GRACE ## 
+#VWB-0320_changes_A_1998-2017.xml
+#VWB-0320_changes_A_2003-2016.xml
+
+###################################
+###        Export media         ###
+###################################
+
+## Export png images ##
+#VWB-0900_ExporttoByte_M.xml
+#VWB-0910_ExporttoByte_timespanA_1998-2017.xml
+
+## Create TRMM movieframes (1998 to 2017) 
+## For fully automated processing you need to set parameter "asscript" to False
+## If you set the parameter "asscript" to True (= default), you have to execute the shell script file reported by the process ##
+#VWB-0950_movieframes_M.xml
+
+## Create movieclock, the process creates two shell scripts that must by run ##
+#VWB-0960_movieclock_M.xml

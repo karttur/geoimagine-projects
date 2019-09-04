@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='utf-8'?>
+<runprocess>	
+	<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'ancillary'></userproj>
+	<period startyear = "2003" endyear = "2016" timestep='timespan-A'></period>	
+	
+	<!-- exporttobyte avg A -->
+	<process processid = 'exporttobyteancillary' version = '1.3'>
+		<overwrite>True</overwrite>
+		<!--
+		
+			<parameter paramid = 'vectoroverlay' paramtyp = 'text' tagorattr = 'Attr' required = 'N' defaultvalue = '' ></parameter>				
+			<parameter paramid = 'width' paramtyp = 'integer' tagorattr = 'Attr' required = 'Y' defaultvalue = '' ></parameter>	
+			<parameter paramid = 'crop' paramtyp = 'text' tagorattr = 'Attr' required = 'N' defaultvalue = '' ></parameter>
+			<parameter paramid = 'border' paramtyp = 'integer' tagorattr = 'Attr' required = 'N' defaultvalue = '0' ></parameter>
+			<parameter paramid = 'bordercolor' paramtyp = 'text' tagorattr = 'Attr' required = 'N' defaultvalue = 'black' ></parameter>
+
+			<parameter paramid = 'emboss' paramtyp = 'text' tagorattr = 'Attr' required = 'Y' defaultvalue = '' ></parameter>
+			<parameter paramid = 'embossdims' paramtyp = 'text' tagorattr = 'Attr' required = 'Y' defaultvalue = '' ></parameter>
+			<parameter paramid = 'embossptsize' paramtyp = 'integer' tagorattr = 'Attr' required = 'Y' defaultvalue = '' ></parameter>
+		-->
+		
+		<parameters palette= 'grace'  width = '720' crop='720,360,0,0' emboss='KARTTUR' embossdims='720,150' embossptsize='100'
+		vectoroverlay = '/Volumes/africa/export/naturalearth/region/graticulse/global/0/graticules-45deg_graticules_global_0_GRACE2.svg'
+		border = '2' bordercolor = 'black'
+		></parameters>		
+		<srcpath volume = "africa" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+		<dstpath volume = "africa" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>    	
+		<srccomp>
+			<avg-grace-ave id='value' source = "NASA-GRACE" product = "ave-cmwater" folder = "cmwater-A-stats" band = "avg-grace-ave" prefix = "avg-grace-ave" suffix = "RL05-f-A">	
+			</avg-grace-ave>
+		</srccomp>	
+	</process>
+
+	<!-- exporttobyte std A -->
+	<process processid = 'exporttobyteancillary' version = '1.3'>
+		<overwrite>True</overwrite>
+		<parameters palette= 'grace' width = '720' crop='720,360,0,0' emboss='KARTTUR' embossdims='720,150' embossptsize='100'
+		vectoroverlay = '/Volumes/africa/export/naturalearth/region/graticulse/global/0/graticules-45deg_graticules_global_0_GRACE2.svg'
+		border = '2' bordercolor = 'black' jpg='72'
+		></parameters>				
+		<srcpath volume = "africa" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+		<dstpath volume = "africa" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>    	
+		<srccomp>
+			<std-grace-ave id='value' source = "NASA-GRACE" product = "ave-cmwater" folder = "cmwater-A-stats" band = "std-grace-ave" prefix = "std-grace-ave" suffix = "RL05-filled">	
+			</std-grace-ave>
+		</srccomp>	
+	</process>
+	
+	<!-- mann-kendal annual -->
+
+	<process processid = 'exporttobyteancillary' version = '1.3'>
+		<overwrite>True</overwrite>
+		<parameters palette= 'zhydro' width = '720' crop='720,360,0,0' emboss='KARTTUR' embossdims='720,150' embossptsize='100'
+		vectoroverlay = '/Volumes/africa/export/naturalearth/region/graticulse/global/0/graticules-45deg_graticules_global_0_GRACE2.svg'
+		border = '2' bordercolor = 'black' jpg='72'
+		></parameters>				
+		<srcpath volume = "africa" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+		<dstpath volume = "africa" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>    	
+		<srccomp>
+			<mk-z-grace-ave id='value' source = "NASA-GRACE" product = "ave-cmwater" folder = "cmwater-A-trend" band = "mk-z-grace-ave" prefix = "mk-z-grace-ave" suffix = "RL05-filled">	
+			</mk-z-grace-ave>
+		</srccomp>
+	</process>
+	
+	<process processid = 'exporttobyteancillary' version = '1.3'>
+		<overwrite>True</overwrite>
+		<parameters palette= 'grace'  width = '720' crop='720,360,0,0' emboss='KARTTUR' embossdims='720,150' embossptsize='100'
+		vectoroverlay = '/Volumes/africa/export/naturalearth/region/graticulse/global/0/graticules-45deg_graticules_global_0_GRACE2.svg'
+		border = '2' bordercolor = 'black' jpg='72'
+		></parameters>			
+		<srcpath volume = "africa" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+		<dstpath volume = "africa" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>    	
+		<srccomp>
+			<ts-mdsl-grace-ave id='1' source = "NASA-GRACE" product = "ave-cmwater" folder = "cmwater-A-trend" band = "ts-mdsl-grace-ave" prefix = "mk-z-grace-ave" suffix = "RL05-filled">	
+			</ts-mdsl-grace-ave>
+			<ts-hisl-grace-ave id='2' source = "NASA-GRACE" product = "ave-cmwater" folder = "cmwater-A-trend" band = "ts-hisl-grace-ave" prefix = "mk-z-grace-ave" suffix = "RL05-filled">	
+			</ts-hisl-grace-ave>
+			<ts-losl-grace-ave id='3' source = "NASA-GRACE" product = "ave-cmwater" folder = "cmwater-A-trend" band = "ts-losl-grace-ave" prefix = "mk-z-grace-ave" suffix = "RL05-filled">	
+			</ts-losl-grace-ave>
+			<ts-ic-grace-ave id='4' source = "NASA-GRACE" product = "ave-cmwater" folder = "cmwater-A-trend" band = "ts-ic-grace-ave" prefix = "mk-z-grace-ave" suffix = "RL05-filled">	
+			</ts-ic-grace-ave>
+			<ols-sl-grace-ave id='5' source = "NASA-GRACE" product = "ave-cmwater" folder = "cmwater-A-trend" band = "ols-sl-grace-ave" prefix = "mk-z-grace-ave" suffix = "RL05-filled">	
+			</ols-sl-grace-ave>
+			<ols-ic-grace-ave id='6' source = "NASA-GRACE" product = "ave-cmwater" folder = "cmwater-A-trend" band = "ols-ic-grace-ave" prefix = "mk-z-grace-ave" suffix = "RL05-filled">	
+			</ols-ic-grace-ave>
+			<ols-r2-grace-ave id='7' source = "NASA-GRACE" product = "ave-cmwater" folder = "cmwater-A-trend" band = "ols-r2-grace-ave" prefix = "mk-z-grace-ave" suffix = "RL05-filled">	
+			</ols-r2-grace-ave>
+			<ols-rmse-grace-ave id='8' source = "NASA-GRACE" product = "ave-cmwater" folder = "cmwater-A-trend" band = "ols-rmse-grace-ave" prefix = "mk-z-grace-ave" suffix = "RL05-filled">	
+			</ols-rmse-grace-ave>	
+		</srccomp>
+	</process>
+	
+</runprocess>
+
+

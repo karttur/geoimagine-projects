@@ -1,0 +1,222 @@
+<?xml version='1.0' encoding='utf-8'?>
+<africasubsahara>
+	<userproj userid = 'karttur' projectid = 'karttur-africasubsahara' tractid= 'karttur-africasubsahara' siteid = '*' plotid = '*' system = 'modis'></userproj>
+	<period startyear = "1998" startmonth='01' endyear = "2017" endmonth='12' timestep='M'></period>
+
+	<!-- Cross correaltion between climate indexes and local rainfall (TRMM) -->
+	<!-- Six different indexs and five different smoothing functions are tested for time series decompositon -->
+	
+	<!-- Spline smoothing with annual (12 month) decompositon filter -->
+	<process processid = 'indexcrosstrendtsmodis' version = '1.3'>
+		<overwrite>False</overwrite>
+		<!-- default parameter values
+
+			normalize = 'False'
+			standardize = 'True'
+			naive  = 'False'
+			additive = 'True'
+			yearfac = '1' 
+			trend = 'spline' 
+			prefilterseason  = 'False' 
+			kernel  = '0'
+			forceseason = 'True' 
+			abs = 'False' 
+		-->
+		<parameters 		
+		xcrossobserved='True'
+		xcrosseason='True'
+		xcrosstendency='True'
+		xcrossresidual='True'
+		
+		xcrosspearson='True'
+		xcrosslag='True'
+ 
+		></parameters>
+		<srcpath volume = "africa" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+		<dstpath volume = "africa" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>
+		<srccomp>
+			<trmm-3b43v7-precip id ='trmm' source = "trmm" product = "3b43" folder = "rainfall" band = "trmm-3b43v7-precip" prefix = "rainfall" suffix = "v7-f-m-30km">
+			</trmm-3b43v7-precip>
+		</srccomp>
+		<index id='soi' band ='soi'></index>
+		<index id='pdo' band ='pdo'></index>
+		<index id='best' band ='best'></index>
+		<index id='nao' band ='nao'></index>
+		<index id='nina3' band ='nina3'></index>
+		<index id='pna' band ='pna'></index>
+	</process>
+	
+	<!-- Spline smoothing with 2 year (24 month) decompositon filter -->
+	<process processid = 'indexcrosstrendtsmodis' version = '1.3'>
+		<overwrite>False</overwrite>
+		<!-- default parameter values
+
+			normalize = 'False'
+			standardize = 'True'
+			naive  = 'False'
+			additive = 'True'
+			yearfac = '1' 
+			trend = 'spline' 
+			prefilterseason  = 'False' 
+			kernel  = '0'
+			forceseason = 'True' 
+			abs = 'False' 
+		-->
+		<parameters 
+		yearfac = '2'		
+		xcrossobserved='True'
+		xcrosseason='True'
+		xcrosstendency='True'
+		xcrossresidual='True'
+		
+		xcrosspearson='True'
+		xcrosslag='True'
+ 
+		></parameters>
+		<srcpath volume = "africa" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+		<dstpath volume = "africa" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>
+		<srccomp>
+			<trmm-3b43v7-precip id ='trmm' source = "trmm" product = "3b43" folder = "rainfall" band = "trmm-3b43v7-precip" prefix = "rainfall" suffix = "v7-f-m-30km">
+			</trmm-3b43v7-precip>
+		</srccomp>
+		<index id='soi' band ='soi'></index>
+		<index id='pdo' band ='pdo'></index>
+		<index id='best' band ='best'></index>
+		<index id='nao' band ='nao'></index>
+		<index id='nina3' band ='nina3'></index>
+		<index id='pna' band ='pna'></index>	
+	</process>
+	
+	<!-- Spline smoothing with annual (12 month) decompositon filter and 
+		absolute correlation (i.e. accepting reverse cross correlations) -->
+	<process processid = 'indexcrosstrendtsmodis' version = '1.3'>
+		<overwrite>False</overwrite>
+		<!-- default parameter values
+			normalize = 'False'
+			standardize = 'True'
+			naive  = 'False'
+			additive = 'True'
+			yearfac = '1' 
+			trend = 'spline' 
+			prefilterseason  = 'False' 
+			kernel  = '0'
+			forceseason = 'True' 
+			abs = 'False' 
+		-->
+		<parameters 
+		abs = 'True'		
+		xcrossobserved='True'
+		xcrosseason='True'
+		xcrosstendency='True'
+		xcrossresidual='True'
+		
+		xcrosspearson='True'
+		xcrosslag='True'
+ 
+		></parameters>
+		<srcpath volume = "africa" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+		<dstpath volume = "africa" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>
+		<srccomp>
+			<trmm-3b43v7-precip id ='trmm' source = "trmm" product = "3b43" folder = "rainfall" band = "trmm-3b43v7-precip" prefix = "rainfall" suffix = "v7-f-m-30km">
+			</trmm-3b43v7-precip>
+		</srccomp>
+		
+		<index id='soi' band ='soi'></index>
+		<index id='pdo' band ='pdo'></index>
+		<index id='best' band ='best'></index>
+		<index id='nao' band ='nao'></index>
+		<index id='nina3' band ='nina3'></index>
+		<index id='pna' band ='pna'></index>	
+	</process>
+	
+	<!-- Naive smoothing with annual (12 month) decompositon filter -->
+	<process processid = 'indexcrosstrendtsmodis' version = '1.3'>
+		<overwrite>False</overwrite>
+		<!-- default parameter values
+
+			normalize = 'False'
+			standardize = 'True'
+			naive  = 'False'
+			additive = 'True'
+			yearfac = '1' 
+			trend = 'spline' 
+			prefilterseason  = 'False' 
+			kernel  = '0'
+			forceseason = 'True' 
+			abs = 'False' 
+		-->
+		<parameters 
+		naive='True'		
+		xcrossobserved='True'
+		xcrosseason='True'
+		xcrosstendency='True'
+		xcrossresidual='True'
+		
+		xcrosspearson='True'
+		xcrosslag='True'
+ 
+		></parameters>
+		<srcpath volume = "africa" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+		<dstpath volume = "africa" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>
+		<srccomp>
+			<trmm-3b43v7-precip id ='trmm' source = "trmm" product = "3b43" folder = "rainfall" band = "trmm-3b43v7-precip" prefix = "rainfall" suffix = "v7-f-m-30km">
+			</trmm-3b43v7-precip>
+		</srccomp>
+		
+		<index id='soi' band ='soi'></index>
+		<index id='pdo' band ='pdo'></index>
+		<index id='best' band ='best'></index>
+		<index id='nao' band ='nao'></index>
+		<index id='nina3' band ='nina3'></index>
+		<index id='pna' band ='pna'></index>	
+	</process>
+	
+	<!-- Naive smoothing with annual (12 month) decompositon filter and 
+		absolute correlation (i.e. accepting reverse cross correlations) -->
+	<process processid = 'indexcrosstrendtsmodis' version = '1.3'>
+		<overwrite>False</overwrite>
+		<!-- default parameter values
+
+			normalize = 'False'
+			standardize = 'True'
+			naive  = 'False'
+			additive = 'True'
+			yearfac = '1' 
+			trend = 'spline' 
+			prefilterseason  = 'False' 
+			kernel  = '0'
+			forceseason = 'True' 
+			abs = 'False' 
+		-->
+		<parameters 
+		naive='True'
+		abs='True'		
+		xcrossobserved='True'
+		xcrosseason='True'
+		xcrosstendency='True'
+		xcrossresidual='True'
+		
+		xcrosspearson='True'
+		xcrosslag='True'
+ 
+		></parameters>
+		<srcpath volume = "africa" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+		<dstpath volume = "africa" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>
+		<srccomp>
+			<trmm-3b43v7-precip id ='trmm' source = "trmm" product = "3b43" folder = "rainfall" band = "trmm-3b43v7-precip" prefix = "rainfall" suffix = "v7-f-m-30km">
+			</trmm-3b43v7-precip>
+		</srccomp>
+		
+		<index id='soi' band ='soi'></index>
+		<index id='pdo' band ='pdo'></index>
+		<index id='best' band ='best'></index>
+		<index id='nao' band ='nao'></index>
+		<index id='nina3' band ='nina3'></index>
+		<index id='pna' band ='pna'></index>	
+	</process>
+
+</africasubsahara>
+
+
+			
+			

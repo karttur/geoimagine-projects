@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LandsatProc>	
+	<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'landsat'></userproj>
+	
+	<process processid ='downloadbulkmeta' dsversion = '1.3'>
+		<parameters 
+			collection='LandsatARD' level='1' sensor='all'
+			filetype= 'csv'
+			>
+		</parameters>
+	</process>
+	
+	<process processid ='downloadbulkmeta' dsversion = '1.3'>
+		<parameters 
+			collection='Landsat1' level='1' sensor='MSS'
+			filetype= 'csv'
+			>
+		</parameters>
+	</process>
+	
+	<process processid ='downloadbulkmeta' dsversion = '1.3'>
+		<parameters 
+			collection='Landsat1' level='1' sensor='TM'
+			filetype= 'csv'
+			>
+		</parameters>
+	</process>
+	
+	<process processid ='downloadbulkmeta' dsversion = '1.3'>
+		<parameters 
+			collection='Landsat1' level='1' sensor='ETM'
+			filetype= 'csv'
+			>
+		</parameters>
+	</process>
+	
+	<process processid ='downloadbulkmeta' dsversion = '1.3'>
+		<parameters 
+			collection='Landsat1' level='1' sensor='OLI-TIRS'
+			filetype= 'csv'
+			>
+		</parameters>
+	</process>
+		
+</LandsatProc>

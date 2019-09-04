@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<downloadSentinel>
+	<userproj userid = 'karttur' projectid = 'karttur-lesotho' tractid= 'karttur-lesotho' siteid = '*' plotid = '*' system = 'sentinel'></userproj>
+	<period startyear='2014' endyear='2014' timestep='singleyear'></period>
+	<process processid ='downloadSentinelRegion' dsversion = '3.0'>
+		<parameters orbitdirection = 'B' 
+			platformname = 'Sentinel-2' 
+			prodtype  = 'S2MSI1C' 
+			cloudmax = "30"
+			startdate = "20160401"
+			enddate = "20180821"
+		> </parameters>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<srcpath volume = "karttur" hdrfiletype = "shp" datfiletype = "shp"></srcpath>
+		<dstpath volume = "karttur" hdrfiletype = "shp" datfiletype = "shp"></dstpath>
+	</process>
+	
+	<!-- Below is for sentinel-1 radar data-->
+	<!-- prodtype ['SLC', 'GRD', 'OCN'] SLC includes phase, whereas GRD excludes phase and is smaller, GRD is better for soil 2D classification, 2.5 D requires SLC-->
+	<processx processid ='downloadSentinelRegion' dsversion = '3.0'>
+		<parameters orbitdirection = 'B'
+			platformname = 'Sentinel-1'
+			prodtype  = 'GRD' 
+			cloudmax = "30"
+			startdate = "20160401"
+			enddate = "20180821"
+		> </parameters>
+		<overwrite>N</overwrite>
+		<delete>N</delete>
+		<srcpath volume = "africa" scenes = 'false' division = 'region' hdrfiletype = "shp" datfiletype = "shp"></srcpath>
+		<dstpath volume = "africa" scenes = 'true' division = 'granule' hdrfiletype = "shp" datfiletype = "shp"></dstpath>
+		<srccomp>
+			<arcticwetlands source = "stockholm-univeristy" product = "groundsites" folder = "wetlands" band = "arcticwetlands" prefix = "arcticwetlands" suffix = "v10" system = 'ancillary'>		
+			</arcticwetlands>
+		</srccomp>		
+	</processx>
+</downloadSentinel>

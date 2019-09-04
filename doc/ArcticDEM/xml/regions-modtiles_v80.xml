@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<regionsmodis>	
+	<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'modis'></userproj>
+	<period timestep='static'></period>
+	
+	<process processid ='LinkDefaultRegionsToMODIS' version = '3.0'>
+		<parameters> </parameters>
+		<overwrite>N</overwrite>
+		<srcpath volume = "karttur3tb" hdrfiletype = "shp" datfiletype = "shp"></srcpath>
+	    <srccomp>
+	    	<modtiles source = "karttur" product = "modtiles" folder = "tiles" band = "modtiles" prefix = "modtiles" suffix = "lonlat">	
+			</modtiles>
+	    </srccomp>
+	</process>
+		
+</regionsmodis>	
+
+
+
+

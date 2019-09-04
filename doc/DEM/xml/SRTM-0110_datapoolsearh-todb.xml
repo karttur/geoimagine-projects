@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<searchdatapool>
+	<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'ancillary'></userproj>
+
+	<process processid ='SRTMSearchToDB' dsversion = '1.3'>
+		<parameters product="SRTMGL1_NC" version="003" ></parameters>
+		<srcpath volume = "guatemala" ></srcpath>
+	</process>
+		
+</searchdatapool>

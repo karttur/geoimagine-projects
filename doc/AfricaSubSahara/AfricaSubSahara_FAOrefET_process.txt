@@ -1,0 +1,32 @@
+###################################
+###################################
+###    FAO refET processing     ###
+###################################
+###################################
+
+## The processing requires that the FAO reference evapotranspiration is captured and organized ##
+
+###################################
+###          Update db          ###
+###################################
+
+## If you have access to TRMM data created by karttur's Geoimagine Framework ##
+## you can access the data from your Framework installation by updating the db ##
+## You can also use updatedb to clean your database and/or delete files from your Framework organized storage ##
+
+## Update db for FAO refET, if needed ##
+#FAOrefET-0190_udatedb.xml
+
+###################################
+###       Tile to region        ###
+###################################
+
+## Tile FAO refET to region ##
+#AfricaSubSahara_FAOrefET-0160_tile_staticM.xml
+
+###################################
+###           Archive           ###
+###################################
+
+## Archive ##
+#AfricaSubSahara_FAOrefET-0980_arcihive-zip_staticM.xml

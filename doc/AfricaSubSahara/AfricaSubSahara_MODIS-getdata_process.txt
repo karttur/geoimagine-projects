@@ -1,0 +1,38 @@
+###################################
+###################################
+###    MODIS processing     ###
+###################################
+###################################
+
+###################################
+###          Update db          ###
+###################################
+
+## If you have access to MODIS data created by karttur's Geoimagine Framework ##
+## you can access the data from your Framework installation by updating the db ##
+## You can also use updatedb to clean your database and/or delete files from your Framework organized storage ##
+
+###################################
+###    Download and organize    ###
+###################################
+
+## Search Data Pool MODIS data holdings for tiles ##
+## The search is always global and not related to any region ##
+#MODIS-0100_search-datapool_2001-present.xml
+
+## Search to db ##
+#MODIS-0110_search-todb_2001-present.xml
+
+## Download modis tiles for Sub Saharan Africa ##
+#AfricaSubSahara_MODIS-0120_download_2018-present.xml
+
+## Either rerun the script "AfricaSubSahara_MODIS-0120_download_2018-present.xml" (fast), or
+## run "AfricaSubSahara_MODIS-0129_download-checktiles_2001-present.xml" (slow)
+#AfricaSubSahara_MODIS-0129_download-checktiles_2001-present.xml
+
+## Explode tiles for Sub Saharan Africa ##
+AfricaSubSahara_MODIS-0130_explodetiles_2001-present.xml
+
+#Either rerun the script "modis_explodetiles_v80.xml" (fast), or
+## run "AfricaSubSahara_MODIS-0129_download-checktiles_2001-present.xml" (slow)
+#AfricaSubSahara_MODIS-0129_download-checktiles_2001-present.xml

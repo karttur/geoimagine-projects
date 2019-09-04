@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='utf-8'?>
+<lfarcticdem>
+	<userproj userid = 'karttur' projectid = 'karttur-arcticdemext' tractid= 'karttur-arcticdemext' siteid = '*' plotid = '*' system = 'modis'></userproj>
+	<period timestep='static'></period>
+	
+
+	<processx processid = 'LandformTPIModis' version = '1.3'>
+
+		<parameters standardize='False' expanded='False'></parameters>
+		<srcpath volume = "karttur3tb"></srcpath>
+		<dstpath volume = "karttur3tb"></dstpath>
+		<srccomp>
+			<tpi500-dem500 id = 'tpis' source = "NGA-NSF" product = "arcticdem" folder = "dem-tpi" band = "tpi500-dem500" prefix = "tpi500-dem500" suffix = "v30">	
+			</tpi500-dem500>
+			<tpi1500-dem500 id = 'tpim' source = "NGA-NSF" product = "arcticdem" folder = "dem-tpi" band = "tpi1500-dem500" prefix = "tpi1500-dem500" suffix = "v30">	
+			</tpi1500-dem500>
+			<slope-d-dem500 id = 'slope' source = "NGA-NSF" product = "arcticdem" folder = "dem-slope" band = "slope-d-dem500" prefix = "slope-d-dem500" suffix = "v30">	
+			</slope-d-dem500>
+		</srccomp>
+		<dstcomp>
+			<tpi500-1500 id = 'landform' source = "NGA-NSF" product = "landform" folder = "landform" band = "tpi500-1500" prefix = "tpi500-1500" suffix = "10cl-arcticdemv30">	
+			</tpi500-1500>
+		</dstcomp>
+
+	</processx>
+	
+	<processx processid = 'LandformTPIModis' version = '1.3'>
+
+		<parameters standardize='True' tpisstd = '0.0' tpilstd = '0.0' expanded='False'></parameters>
+		<srcpath volume = "karttur3tb"></srcpath>
+		<dstpath volume = "karttur3tb"></dstpath>
+		<srccomp>
+			<tpi500-dem500 id = 'tpis' source = "NGA-NSF" product = "arcticdem" folder = "dem-tpi" band = "tpi500-dem500" prefix = "tpi500-dem500" suffix = "v30">	
+			</tpi500-dem500>
+			<tpi1500-dem500 id = 'tpim' source = "NGA-NSF" product = "arcticdem" folder = "dem-tpi" band = "tpi1500-dem500" prefix = "tpi1500-dem500" suffix = "v30">	
+			</tpi1500-dem500>
+			<slope-d-dem500 id = 'slope' source = "NGA-NSF" product = "arcticdem" folder = "dem-slope" band = "slope-d-dem500" prefix = "slope-d-dem500" suffix = "v30">	
+			</slope-d-dem500>
+		</srccomp>
+		<dstcomp>
+			<tpi500-1500 id = 'landform' source = "NGA-NSF" product = "landform" folder = "landform" band = "tpi500-1500" prefix = "tpi500-1500" suffix = "stand-10cl-arcticdemv30">	
+			</tpi500-1500>
+		</dstcomp>
+
+	</processx>
+	
+	<process processid = 'LandformTPIModis' version = '1.3'>
+
+		<parameters standardize='True' tpisstd = '30' tpilstd = '0.0' expanded='False'></parameters>
+		<srcpath volume = "karttur3tb"></srcpath>
+		<dstpath volume = "karttur3tb"></dstpath>
+		<srccomp>
+			<tpi500-dem500 id = 'tpis' source = "NGA-NSF" product = "arcticdem" folder = "dem-tpi" band = "tpi500-dem500" prefix = "tpi500-dem500" suffix = "v30">	
+			</tpi500-dem500>
+			<tpi1500-dem500 id = 'tpim' source = "NGA-NSF" product = "arcticdem" folder = "dem-tpi" band = "tpi1500-dem500" prefix = "tpi1500-dem500" suffix = "v30">	
+			</tpi1500-dem500>
+			<slope-d-dem500 id = 'slope' source = "NGA-NSF" product = "arcticdem" folder = "dem-slope" band = "slope-d-dem500" prefix = "slope-d-dem500" suffix = "v30">	
+			</slope-d-dem500>
+		</srccomp>
+		<dstcomp>
+			<tpi500-1500 id = 'landform' source = "NGA-NSF" product = "landform" folder = "landform" band = "tpi500-1500" prefix = "tpi500-1500" suffix = "rel-10cl-arcticdemv30">	
+			</tpi500-1500>
+		</dstcomp>
+
+	</process>
+	
+	<processx processid = 'LandformTPIModis' version = '1.3'>
+
+		<parameters standardize='True' expanded='False'></parameters>
+		<srcpath volume = "karttur3tb"></srcpath>
+		<dstpath volume = "karttur3tb"></dstpath>
+		<srccomp>
+			<tpi500-dem500 id = 'tpis' source = "NGA-NSF" product = "arcticdem" folder = "dem-tpi" band = "tpi500-dem500" prefix = "tpi500-dem500" suffix = "v30">	
+			</tpi500-dem500>
+			<tpi1500-dem500 id = 'tpim' source = "NGA-NSF" product = "arcticdem" folder = "dem-tpi" band = "tpi1500-dem500" prefix = "tpi1500-dem500" suffix = "v30">	
+			</tpi1500-dem500>
+			<slope-d-dem500 id = 'slope' source = "NGA-NSF" product = "arcticdem" folder = "dem-slope" band = "slope-d-dem500" prefix = "slope-d-dem500" suffix = "v30">	
+			</slope-d-dem500>
+		</srccomp>
+		<dstcomp>
+			<tpi500-1500 id = 'landform' source = "NGA-NSF" product = "landform" folder = "landform" band = "tpi500-1500" prefix = "tpi500-1500" suffix = "glob-10cl-arcticdemv30">	
+			</tpi500-1500>
+		</dstcomp>
+
+	</processx>
+</lfarcticdem>

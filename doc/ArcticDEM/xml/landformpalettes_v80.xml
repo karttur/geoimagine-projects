@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<palette>
+	<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'system'></userproj>
+
+	<!-- addrasterpalette preciplinear-->
+	<process processid = 'addrasterpalette'>
+		<overwrite>Y</overwrite>
+		<delete>N</delete>
+		<parameters palette = 'landform' compid='test'>
+			<setcolor id = '0' red = '0' green ='0' blue='50' alpha ='0' label='No data' hint='No data' ></setcolor>
+			<setcolor id = '1' red = '21' green ='19' blue='186' alpha ='0' label='Open water' hint='Open water body' ></setcolor>
+			<setcolor id = '2' red = '60' green ='20' blue='220' alpha ='0' label='River' hint='Permanent river (in plain or valley)' ></setcolor>
+			<setcolor id = '3' red = '83' green ='213' blue='255' alpha ='0' label='Stream' hint='Intermittent stream' ></setcolor>
+			<setcolor id = '4' red = '98' green ='28' blue='210' alpha ='0' label='Incised river' hint='Canyon/incised river' ></setcolor>
+			<setcolor id = '5' red = '174' green ='45' blue='223' alpha ='0' label='Canyon' hint='Canyon/Incised river' ></setcolor>
+			<setcolor id = '6' red = '155' green ='59' blue='245' alpha ='0' label='channel' hint='channel/shallow valley' ></setcolor>
+			<setcolor id = '7' red = '161' green ='104' blue='240' alpha ='0' label='midslope drainage' hint='midslope drainage' ></setcolor>
+			<setcolor id = '8' red = '162' green ='133' blue='255' alpha ='0' label='upland drainage' hint='Headwaters/upland drainage' ></setcolor>
+			<setcolor id = '9' red = '0' green ='192' blue='173' alpha ='0' label='Valley' hint='U-shaped valley' ></setcolor>
+			<setcolor id = '10' red = '55' green ='154' blue='27' alpha ='0' label='Plain' hint='plain' ></setcolor>
+			<setcolor id = '11' red = '170' green ='231' blue='0' alpha ='0' label='Open slope' hint='Open slope' ></setcolor>
+			<setcolor id = '12' red = '233' green ='245' blue='9' alpha ='0' label='Dome' hint='Mesa, flat hilltop' ></setcolor>
+			<setcolor id = '13' red = '255' green ='198' blue='126' alpha ='0' label='Valley Ridge' hint='Local ridge' ></setcolor>
+			<setcolor id = '14' red = '232' green ='142' blue='56' alpha ='0' label='Hill' hint='local valley hill' ></setcolor>
+			<setcolor id = '15' red = '232' green ='109' blue='56' alpha ='0' label='midslope ridge' hint='midslope ridge' ></setcolor>
+			<setcolor id = '16' red = '228' green ='74' blue='13' alpha ='255' label='Mountain top' hint='Mountain peak' ></setcolor>
+			<setcolor id = '251' red = '250' green ='250' blue='250' alpha ='255' label='255' hint='no data' ></setcolor>
+			<setcolor id = '252' red = '250' green ='250' blue='250' alpha ='255' label='255' hint='no data' ></setcolor>
+			<setcolor id = '253' red = '250' green ='250' blue='250' alpha ='255' label='255' hint='no data' ></setcolor>
+			<setcolor id = '254' red = '250' green ='250' blue='250' alpha ='255' label='255' hint='no data' ></setcolor>
+			<setcolor id = '255' red = '250' green ='250' blue='250' alpha ='255' label='255' hint='no data' ></setcolor>
+		</parameters>
+	</process>
+
+</palette>

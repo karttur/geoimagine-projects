@@ -1,0 +1,94 @@
+###################################
+###################################
+###    TRMM data processing     ###
+###################################
+###################################
+
+## The processing of Tropical Rainfall Measurement Mission (TRMM) data requires that 
+## the original TRMM data are already downloaded, processed and available ##
+
+###################################
+###          Update db          ###
+###################################
+
+## If you have access to TRMM data created by karttur's Geoimagine Framework ##
+## you can access the data from your Framework installation by updating the db ##
+
+###################################
+###       Tile to region        ###
+###################################
+
+## Tile monthly TRMM (the tiling is repeated 3 times producing TRMM data in different spatial resolutions) ##
+AfricaSubSahara_TRMM-0160_tile_M.xml
+
+## Tile annual TRMM (the tiling is repeated 3 times producing TRMM data in different spatial resolutions) ##
+AfricaSubSahara_TRMM-0161_tile_A.xml
+
+###################################
+###   Time Series Processing    ###
+###################################
+
+## Statistics and trends 
+## 1998-2017 is for the complete timeseries, 2003-2016 for overlap with GRACE and 2001 to 2018 for overlap with MODIS TWI ## 
+AfricaSubSahara_TRMM-0310_trend_A_1998-2017.xml
+AfricaSubSahara_TRMM-0310_trend_A_2003-2016.xml
+AfricaSubSahara_TRMM-0310_trend_A_2001-2017.xml
+
+## Changes and significant trends 
+## 1998-2017 is for the complete timeseries, 2003-2016 for overlap with GRACE and 2001 to 2018 for overlap with MODIS TWI ## 
+AfricaSubSahara_TRMM-0320_changes_A_1998-2017.xml
+AfricaSubSahara_TRMM-0320_changes_A_2003-2016.xml
+AfricaSubSahara_TRMM-0320_changes_A_2001-2017.xml
+
+## Cross correlation climate indexes and TRMM ##
+#AfricaSubSahara_TRMM-0380_index-x-corr_M.xml
+
+###################################
+###   	       Mosaic           ###
+###################################
+
+## Mosaic monthly TRMM ##
+#AfricaSubSahara_TRMM-0610_mosaic_M.xml
+
+## Mosaic stats, trends and changes ##
+#AfricaSubSahara_TRMM-0630_mosaic_timespanA_1998-2017.xml
+#AfricaSubSahara_TRMM-0630_mosaic_timespanA_2003-2016.xml
+
+## Mosaic climate Index vs TRMM cross correlation ##
+#AfricaSubSahara_TRMM-0620_mosaic_index-x-corr_M.xml
+
+###################################
+###        Export media         ###
+###################################
+
+## Export monthly TRMM ##
+#AfricaSubSahara_TRMM-0900_ExporttoByte_M.xml
+
+## Export stats, trends and changes ##
+#AfricaSubSahara_TRMM-0910_ExporttoByte_timespanA_1998-2017.xml
+#AfricaSubSahara_TRMM-0910_ExporttoByte_timespanA_2003-2016.xml
+
+## Export Climate Index vs TRMM Cross correlation ##
+#AfricaSubSahara_TRMM-0920_ExporttoByte_crosscorr_2003-2016.xml
+
+## Create movieframes ##
+#AfricaSubSahara_TRMM-0950_movieframes_M.xml
+
+## Create movieclock and movie scripts ##
+#AfricaSubSahara_TRMM-0960_movieclock_M.xml
+
+###################################
+###           Archive           ###
+###################################
+
+## Archive monthly TRMM ##
+#AfricaSubSahara_TRMM-0980_archive-zip_M_1998-2017.xml
+#AfricaSubSahara_TRMM-0980_archive-zip_M_2003-2016.xml
+
+## Archive annual TRMM ##
+#AfricaSubSahara_TRMM-0980_archive-zip_A_1998-2017.xml
+#AfricaSubSahara_TRMM-0980_archive-zip_A_2003-2016.xml
+
+## Archive stats, trends and changes TRMM ##
+#AfricaSubSahara_TRMM-0980_archive-zip_A-stats_1998-2017.xml
+#AfricaSubSahara_TRMM-0980_archive-zip_A-stats_2003-2016.xml

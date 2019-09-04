@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LandsatProc>	
+	<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'landsat'></userproj>
+	
+	<process processid ='managebulkmetaurl' dsversion = '1.3'>
+		<parameters 
+			collection='LandsatARD' level='1' sensor='all'
+			label ='U.S Landsat Analysis Ready Data (ARD)'
+			xmlurl= 'https://landsat.usgs.gov/landsat/metadata_service/bulk_metadata_files/ARD_TILE.xml.gz'
+			csvurl='https://landsat.usgs.gov/landsat/metadata_service/bulk_metadata_files/ARD_TILE.csv.gz'
+			>
+		</parameters>
+
+	</process>
+	
+	<process processid ='managebulkmetaurl' dsversion = '1.3'>
+		<parameters 
+			collection='Landsat1' level='1' sensor='MSS'
+			label ='Landsat 1-5 Multispectral Scanner (MSS)'
+			xmlurl= 'https://landsat.usgs.gov/landsat/metadata_service/bulk_metadata_files/LANDSAT_MSS_C1.xml.gz'
+			csvurl='https://landsat.usgs.gov/landsat/metadata_service/bulk_metadata_files/LANDSAT_MSS_C1.csv.gz'
+			>
+		</parameters>
+
+	</process>
+	
+	<process processid ='managebulkmetaurl' dsversion = '1.3'>
+		<parameters 
+			collection='Landsat1' level='1' sensor='TM'
+			label ='Landsat 4-5 Thematic Mapper'
+			xmlurl= 'https://landsat.usgs.gov/landsat/metadata_service/bulk_metadata_files/LANDSAT_TM_C1.xml.gz'
+			csvurl='https://landsat.usgs.gov/landsat/metadata_service/bulk_metadata_files/LANDSAT_TM_C1.csv.gz'
+			>
+		</parameters>
+
+	</process>
+	
+	<process processid ='managebulkmetaurl' dsversion = '1.3'>
+		<parameters 
+			collection='Landsat1' level='1' sensor='ETM'
+			label ='Landsat 7 Enhanced Thematic Mapper Plus (ETM+) (combined SLC-on/off)'
+			xmlurl= 'https://landsat.usgs.gov/landsat/metadata_service/bulk_metadata_files/LANDSAT_ETM_C1.xml.gz'
+			csvurl='https://landsat.usgs.gov/landsat/metadata_service/bulk_metadata_files/LANDSAT_ETM_C1.csv.gz'
+			>
+		</parameters>
+
+	</process>
+	
+	<process processid ='managebulkmetaurl' dsversion = '1.3'>
+		<parameters 
+			collection='Landsat1' level='1' sensor='OLI-TIRS'
+			label ='Landsat 8 Operational Land Imager (OLI)/ Thermal Infrared Sensor (TIRS) (combined Pre- and On-WRS)'
+			xmlurl= 'https://landsat.usgs.gov/landsat/metadata_service/bulk_metadata_files/LANDSAT_8_C1.xml.gz'
+			csvurl='https://landsat.usgs.gov/landsat/metadata_service/bulk_metadata_files/LANDSAT_8_C1.csv.gz'
+			>
+		</parameters>
+
+	</process>
+		
+</LandsatProc>

@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<africasubsahara>
+	<userproj userid = 'karttur' projectid = 'karttur-africasubsahara' tractid= 'karttur-africasubsahara' siteid = '*' plotid = '*' system = 'modis'></userproj>
+	<period startyear = "1998" endyear = "2018" timestep='M'></period>
+
+	<!-- Update DB -->	
+	<processx processid = 'updatedbModis' version = '1.3'>
+		<delete>True</delete>
+		<parameters></parameters>
+		<dstpath volume = "africa" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>
+		<dstcomp>
+			<trmm-3b43v7-precip source = "trmm" product = "3b43" folder = "rainfall" band = "trmm-3b43v7-precip" prefix = "rainfall" suffix = "v7-f"
+			cellnull='-32768' celltype='Int16' measure='R' dataunit='mm' scalfac='1' offsetadd='0'>
+			</trmm-3b43v7-precip>
+		</dstcomp>
+	</processx>
+	
+	<!-- Update DB -->	
+	<process processid = 'updatedbModis' version = '1.3'>
+		<delete>True</delete>
+		<parameters></parameters>
+		<dstpath volume = "africa" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>
+		<dstcomp>
+			<trmm-3b43v7-precip source = "trmm" product = "3b43" folder = "rainfall" band = "trmm-3b43v7-precip" prefix = "rainfall" suffix = "v7-f-m"
+			cellnull='-32768' celltype='Int16' measure='R' dataunit='mm' scalfac='1' offsetadd='0'>
+			</trmm-3b43v7-precip>
+		</dstcomp>
+	</process>
+	
+</africasubsahara>
+
+
+
+

@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LandsatProc>	
+	<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'landsat'></userproj>
+	<period startyear = "1992" endyear = "2019" timestep='allscenes'></period>
+	
+	<processx processid ='downloadbulkmeta' dsversion = '1.3'>
+		<parameters 
+			collection='LandsatARD' level='1' sensor='all'
+			filetype= 'csv'
+			>
+		</parameters>
+		<dstpath volume = "guatemala" hdrfiletype = 'gz' datfiletype = 'csv'></dstpath>
+	</processx>
+	
+	<processx processid ='downloadbulkmeta' dsversion = '1.3'>
+		<parameters 
+			collection='Landsat1' level='1' sensor='MSS'
+			filetype= 'csv'
+			>
+		</parameters>
+		<dstpath volume = "guatemala" hdrfiletype = 'gz' datfiletype = 'csv'></dstpath>
+	</processx>
+	
+	<processx processid ='searchLandsatSingleScene' dsversion = '1.3'>
+		<parameters wrspath='175' wrsrow='75' maxcloudcovland='30' sensorid='T' imgqualmin = '6'
+			remoteuser='thomas.gumbricht@gmail.com'>
+		</parameters>
+		<dstpath volume = "guatemala" hdrfiletype = 'gz' datfiletype = 'csv'></dstpath>
+	</processx>
+	
+	<processx processid ='downloadbulkmeta' dsversion = '1.3'>
+		<overwrite>True</overwrite>
+		<parameters collection='Landsat1' level='1' sensor='ETM' 
+			filetype= 'csv'
+			>
+		</parameters>
+		<dstpath volume = "guatemala" hdrfiletype = 'gz' datfiletype = 'csv'></dstpath>
+	</processx>
+	
+	<processx processid ='downloadbulkmeta' dsversion = '1.3'>
+		<overwrite>True</overwrite>
+		<parameters 
+			collection='Landsat1' level='1' sensor='OLI-TIRS'
+			filetype= 'csv'
+			>
+		</parameters>
+		<dstpath volume = "guatemala" hdrfiletype = 'gz' datfiletype = 'csv'></dstpath>
+	</processx>
+	
+	<process processid ='searchLandsatSingleScene' dsversion = '1.3'>
+		<parameters wrspath='20' wrsrow='50' maxcloudcovland='30' sensorid='' imgqualmin = '6'
+			remoteuser='thomas.gumbricht@gmail.com'
+			download='False'>
+		</parameters>
+		<dstpath volume = "guatemala" hdrfiletype = 'gz' datfiletype = 'csv'></dstpath>
+	</process>
+	
+	<process processid ='searchLandsatSingleScene' dsversion = '1.3'>
+		<parameters wrspath='20' wrsrow='49' maxcloudcovland='30' sensorid='' imgqualmin = '6'
+			remoteuser='thomas.gumbricht@gmail.com'
+			download='False'>
+		</parameters>
+		<dstpath volume = "guatemala" hdrfiletype = 'gz' datfiletype = 'csv'></dstpath>
+	</process>
+	
+	<process processid ='searchLandsatSingleScene' dsversion = '1.3'>
+		<parameters wrspath='19' wrsrow='49' maxcloudcovland='30' sensorid='' imgqualmin = '6'
+			remoteuser='thomas.gumbricht@gmail.com'
+			download='False'>
+		</parameters>
+		<dstpath volume = "guatemala" hdrfiletype = 'gz' datfiletype = 'csv'></dstpath>
+	</process>
+	
+	<process processid ='searchLandsatSingleScene' dsversion = '1.3'>
+		<parameters wrspath='19' wrsrow='50' maxcloudcovland='30' sensorid='' imgqualmin = '6'
+			remoteuser='thomas.gumbricht@gmail.com'
+			download='False'>
+		</parameters>
+		<dstpath volume = "guatemala" hdrfiletype = 'gz' datfiletype = 'csv'></dstpath>
+	</process>
+		
+</LandsatProc>
+

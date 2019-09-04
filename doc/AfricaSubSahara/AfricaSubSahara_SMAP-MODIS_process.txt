@@ -1,0 +1,140 @@
+###################################
+###################################
+###  MODIS + SMAP assimilation  ###
+###################################
+###################################
+
+###################################
+###          Update db          ###
+###################################
+
+## If you have access to SMAP assimilated MODIS data created by karttur's Geoimagine Framework ##
+## you can access the data from your Framework installation by updating the db ##
+## You can also use updatedb to clean your database and/or delete files from your Framework organized storage ##
+
+## Update db with assimilated TWI A ##
+#AfricaSubSahara_MODIS-0190_updatedb_TWI-assimilated-A.xml
+
+## Update db with TWI resampled to 9km for SMAP overlap period ##
+#AfricaSubSahara_MODIS-0190_updatedb_TWI_16D_9km.xml
+
+###################################
+###   Create coherent datasets  ###
+###################################
+
+## Tile SMAP to MODIS original spatiotemporal resolution ## 
+AfricaSubSahara_SMAP-0167_tile_filled_16D_500m.xml
+
+## Resample SMAP SINgrid back to 9km but using average (fitting to modis TWI resampled to 9km) ##
+#AfricaSubSahara_SMAP-0170_resample-2-SMAP_filled-16D.xml
+
+## Resample MODIS to fit the SMAP 9 km spatial resolution (overlapping dates) ##
+#AfricaSubSahara_MODIS-0170_resample-2-SMAP_16D.xml
+
+###################################
+###      Cross correlation      ###
+###################################
+
+## Cross correlate SMAP and TWI at 9km and overlapping period (both filled)
+#AfricaSubSahara-MODIS-SMAP-0385_layer-x-cross_16D.xml
+
+##############################################
+###  Extract overlapping seasonal signals  ###
+##############################################
+
+## Extract MODIS an SMAP seasonal signals at 9km for overlapping period ##
+#AfricaSubSahara_MODIS-SMAP-0320_extract-seasons_16D_2015-2018.xml
+
+###################################
+###     Define assimilation     ###
+###################################
+
+## Set MODIS to SMAP Assimilation (mean and standard deviation from master and slave) ##
+#AfricaSubSahara_MODIS-SMAP-0380_setassimilation_16D.xml
+
+###################################
+###      Infer assimilation     ###
+###################################
+
+## Assimilate MODIS to SMAP at 9 km (infer the assimilation)
+#AfricaSubSahara_MODIS-SMAP-0390_assimilate_16D_9km.xml
+
+## Assimilate MODIS to SMAP at full resolution (infer the assimilation)
+#AfricaSubSahara_MODIS-SMAP-0392_assimilate_16D.xml
+
+###################################
+###   Time Series Processing    ###
+###################################
+
+## Resample assimilated MODIS TWI to annual ##
+#AfricaSubSahara_MODIS-0290_resample-2-A.xml
+
+## Run trend analysis on assimilated TWI ##
+#AfricaSubSahara_MODIS-0310_trend_A_2001-2017.xml
+
+#AfricaSubSahara_MODIS-0320_changes_A_2001-2018.xml
+
+###################################
+###   	       Mosaic           ###
+###################################
+
+## Mosaic the SMAP-MODIS (Master-Slave) cross correlation results for Sub Saharan Africa ##
+#AfricaSubSahara_MODIS-SMAP-0625_mosaic_layer-x-corr_2015-2018.xml
+
+###################################
+###         Export Media        ###
+###################################
+
+#Export cross correlations SMAP vs MODIS twi at 9 km
+#AfricaSubSahara_MODIS-SMAP-0925-ExporttoByte_layer-x-corr_2015-2018.xml
+
+#Export 9km SMAP, TWI original and TWI assimilated, same period and palette
+#AfricaSubSahara_MODIS-SMAP-0900_ExporttoByte_16D_9km.xml
+
+#Export MODIS 16D tiles
+#AfricaSubSahara_MODIS-0900_ExporttoByte_16D.xml
+
+#Export MODIS annual tiles
+#AfricaSubSahara_MODIS-0900_ExporttoByte_A.xml
+
+#Export MODIS statistics, trends and changes
+#AfricaSubSahara_MODIS-0900_ExporttoByte_timespanA.xml
+
+###################################
+###     MODIS + SMAP MOVIES     ###
+###################################
+
+## Create movieframes for TWI, SMAP and 2 versions of TWI assimilated to SMAP ##
+#AfricaSubSahara_MODIS-SMAP-0950_movieframes-tiles_16D_9km.xml
+
+#Append to frames to combined movie (done in 3 steps to create a movie with 4 frames)
+#AfricaSubSahara_MODIS-SMAP-0951_movieframes-append-tiles_16D_9km.xml
+
+## Movie clock, overlay and movie generation for appended tile versions ##
+#AfricaSubSahara_MODIS-SMAP-0960_movielock-append-tiles_16D_9km.xml
+
+###################################
+###  MODIS + SMAP MOSAIC  ###
+###################################
+
+## MOSAIC 9 km SMAP and MODIS 16D (for movie)
+#AfricaSubSahara_MOIDS-SMAP-0610_mosaic_16D_9km.xml
+
+## Create SMAP + TWI 9 km movieframes (for separate movies) ##
+##AfricaSubSahara_SMAP-0950_movieframes-region_16D_9km.xml
+
+## Create SMAP + TWI 9 km movieframes (for separate movies) ##
+#AfricaSubSahara_SMAP-0960_movieclock_16D_9km.xml
+
+###################################
+###      Archive     ###
+###################################
+
+## Archive the MODIS to SMAP assimilation parameters ##
+#AfricaSubSahara_MODIS-SMAP-0980_archive-zip_assimvars.xml
+
+#ZIP archive MODIS 16D tiles
+#AfricaSubSahara_MODIS-0980_arcihive-zip_16D.xml
+
+## Archive the annually assiimilate MODIS TWI ##
+#AfricaSubSahara_MODIS-0980_arcihive-zip_a.xml

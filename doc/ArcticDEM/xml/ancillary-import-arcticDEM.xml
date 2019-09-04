@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='utf-8'?>
+<importarcticdem>
+	<userproj userid = 'karttur' projectid = 'karttur-arcticdemext' tractid= 'karttur-arcticdemext' siteid = '*' plotid = '*' system = 'ancillary'></userproj>
+	<period timestep='static'></period>
+	<process processid ='organizeancillary' dsversion = '3.0'>
+		<parameters importdef='geotiff'
+			epsg = '3413' 
+			instid = 'NGA-NSF' 
+			dsname  = 'arcticdem' 
+			dsversion = "3.0"
+			accessdate = "20181110"
+			copyright = ""
+			regionid = 'arcticdem' 
+			regioncat = 'global'
+			dataurl = "" 
+			metaurl="" 
+			title = "Arctic DEM"
+			label = "Arctice Digitial Surface Model"
+		> </parameters>
+		 	 
+		<srcpath volume = "Karttur3tb/ANCILIMPORT" hdrfiletype = "tif" datfiletype = "tif"></srcpath>
+		<dstpath volume = "Karttur3tb" hdrfiletype = "tif" datfiletype = "tif"></dstpath>
+				
+		<srcraw 
+			id="dem500"
+			datadir ='ArcticDEM'
+			datafile = "arcticdem_mosaic_500m_v3.0"
+			theme = "DEM"
+			subtheme = "DSM"
+			metadir =""
+			metadfile =""
+			title = "Arctic DEM"
+			label = "Arctice Digitial Surface Modeln"
+		></srcraw>
+		<dstcomp>
+			<dem500 source = "NGA-NSF" product = "arcticdem" folder = "dem" band = "dem500" prefix = "dem500" suffix = "v30" scalefac = "1" offsetadd = "0" dataunit = "masl" celltype = 'Float32' cellnull = '-9999' measure ='R' masked='N'>	
+			</dem500>
+		</dstcomp>
+
+		<srcraw 
+			id="dem100"
+			datadir ='ArcticDEM'
+			datafile = "arcticdem_mosaic_100m_v3.0"
+			theme = "DEM"
+			subtheme = "DSM"
+			metadir =""
+			metadfile =""
+			title = "Arctic DEM"
+			label = "Arctice Digitial Surface Modeln"
+		></srcraw>
+		<dstcomp>
+			<dem100 source = "NGA-NSF" product = "arcticdem" folder = "dem" band = "dem100" prefix = "dem100" suffix = "v30" scalefac = "1" offsetadd = "0" dataunit = "masl" celltype = 'Float32' cellnull = '-9999' measure ='R' masked='N'>	
+			</dem100>
+		</dstcomp>
+
+	</process>		
+</importarcticdem>
+

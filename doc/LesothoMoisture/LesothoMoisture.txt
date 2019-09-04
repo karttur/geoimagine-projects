@@ -1,0 +1,62 @@
+#Create user projects and tracts for Lesotho
+#This must be done with all the following processes closed (commented with #)
+#add_user_projects-regions_lesotho.xml
+
+###################################
+###################################
+###    TRMM data processing     ###
+###################################
+###################################
+
+## The processing of Tropical Rainfall Measurement Mission (TRMM) data requires that 
+## the original TRMM data are already downloaded, processed and available ##
+
+###################################
+###       Tile to region        ###
+###################################
+
+## Tile monthly TRMM ##
+#LesothoMoisture_TRMM-0160_tile_M.xml
+
+## Tile annual TRMM ##
+#LesothoMoisture_TRMM-0161_tile_A.xml
+
+###################################
+###   Time Series Processing    ###
+###################################
+
+## Annual statistics and trends  
+## should be done at tile level! Not by tiling original data. ##
+#LesothoMoisture_TRMM-0310_trend_A_1998-2017.xml
+
+
+## Annual changes and significant trends ## 
+#LesothoMoisture_TRMM-0320_changes_A_1998-2017.xml
+
+## Cross correlation climate indexes and TRMM ##
+#LesothoMoisture_TRMM-0380_index-x-corr_M.xml
+
+###################################
+###   	       Mosaic           ###
+###################################
+
+## Mosaic monthly TRMM ##
+#LesothoMoisture_TRMM-0610_mosaic_M.xml
+
+## Mosaic stats, trends and changes ##
+#LesothoMoisture_TRMM-0630_mosaic_timespanA_1998-2017.xml
+#LesothoMoisture_TRMM-0630_mosaic_timespanA_2003-2016.xml
+
+## Mosaic climate Index vs TRMM cross correlation ##
+#LesothoMoisture_TRMM-0620_mosaic_index-x-corr_M.xml
+
+###################################
+###################################
+###     Sentinel processing     ###
+###################################
+###################################
+
+#LesothoMositure_sentinel-download-meta.xml
+
+LesothoMositure_sentinel-download-data.xml
+

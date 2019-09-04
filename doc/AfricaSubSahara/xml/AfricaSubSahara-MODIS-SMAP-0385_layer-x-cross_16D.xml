@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='utf-8'?>
+<africasubsahara>
+	<userproj userid = 'karttur' projectid = 'karttur-africasubsahara' tractid= 'karttur-africasubsahara' siteid = '*' plotid = '*' system = 'modis'></userproj>
+	<period startyear = "2015" startmonth='04' startday='23' endyear = "2018" timestep='16D'></period>
+
+	<processx processid = 'imagecrosstrendtsmodis' version = '1.3'>
+		<overwrite>True</overwrite>
+		<!-- default parameter values
+			
+			normalize = 'False'
+			standardize = 'True'
+			naive  = 'False'
+			additive = 'True'
+			yearfac = '1' 
+			trend = 'spline' 
+			prefilterseason  = 'False' 
+			kernel  = '0'
+			forceseason = 'True' 
+			abs = 'False' 
+			savelags = -1
+			maxlag = 6
+			mirrorlag = False
+		-->
+		<parameters 
+			mirrorlag = 'False'
+			naive='True'
+			savelags='6'
+			xcrossobserved='True'
+			xcrosseason='True'
+			xcrosstendency='True'
+			xcrossresidual='True'
+		></parameters>
+		<srcpath volume = "africa" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+		<dstpath volume = "africa" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>
+		<srccomp>
+			<soil-moisture-avg-16d id = 'master' source = "SPL3SMP-E.002" product = "SPL3SMP-E" folder = "soil-moisture-avg-16d-fill" band = "soil-moisture-avg-16d" prefix = "soil-moisture-avg-16d" suffix = "002-modfit-9km">	
+			</soil-moisture-avg-16d>
+			<TWIpercent id = 'slave' source = "MCD43A4v006" product = "MCD43A4" folder = "TWIpercent-fill" band = "TWIpercent" prefix = "TWIpercent" suffix = "v006-tg01-9km">
+			</TWIpercent>
+		</srccomp>
+		<dstcomp>
+			<noeffect source = "smapmodtwi"  product = "smap-xc-modtwi" suffix = "f-002-tg01-9km">
+			</noeffect>
+		</dstcomp>
+	</processx>
+	
+	<processx processid = 'imagecrosstrendtsmodis' version = '1.3'>
+		<overwrite>False</overwrite>
+		<!-- default parameter values
+			
+			normalize = 'False'
+			standardize = 'True'
+			naive  = 'False'
+			additive = 'True'
+			yearfac = '1' 
+			trend = 'spline' 
+			prefilterseason  = 'False' 
+			kernel  = '0'
+			forceseason = 'True' 
+			abs = 'False' 
+			savelags = -1
+			maxlag = 6
+			mirrorlag = False
+		-->
+		<parameters 
+			normalize = 'True'
+			standardize = 'False'
+			mirrorlag = 'True'
+			naive='True'
+			savelags='12'
+			maxlag = '12'
+			xcrossobserved='True'
+			xcrosseason='True'
+			xcrosstendency='True'
+			xcrossresidual='True'
+		></parameters>
+		<srcpath volume = "africa" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+		<dstpath volume = "africa" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>
+		<srccomp>
+			<soil-moisture-avg-16d id = 'master' source = "SPL3SMP-E.002" product = "SPL3SMP-E" folder = "soil-moisture-avg-16d-fill" band = "soil-moisture-avg-16d" prefix = "soil-moisture-avg-16d" suffix = "002-modfit-9km">	
+			</soil-moisture-avg-16d>
+			<TWIpercent id = 'slave' source = "MCD43A4v006" product = "MCD43A4" folder = "TWIpercent-fill" band = "TWIpercent" prefix = "TWIpercent" suffix = "v006-tg01-9km">
+			</TWIpercent>
+		</srccomp>
+		<dstcomp>
+			<noeffect source = "smapmodtwi"  product = "smap-xc-modtwi" suffix = "f-002-tg01-9km">
+			</noeffect>
+		</dstcomp>
+	</processx>	
+		
+	<!-- vegetation water content-->
+	<processx processid = 'imagecrosstrendtsmodis' version = '1.3'>
+		<overwrite>False</overwrite>
+		<!-- default parameter values
+			
+			normalize = 'False'
+			standardize = 'True'
+			naive  = 'False'
+			additive = 'True'
+			yearfac = '1' 
+			trend = 'spline' 
+			prefilterseason  = 'False' 
+			kernel  = '0'
+			forceseason = 'True' 
+			abs = 'False' 
+			savelags = -1
+			maxlag = 6
+			mirrorlag = False
+		-->
+		<parameters 
+			normalize = 'True'
+			standardize = 'False'
+			mirrorlag = 'True'
+			naive='True'
+			savelags='12'
+			maxlag = '12'
+			xcrossobserved='True'
+			xcrosseason='True'
+			xcrosstendency='True'
+			xcrossresidual='True'
+		></parameters>
+		<srcpath volume = "africa" hdrfiletype = 'tif' datfiletype = 'tif'></srcpath>
+		<dstpath volume = "africa" hdrfiletype = 'tif' datfiletype = 'tif'></dstpath>
+		<srccomp>
+			<veg-moisture-avg-16d id = 'master' source = "SPL3SMP-E.002" product = "SPL3SMP-E" folder = "veg-moisture-avg-16d-fill" band = "veg-moisture-avg-16d" prefix = "veg-moisture-avg-16d" suffix = "002-modfit-9km">	
+			</veg-moisture-avg-16d>
+			<TWIpercent id = 'slave' source = "MCD43A4v006" product = "MCD43A4" folder = "TWIpercent-fill" band = "TWIpercent" prefix = "TWIpercent" suffix = "v006-tg01-9km">
+			</TWIpercent>
+		</srccomp>
+		<dstcomp>
+			<noeffect source = "smapmodtwi"  product = "smapveg-xc-modtwi" suffix = "f-002-tg01-9km">
+			</noeffect>
+		</dstcomp>
+	</processx>	
+	
+</africasubsahara>
+
+
+
+
+			
+			

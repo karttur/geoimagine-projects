@@ -1,0 +1,67 @@
+###################################
+###################################
+###   TRMM vs GRACE analysis   ###
+###################################
+###################################
+
+## The processing requires that the project TRMM and GRACE processing are completed ##
+
+###################################
+###          Update db          ###
+###################################
+
+## If you have access to preprocessed data created by karttur's Geoimagine Framework ##
+## you can access the data from your Framework installation by updating the db ##
+## You can also use updatedb to clean your database and/or delete files from your Framework organized storage ##
+
+###################################
+###     Overlay comparison      ###
+###################################
+
+## Compare trends from TRMM and GRACE ##
+#AfricaSubSahara_TRMM-GRACE-0370_dualtrendcomp_2003-2016.xml
+
+###################################
+###   Time Series Processing    ###
+###################################
+
+## Cross correlation between TRMM (master) and GRACE (slave) ##
+#AfricaSubSahara_TRMM-GRACE-0385_layer-x-corr_2003-2016.xml
+
+###################################
+###   	       Mosaic           ###
+###################################
+
+## Mosaic cross correlation TRMM-GRACE (Master-Slave) results for Sub Saharan Africa ##
+#AfricaSubSahara_TRMM-GRACE-0625_mosaic_layer-x-corr_2003-2016.xml
+
+## Mosaic change comparison TRMM-GRACE for Sub Saharan Africa ##
+#AfricaSubSahara_TRMM-GRACE-0630_mosaic_trendcomp_2003-2016.xml
+
+###################################
+###        Export media         ###
+###################################
+
+## Export cross correlation TRMM-GRACE (Master-Slave)  ##
+#AfricaSubSahara_TRMM-GRACE-0925-ExporttoByte_layer-x-corr_2003-2016.xml
+
+## Export change comparison TRMM-GRACE results ##
+#AfricaSubSahara_TRMM-GRACE-0930-ExporttoByte_trendcomp.xml
+
+###   	       Movie            ###
+
+## Create overlay image frames TRMM-GRACE ##
+#AfricaSubSahara_TRMM-GRACE-0951_overlay-movieframes_M.xml
+
+## Create clock frames and movie for TRMM + GRACE overlay movie with movieclock overlay ##
+#AfricaSubSahara_TRMM-GRACE-0960_movieclock_M.xml
+
+###################################
+###          Archive            ###
+###################################
+
+## Archive cross correlation ##
+#AfricaSubSahara_TRMM-GRACE-0980_archive-zip_layer-x-corr_2003-2016.xml
+
+## Archive change comparison TRMM-GRACE for Sub Saharan Africa ##
+AfricaSubSahara_TRMM-GRACE-0980-archive-zip_trendcomp.xml

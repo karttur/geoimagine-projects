@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LandsatProc>	
+	<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'landsat'></userproj>
+	<period startyear = "1992" endyear = "2019" timestep='allscenes'></period>
+	
+	<process processid ='explodeLandsatSingleScene' dsversion = '1.3'>
+		<parameters wrspath='19' wrsrow='49' proccat='DN'>
+		</parameters>
+		<srcpath volume = "guatemala" hdrfiletype = 'tar.gz' datfiletype = 'tif'></srcpath>
+		<dstpath volume = "guatemala"></dstpath>	
+	</process>
+	
+	<process processid ='explodeLandsatSingleScene' dsversion = '1.3'>
+		<parameters wrspath='19' wrsrow='50' proccat='DN'>
+		</parameters>
+		<srcpath volume = "guatemala" hdrfiletype = 'tar.gz' datfiletype = 'tif'></srcpath>
+		<dstpath volume = "guatemala"></dstpath>	
+	</process>
+	
+	<process processid ='explodeLandsatSingleScene' dsversion = '1.3'>
+		<parameters wrspath='20' wrsrow='49' proccat='DN'>
+		</parameters>
+		<srcpath volume = "guatemala" hdrfiletype = 'tar.gz' datfiletype = 'tif'></srcpath>
+		<dstpath volume = "guatemala"></dstpath>	
+	</process>
+	
+	<process processid ='explodeLandsatSingleScene' dsversion = '1.3'>
+		<parameters wrspath='20' wrsrow='50' proccat='DN'>
+		</parameters>
+		<srcpath volume = "guatemala" hdrfiletype = 'tar.gz' datfiletype = 'tif'></srcpath>
+		<dstpath volume = "guatemala"></dstpath>	
+	</process>
+		
+</LandsatProc>
+
+

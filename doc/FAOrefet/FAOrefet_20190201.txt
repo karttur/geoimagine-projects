@@ -1,0 +1,7 @@
+##### FAO ref ET IMPORT #####
+
+#import FAO ref ET
+ancillary-import-FAO-refevap.xml
+
+#Convert FAO ref ET to mm per month
+convert-FAO-refevap_daytomonth.xml

@@ -1,0 +1,100 @@
+###################################
+###################################
+###             TRMM            ###
+###################################
+###################################
+
+###################################
+###          Update db          ###
+###################################
+
+## If you have access to TRMM data created by karttur's Geoimagine Framework ##
+## you can access the data from your Framework installation by updating the db ##
+#TRMM-0190_udatedb.xml
+
+#If the above process is run the next setcion "Import" can be skipped.
+
+###################################
+###            Import           ###
+###################################
+
+## Import the 1998 to 1999 data (separate naming) ##
+#TRMM-0100_ancillary-import-3B43v7_1998-1999.xml
+
+## Import the 2000 to 2010 data (separate naming) ##
+#TRMM-0100_ancillary-import-3B43v7_2000-2010.xml
+
+## Import the 2010 to 2018 data (separate naming) ##
+#TRMM-0100_ancillary-import-3B43v7_2010-2018.xml
+
+## mend TRMM (fill in nodata holes and negative numbers) ##
+#TRMM-0110_mendts.xml
+
+## Rename, fix the date stamp and copy the cleaned TRMM data ready for use ##
+#TRMM-0120_monthdaytomonth.xml
+
+###################################
+###   Time Series Processing    ###
+###################################
+
+## Resample TRMM to annual ##
+#TRMM-0290_resample-2-annual.xml
+
+###################################
+###   Time Series Analysis    ###
+###################################
+
+## Estimate TRMM annual trends (1998-2017 is for the complete timeseries, 2003-2016 for overlap with GRACE ##
+#TRMM-0310_trend_A_1998-2017.xml
+#TRMM-0310_trend_A_2003-2016.xml
+#TRMM-0310_trend_A_2001-2017.xml
+
+## Identify regions with significant trends (1998-2017 is for the complete timeseries, 2003-2016 for overlap with GRACE ## 
+#TRMM-0320_changes_A_1998-2017.xml
+#TRMM-0320_changes_A_2003-2016.xml
+TRMM-0320_changes_A_2001-2017.xml
+
+## Decompose TRMM timeseries ##
+#TRMM-0360_decompose_M.xml
+
+## Autocorrelation ##
+#TRMM-0370_autocorr_M.xml
+
+## Cross correlation between monthly climate indexes and TRMM  ##
+#TRMM-0380_index-x-corr_M.xml
+
+###################################
+###            Layout           ###
+###################################
+
+## Create scaling for TRMM data ##
+#TRMM-0001_createscaling.xml
+
+## Create the TRMM palettes ##
+#TRMM-0002_createpalettes.xml
+
+# Create legends for TRMM ##
+#TRMM-0003_createlegends.xml
+
+## Create TRMM movieclock ##
+#TRMM-0004_addmovieclock.xml
+
+###################################
+###        Export media         ###
+###################################
+
+## Export png images ##
+#TRMM-0900_ExporttoByte_M.xml
+#TRMM-0910_ExporttoByte_timespanA_1998-2017.xml
+#TRMM-0920_ExporttoByte_timespanM.xml
+
+## Export the global land mask to fit the TRMM data
+#TRMM-0925_ExporttoSVG.xml
+
+## Create TRMM movieframes (1998 to 2017) ##
+#TRMM-0950_movieframes_M.xml
+
+## Create moviecloc, the process creates two shell scripts that must by run ##
+TRMM-0960_movieclock_M.xml
+
+

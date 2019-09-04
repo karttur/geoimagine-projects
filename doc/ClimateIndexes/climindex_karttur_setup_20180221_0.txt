@@ -1,0 +1,12 @@
+##### CLIMATE INDEX IMPORT #####
+#import NOAA climate indexes
+#climateindex-import-NOAA.xml
+
+#import mauna loa C02 record
+#co2record-import-maunaloa.xml
+
+#plot CO2 climate indexes
+#CO2-plot.xml
+
+#plot NOAA climate indexes
+#climateindex-plot.xml

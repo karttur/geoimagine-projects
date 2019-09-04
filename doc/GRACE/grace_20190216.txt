@@ -1,0 +1,75 @@
+###################################
+###################################
+###            GRACE            ###
+###################################
+###################################
+
+###################################
+###            Layout           ###
+###################################
+
+## Create scaling for GRACE compids ##
+#GRACE-0001_createscaling.xml
+
+## Create palettes for GRACE ##
+#GRACE-0002_createpalettes.xml
+
+## Create legend for GRACE ##
+GRACE-0003_createlegends.xml
+
+## Export legends for GRACE ##
+GRACE-0005_exportlegend.xml
+
+## Create movie clock ##
+##NOTDONE##
+#smap_createmovieclock.xml
+
+#Create the graticule to use for map layout
+#GRACE-0925_graticule_ExporttoSVG.xml
+
+###################################
+###     Download & organize     ###
+###################################
+
+## The GRACE mission is finished and the data must be 
+## manually searched and downloaded as described in the 
+## SMAP blogpost: https://karttur.github.io/geoimagine/blog/blog-SMAP/
+
+## Organize the downloaded GRACE data ##
+#GRACE-0101_organize.xml
+
+## Mend GRACE by interpolating missing dates ##
+#GRACE-0111_mendts.xml
+
+## Average the three GRACE solutions ##
+#GRACE-0115_average.xml
+
+## Convert month format to karttur standard ##
+#GRACE-0120_monthdaytomonth.xml
+
+## Alternative import pre-processed GRACE data and update db ##
+#GRACE-0190_updatedb.xml
+
+###################################
+###   Time series processing    ###
+###################################
+
+## Extract GRACE seasonal signal ##
+#GRACE-0231_extract-season.xml
+
+## Resample Grace to Annual ##
+#GRACE-0290_resample-2-annual.xml
+
+## Estimate trend from annual timestep ##
+#GRACE-0310_trend_A_2003-2016.xml
+
+## Calculate annual changes 2003 t0 2016 ##
+#GRACE-0320_changes_A_2003-2016.xml
+
+
+###################################
+###        Export media         ###
+###################################
+
+## Export annual statistics, trends and changes ##
+#GRACE-0910_ExporttoByte_timespanA_2003-2016.xml

@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LandsatProc>	
+	<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'landsat'></userproj>
+	<period startyear = "1984" endyear = "2017" timestep='allscenes'></period>
+	
+	<processx processid ='downloadbulkmeta' dsversion = '1.3'>
+		<parameters 
+			collection='LandsatARD' level='1' sensor='all'
+			filetype= 'csv'
+			>
+		</parameters>
+		<dstpath volume = "africa" hdrfiletype = 'gz' datfiletype = 'csv'></dstpath>
+	</processx>
+	
+	<processx processid ='downloadbulkmeta' dsversion = '1.3'>
+		<parameters 
+			collection='Landsat1' level='1' sensor='MSS'
+			filetype= 'csv'
+			>
+		</parameters>
+		<dstpath volume = "africa" hdrfiletype = 'gz' datfiletype = 'csv'></dstpath>
+	</processx>
+	
+	<process processid ='searchLandsatSingleScene' dsversion = '1.3'>
+		<parameters path='175' row='75' maxcloudcovland='30' sensorid='T' imgqualmin = '6'
+			remoteuser='thomas.gumbricht@gmail.com'>
+		</parameters>
+		<dstpath volume = "africa" hdrfiletype = 'gz' datfiletype = 'csv'></dstpath>
+	</process>
+	
+	<processx processid ='downloadbulkmeta' dsversion = '1.3'>
+		<overwrite>True</overwrite>
+		<parameters collection='Landsat1' level='1' sensor='ETM' 
+			filetype= 'csv'
+			>
+		</parameters>
+		<dstpath volume = "africa" hdrfiletype = 'gz' datfiletype = 'csv'></dstpath>
+	</processx>
+	
+	<processx processid ='downloadbulkmeta' dsversion = '1.3'>
+		<overwrite>True</overwrite>
+		<parameters 
+			collection='Landsat1' level='1' sensor='OLI-TIRS'
+			filetype= 'csv'
+			>
+		</parameters>
+		<dstpath volume = "africa" hdrfiletype = 'gz' datfiletype = 'csv'></dstpath>
+	</processx>
+		
+</LandsatProc>
+

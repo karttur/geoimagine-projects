@@ -1,0 +1,36 @@
+###################################
+###################################
+###   TWI original processing   ###
+###################################
+###################################
+
+#### STOP HERE ????
+## Resample MODIS 16D to monthly
+#NOT DONE
+#AfricaSubSahara_MODIS-0290_resample-2-M.xml
+
+## Resample MODIS 16D to annual
+#AfricaSubSahara_MODIS-0290_resample-2-A.xml
+
+## Annual stats ##
+#AfricaSubSahara_MODIS-0310_trend_A_2001-2017.xml
+
+###################################
+###   	       Mosaic           ###
+###################################
+
+###################################
+###        Export media         ###
+###################################
+
+#Export MODIS 16D tiles
+#AfricaSubSahara_MODIS-0900_ExporttoByte_16D.xml
+
+###################################
+###           Archive           ###
+###################################
+
+#ZIP archive MODIS 16D tiles
+#AfricaSubSahara_MODIS-0980_arcihive-zip_16D.xml
+
+#AfricaSubSahara_TRMM-0980_archive_crosscorr.xml

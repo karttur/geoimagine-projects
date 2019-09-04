@@ -1,0 +1,26 @@
+#Create Africa Sub-Saharan default region
+#NOTE THIS MUST BE DONE FROM THE PACKAGE SETUP_PROCESSES
+#add_Africa-Sub_Sahara_default-region_v80.xml
+
+#Link regions to the MODIS tiles
+#regions-modtiles_v80.xml
+
+#Create user projects and tracts for Sub Saharan Africa
+#add_user_project-region_africa-sub-sahara.xml
+
+## Create scaling for miscellaneous layers ##
+#SubSaharanAfrica_0001_createscaling.xml
+
+## Create MODIS scaling
+#MODIS-0001_createscaling.xml
+
+#VWB000_createscaling_v80.xml
+#VWB_scaling_auto+cross-corr.xml
+
+
+
+
+
+
+
+

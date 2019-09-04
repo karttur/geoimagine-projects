@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='utf-8'?>
+<regionswrs>	
+
+	<userproj userid = 'karttur' projectid = 'karttur' tractid= 'karttur' siteid = '*' plotid = '*' system = 'system'></userproj>
+
+	<process processid ='exportalldatacsvsql' version = '3.0'>
+		<parameters schema = 'process' table='subprocesses'> </parameters>
+		<overwrite>N</overwrite>
+		<dstpath volume = "karttur" hdrfiletype = "csv"></dstpath>
+	</process>
+	
+	<processx processid ='exporttabledatacsvsql' version = '3.0'>
+		<parameters schema = 'process' table='subprocesses'> </parameters>
+		<overwrite>N</overwrite>
+		<dstpath volume = "TILES" hdrfiletype = "csv"></dstpath>
+	</processx>
+	
+	<processx processid ='copytabledatacsvsql' version = '3.0'>
+		<parameters schema = 'smap' table='layers'> </parameters>
+		<overwrite>N</overwrite>
+		<srcpath volume = "TILES" hdrfiletype = "csv"></srcpath>
+	</processx>
+
+	<processx processid ='dumptablesql' version = '3.0'>
+		<parameters schema = 'process' table='subprocesses' cmdpath='/usr/local/opt/postgresql/bin'> </parameters>
+		<overwrite>N</overwrite>
+		<dstpath volume = "TILES" hdrfiletype = "csv"></dstpath>
+	</processx>
+	
+	<processx processid ='dumptablesql' version = '3.0'>
+		<parameters schema = 'process' table='subprocesses' schemaonly='True' cmdpath='/usr/local/opt/postgresql/bin'> </parameters>
+		<overwrite>N</overwrite>
+		<dstpath volume = "TILES" hdrfiletype = "sql"></dstpath>
+	</processx>
+	
+	<processx processid ='dumpschemasql' version = '3.0'>
+		<parameters schema = 'process' cmdpath='/usr/local/opt/postgresql/bin'> </parameters>
+		<overwrite>N</overwrite>
+		<dstpath volume = "TILES" hdrfiletype = "sql"></dstpath>
+	</processx>
+	
+	<processx processid ='dumpdbsql' version = '3.0'>
+		<parameters schemaonly='True' cmdpath='/usr/local/opt/postgresql/bin'> </parameters>
+		<overwrite>N</overwrite>
+		<dstpath volume = "TILES" hdrfiletype = "sql"></dstpath>
+	</processx>
+	
+	<processx processid ='restoretablesql' version = '3.0'>
+		<parameters schema = 'process' table='subprocesses' cmdpath='/usr/local/opt/postgresql/bin'> </parameters>
+		<overwrite>N</overwrite>
+		<dstpath volume = "TILES" hdrfiletype = "csv"></dstpath>
+	</processx>
+	
+	
+	
+	
+	
+</regionswrs>

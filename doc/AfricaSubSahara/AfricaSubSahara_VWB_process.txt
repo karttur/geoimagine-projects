@@ -1,0 +1,88 @@
+###################################
+###################################
+###     VWB data processing     ###
+###################################
+###################################
+
+## The processing requires that the Vertical Water Balance (VWB) data are already processed and available ##
+
+###################################
+###          Update db          ###
+###################################
+
+## If you have access to TRMM data created by karttur's Geoimagine Framework ##
+## you can access the data from your Framework installation by updating the db ##
+## You can also use updatedb to clean your database and/or delete files from your Framework organized storage ##
+
+###################################
+###       Tile to region        ###
+###################################
+
+## Tile monthly VWB (the tiling is repeated 3 times producing VWB data in different spatial resolutions) ##
+#AfricaSubSahara_VWB-0160_tile_M.xml
+
+## Tile annual VWB to region (the tiling is repeated 3 times producing VWB data in different spatial resolutions) ##
+#AfricaSubSahara_VWB-0161_tile_A.xml
+
+###################################
+###   Time Series Processing    ###
+###################################
+
+## Annual statistics and trends (1998-2017 is for the complete timeseries, 2003-2016 for overlap with GRACE) 
+## should be done at tile level! Not by tiling original data. ##
+#AfricaSubSahara_VWB-0310_trend_A_1998-2017.xml
+#AfricaSubSahara_VWB-0310_trend_A_2003-2016.xml
+
+## Annual changes and significant trends (1998-2017 is for the complete timeseries, 2003-2016 for overlap with GRACE) ## 
+#AfricaSubSahara_VWB-0320_changes_A_1998-2017.xml
+#AfricaSubSahara_VWB-0320_changes_A_2003-2016.xml
+
+###################################
+###   	       Mosaic           ###
+###################################
+
+## Mosaic monthly VWB ##
+#AfricaSubSahara_VWB-0610_mosaic_M.xml
+
+## Mosaic VWB trends ##
+#AfricaSubSahara_VWB-0630_mosaic_timespanA_1998-2017.xml
+#AfricaSubSahara_VWB-0630_mosaic_timespanA_2003-2016.xml
+
+###################################
+###        Export media         ###
+###################################
+
+## Export monthly VWB mosaics ##
+#AfricaSubSahara_VWB-0900_ExporttoByte_M.xml
+
+## Export VWB annual trends ##
+#AfricaSubSahara_VWB-0910_ExporttoByte_timespanA_1998-2017.xml
+#AfricaSubSahara_VWB-0910_ExporttoByte_timespanA_2003-2016.xml
+
+###            movie            ###
+
+## To create individual movies for VWB-total, VWB-surplus and VWB-deficit
+## run the scripts three times while only keeping one process each time 
+## and also deleting intermediate files in between each run and renaming the final movie
+## There are alternatives, including running all scripts and change the the script files or 
+## the frame folders/frame names ##
+
+## Create monthly VWB movieframes for Sub Saharan Africa ##
+#AfricaSubSahara_VWB-0950_movieframes_M.xml
+
+## Create Movieclock and scripts for VWB movie with movieclock overlay 
+#AfricaSubSahara_VWB-0960_movieclock_M.xml
+
+###################################
+###           Archive           ###
+###################################
+
+## Archive monthly VWB ##
+#AfricaSubSahara_VWB-0980_archive-zip_M.xml
+
+## Archive annual VWB ##
+#AfricaSubSahara_VWB-0980_archive-zip_A.xml
+
+## Archive annual stats, trends and changes ##
+AfricaSubSahara_VWB-0980_archive-zip_timespanA_1998-2017.xml
+AfricaSubSahara_VWB-0980_archive-zip_timespanA_2003-2016.xml

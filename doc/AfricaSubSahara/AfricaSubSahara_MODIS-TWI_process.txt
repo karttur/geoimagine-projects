@@ -1,0 +1,43 @@
+###################################
+###################################
+###       MODIS processing      ###
+###################################
+###################################
+
+###################################
+###          Update db          ###
+###################################
+
+## If you have access to MODIS data created by karttur's Geoimagine Framework ##
+## you can access the data from your Framework installation by updating the db ##
+## You can also use updatedb to clean your database and/or delete files from your Framework organized storage ##
+
+###################################
+###    MODIS TWI calculations   ###
+###################################
+
+## Orthogonal transformation
+#AfricaSubSahara_MODIS-0461_orthotrans.xml
+
+## Foreground index (TWI) ##
+#AfricaSubSahara_MODIS-0471_fgbg-TWI.xml
+
+## Convert TWI to vol/vol soil moisture ##
+#AfricaSubSahara_MODIS-0472_TWI-percent.xml
+
+###################################
+###   Time Series Processing    ###
+###################################
+
+## Extract season ##
+#AfricaSubSahara_MODIS-0320_TWI-extract-season_16D.xml
+
+## Interpolation Force fill with season
+AfricaSubSahara_MODIS-0330_interpolseasn-16D_2001-2018.xml
+
+###################################
+###           Next step         ###
+###################################
+
+## As the next step you can either processes the (original) TWI (created here) 
+## Or assimilate the TWI to SMAP and do the time series processing using the assimilated TWI 
